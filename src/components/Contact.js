@@ -8,7 +8,12 @@ const Contact = () => {
     <div
       className='menu contact'
       // className='menu   contact contact--unorganized'
-      onClick={() => handleBusinessCardClick('contact')}
+      onClick={() =>
+        handleBusinessCardClick(
+          'contact',
+          'translate(-50%, -50%) skew(10deg, -10deg) scale(1.2) rotate(-4deg); '
+        )
+      }
     >
       {/* <BusinessCard text='Who am I' /> */}
       <BusinessCard text='Contact' />

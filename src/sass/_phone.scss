@@ -1,19 +1,24 @@
 .phone {
-  -moz-transform: skew(34deg, -15deg);
-  -webkit-transform: skew(36deg, -15deg);
-  -o-transform: skew(36deg, -15deg);
-  -ms-transform: skew(36deg, -15deg);
-  transform: skew(30deg, -15deg);
+  -moz-transform: skew(15deg, 0deg);
+  -webkit-transform: skew(15deg, 0deg);
+  -o-transform: skew(15deg, 0deg);
+  -ms-transform: skew(15deg, 0deg);
 
   width: 50%;
   height: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);
-  z-index: 6;
-  transform: translate(-50%, -50%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);
   top: 56%;
   left: 51%;
+  position: absolute;
+
+  z-index: 6;
+  transform: translate(-50%, -50%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);
+
   // border: 4px dotted red;
+
+  &--black {
+    top: 50%;
+    transform: translate(-50%, -50%) skew(0deg, 15deg) scale(1.2) rotate(-5deg);
+  }
 
   &-part {
     position: absolute;

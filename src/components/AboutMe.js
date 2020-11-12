@@ -9,7 +9,12 @@ const AboutMe = () => {
     <div
       className='menu about-me'
       // className='menu about-me about-me--unorganized'
-      onClick={() => handleBusinessCardClick('aboutme')}
+      onClick={() =>
+        handleBusinessCardClick(
+          'aboutme',
+          ' translate(-50%, -50%) skew(5deg, 5deg) scale(1.25) rotate(-5deg);'
+        )
+      }
     >
       {/* <BusinessCard text='Who am I' /> */}
       <BusinessCard text='Who am I' />

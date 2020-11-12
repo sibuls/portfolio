@@ -9,7 +9,12 @@ const Projects = () => {
     <div
       className='menu  projects'
       // className='menu   projects projects--unorganized'
-      onClick={() => handleBusinessCardClick('projects')}
+      onClick={() =>
+        handleBusinessCardClick(
+          'projects',
+          'translate(-50%, -50%) skew(4deg, 12deg) scale(1.2) rotate(-5deg); '
+        )
+      }
     >
       {/* <BusinessCard text='Who am I' /> */}
       <BusinessCard text='Projects' />
