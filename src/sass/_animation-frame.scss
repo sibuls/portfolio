@@ -8,6 +8,7 @@
   transform: translate(-50%, -50%);
   width: 100vw;
   height: 250vh;
+  align-content: flex-start;
 
   display: grid;
   grid-template:
@@ -23,7 +24,7 @@
     height: 100vh;
     // top: 0;
     // left: 0;
-    // border: 10px yellow dotted;
+    border: 2px red dotted;
   }
 
   &__cards {
@@ -36,13 +37,14 @@
   }
 
   &__laptop {
-    margin-top: 10px;
+    // margin-top: 10px;
     position: relative;
     width: 100vw;
     height: 100vh;
     // top: 100%;
     // left: 0;
     grid-area: laptop;
+    border: 2px dotted yellow;
   }
 
   @media (max-resolution: 1dppx) and (min-width: 1280px) {

@@ -11,7 +11,9 @@ function Steps() {
       onClick={() =>
         handleBusinessCardClick(
           'steps',
-          'translate(-50%, -50%) skew(18deg, -10deg) scale(1.3) rotate(10deg); '
+          'translate(-50%, 0%) skew(4deg, 12deg) scale(1.3) rotate(-5deg);',
+          '52%' /* height - default height is 50% */,
+          '25%' /* top -  default top is 30% */
         )
       }
     >

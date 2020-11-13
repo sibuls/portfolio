@@ -11,7 +11,8 @@ const Contact = () => {
       onClick={() =>
         handleBusinessCardClick(
           'contact',
-          'translate(-50%, -50%) skew(10deg, -10deg) scale(1.2) rotate(-4deg); '
+          'translate(-50%, 0%) skew(21deg, -7deg) scale(1.15) rotate(10deg); ',
+          '53%' /* height - default height is 50% */
         )
       }
     >

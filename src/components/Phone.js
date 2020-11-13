@@ -14,26 +14,27 @@ const DivAnimation = styled.div`
 `;
 
 const PhoneBottom = styled.div`
-  animation: 1s 0s ${(props) => props.phoneBottomAnime} ease-out 1,
-    3s 0s ${(props) => props.phoneToTabletBottom} ease-out forwards;
+  animation: 1s 0s ${(props) => props.phoneBottomAnime} ease-out 1;
+  // 3s 0s ${(props) => props.phoneToTabletBottom} ease-out forwards;
 `;
 const Frame = styled.div`
-  animation: 3s 0s ${(props) => props.frameAnime} ease-out 1,
-    4s 1s ${(props) => props.phoneToTabletFrame} ease-out forwards;
+  animation: 3s 0s ${(props) => props.frameAnime} ease-out 1;
+  // 4s 1s ${(props) => props.phoneToTabletFrame} ease-out forwards;
 `;
 const Screen = styled.div`
   animation: 5s 0s ${(props) => props.screenAnime} ease-out 1 // ,
 ;
 `;
 const Browser = styled.div`
-  animation: 1s 0s ${(props) => props.phoneToTabletBrowser} ease-out forwards,
+  animation: 
+  // 1s 0s ${(props) => props.phoneToTabletBrowser} ease-out forwards,
     ${(props) => props.fadeTime} ${(props) => props.fade} ease-out 1;
 `;
 const Glass = styled.div`
-  animation: 4s 0s ${(props) => props.glassAnime} ease-out 1,
-    4s 1.5s ${(props) => props.phoneToTabletGlass} ease-out forwards;
+  animation: 4s 0s ${(props) => props.glassAnime} ease-out 1;
+  // 4s 1.5s ${(props) => props.phoneToTabletGlass} ease-out forwards;
 `;
-const ButtonAnime = styled.div`
+const Button = styled.div`
   animation: 6s 0s ${(props) => props.accesoriesAnime} ease-out 1;
 `;
 const Microphone = styled.div`
@@ -47,11 +48,17 @@ const Camera = styled.div`
 // --- main function start ---
 
 const Phone = (props) => {
-  const { menuActive, currentTransform, prevTransform } = useContext(
-    AppContext
-  );
+  const {
+    menuActive,
+    prevTransform,
+    currentTransform,
+    prevHeight,
+    currentHeight,
+    prevTop,
+    currentTop,
+  } = useContext(AppContext);
   //
-  const animationStartTop = menuActive === 'start' ? '50%' : '56%';
+  const animationStartTop = menuActive === 'start' ? '30%' : prevTop;
   const animationStartLeft = menuActive === 'start' ? '150%' : '51%';
   const fadeTime = menuActive === 'start' ? '10s' : '1s';
 
@@ -62,47 +69,21 @@ const Phone = (props) => {
   0% {
   top:${animationStartTop};
   left:${animationStartLeft};
-  // transform: translate(-50%, -50%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);
-  transform: ${prevTransform}
-  }
+  transform: ${prevTransform};
+  height:${prevHeight};}
 
-
-  // 10%{
-  // top: 56%;
-  // left: 51%;
-  // }
-  
+ 
+ 
+ 
   100% {
-    ${menuActive === 'start' ? '  ' : null} 
-    ${
-      menuActive === 'aboutme'
-        ? ' transform: translate(-50%, -50%) skew(5deg, 5deg) scale(1.25) rotate(-5deg);'
-        : null
-    }
-    ${
-      menuActive === 'description'
-        ? 'transform:translate(-50%, -50%) skew(10deg, -5deg) scale(1.2) rotate(-2deg); '
-        : null
-    }
-    ${
-      menuActive === 'steps'
-        ? ' transform: translate(-50%, -50%) skew(18deg, -10deg) scale(1.3) rotate(10deg); '
-        : null
-    }
-    ${
-      menuActive === 'projects'
-        ? ' transform: translate(-50%, -50%) skew(4deg, 12deg) scale(1.2) rotate(-5deg); '
-        : null
-    }
-    ${
-      menuActive === 'contact'
-        ? 'transform: translate(-50%, -50%) skew(10deg, -10deg) scale(1.2) rotate(-4deg); '
-        : null
-    }
-}
-  
+  transform: ${currentTransform};
+  height: ${currentHeight};
+  top: ${currentTop};
+ }
   `;
 
+  console.log('prevHeight: ' + prevHeight);
+  console.log('currentHeight: ' + currentHeight);
   // animation black/white screen - works for start animation and changing menu
   const fade = keyframes`
  0%  {opacity:0;}
@@ -246,12 +227,26 @@ const Phone = (props) => {
           accesoriesAnime={accesoriesAnime}
           className='phone-part phone__front-camera'
         ></Camera>
-        <ButtonAnime
+        <Button
           accesoriesAnime={accesoriesAnime}
           className='phone-part phone__home-button phone__home-button--modelx'
         >
           <div className='phone-part phone__home-button--inside'></div>
-        </ButtonAnime>
+        </Button>
+        {/* <div className='phone-part phone__arrow-box'> */}
+        <div className='phone-part phone__arrow'>
+          <div className='phone-part phone__triangle-box'>
+            {' '}
+            <div className='phone-part phone__triangle'></div>
+          </div>
+
+          <div className='phone-part phone__line'></div>
+        </div>
+        {/* </div> */}
+        {/* <div className='phone-part phone__squares-box'> */}
+        <div className='phone-part phone__squares'></div>
+        <div className='phone-part phone__square'></div>
+        {/* </div> */}
         <PhoneBottom
           phoneBottomAnime={phoneBottomAnime}
           phoneToTabletBottom={phoneToTabletBottom}

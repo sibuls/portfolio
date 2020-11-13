@@ -3,6 +3,8 @@ import { AppContext, defaultObject } from './AppContext';
 import AnimationFrame from './components/AnimationFrame';
 
 const App = () => {
+  // hooks
+
   const [isAboutMeActive, setIsAboutMeActive] = useState(
     defaultObject.isAboutMeActive
   );
@@ -12,7 +14,13 @@ const App = () => {
     defaultObject.currentTransform
   );
 
-  // function which will get prevstate
+  const [currentHeight, setCurrentHeight] = useState(
+    defaultObject.currentHeight
+  );
+
+  const [currentTop, setCurrentTop] = useState(defaultObject.currentTop);
+
+  // function which will get prevstate of our hooks
   const usePrevious = (value) => {
     const ref = useRef();
     useEffect(() => {
@@ -22,15 +30,23 @@ const App = () => {
   };
 
   const prevTransform = usePrevious(currentTransform);
+  const prevHeight = usePrevious(currentHeight);
+  const prevTop = usePrevious(currentTop);
 
   // handles
-  const handleBusinessCardClick = (menu, transform) => {
+
+  const handleBusinessCardClick = (
+    menu,
+    transform,
+    height = '50%',
+    top = '30%'
+  ) => {
+    // /*  height default 50% top deafult 30% , without default 'height' and 'top' doesnt work well */
     // setIsAboutMeActive(!isAboutMeActive);
     setMenuActive(menu);
     setCurrentTransform(transform);
-
-    // console.log('clicked handle business in App');
-    // console.log(menu);
+    setCurrentHeight(height);
+    setCurrentTop(top);
   };
   const paper = () => {
     return {
@@ -74,8 +90,12 @@ const App = () => {
         value={{
           isAboutMeActive: isAboutMeActive,
           menuActive: menuActive,
-          currentTransform: currentTransform,
           prevTransform: prevTransform,
+          currentTransform: currentTransform,
+          prevHeight: prevHeight,
+          currentHeight: currentHeight,
+          prevTop: prevTop,
+          currentTop: currentTop,
           handleBusinessCardClick: handleBusinessCardClick,
         }}
       >

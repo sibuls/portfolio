@@ -12,7 +12,8 @@ const AboutMe = () => {
       onClick={() =>
         handleBusinessCardClick(
           'aboutme',
-          ' translate(-50%, -50%) skew(5deg, 5deg) scale(1.25) rotate(-5deg);'
+          ' translate(-50%, 0%) skew(4deg, 5deg) scale(1.25) rotate(-7deg);',
+          '51%;' /* height - default height is 50% */
         )
       }
     >
