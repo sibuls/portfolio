@@ -229,32 +229,34 @@ const Phone = (props) => {
         ></Camera>
         <Button
           accesoriesAnime={accesoriesAnime}
-          className='phone-part phone__home-button phone__home-button--modelx'
+          className='phone-part phone__home-button'
+          className={`${
+            props.color === 'white'
+              ? 'phone-part phone__home-button phone__home-button--modelx'
+              : 'phone-part phone__home-button phone__home-button--black'
+          }`}
         >
-          <div className='phone-part phone__home-button--inside'></div>
+          {props.color === 'white' ? (
+            <div className='phone-part phone__home-button-inside'></div>
+          ) : null}
         </Button>
-        {/* <div className='phone-part phone__arrow-box'> */}
-        <div className='phone-part phone__arrow'>
-          <div className='phone-part phone__triangle-box'>
-            {' '}
-            <div className='phone-part phone__triangle'></div>
-          </div>
+        {/* <div className='phone-part phone__arrow'>
+          <div className='phone-part  phone__triangle'></div>
 
           <div className='phone-part phone__line'></div>
         </div>
-        {/* </div> */}
-        {/* <div className='phone-part phone__squares-box'> */}
-        <div className='phone-part phone__squares'></div>
-        <div className='phone-part phone__square'></div>
-        {/* </div> */}
+        <div className='phone-part phone__squares'>
+          <div className='phone-part phone__square'></div>
+          <div className='phone-part phone__square phone__square--bottom'></div>
+        </div> */}
         <PhoneBottom
           phoneBottomAnime={phoneBottomAnime}
           phoneToTabletBottom={phoneToTabletBottom}
-          className={
-            menuActive === 'steps'
-              ? 'phone-part phone__bottom phone__bottom--tablet'
-              : 'phone-part phone__bottom'
-          }
+          className={`${
+            props.color === 'white'
+              ? 'phone-part phone__bottom'
+              : 'phone-part phone__bottom phone__bottom--black'
+          }`}
         ></PhoneBottom>
       </DivAnimation>
     </React.Fragment>
