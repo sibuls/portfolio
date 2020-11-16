@@ -1,0 +1,20 @@
+.animation__dot {
+  //   position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: double 3px rgb(114, 114, 114);
+
+  &--white {
+    background-color: rgba(255, 255, 255, 0.831);
+  }
+  &--black {
+    background-color: rgba(0, 0, 0, 0.701);
+  }
+  &--red {
+    background-color: rgba(255, 0, 0, 0.735);
+  }
+  &--silver {
+    background-color: rgba(84, 84, 84, 0.701);
+  }
+}

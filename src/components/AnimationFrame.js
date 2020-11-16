@@ -1,4 +1,5 @@
 import React from 'react';
+import Dot from './Dot';
 import Phone from './Phone';
 import TextBody from './TextBody';
 
@@ -10,7 +11,10 @@ const AnimationFrame = () => {
       <div className='animation__phone-container'>
         <Phone color={'white'} />
       </div>
-      <div className='animation__laptop'>{/* <Phone color={'black'} /> */}</div>
+
+      <div className='animation__laptop-container'>
+        <Phone color={'black'} />
+      </div>
     </div>
   );
 };

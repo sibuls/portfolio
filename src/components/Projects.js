@@ -7,7 +7,7 @@ const Projects = () => {
 
   return (
     <span
-      className='text-body__span text-body__span--projects'
+      className='text-body__menu text-body__menu--projects'
       onClick={() =>
         handleBusinessCardClick(
           'projects',

@@ -6,7 +6,7 @@ function Steps() {
   const { handleBusinessCardClick } = useContext(AppContext);
   return (
     <span
-      className='text-body__span text-body__span--steps'
+      className='text-body__menu text-body__menu--steps'
       onClick={() =>
         handleBusinessCardClick(
           'steps',

@@ -6,7 +6,7 @@ const Description = () => {
   const { handleBusinessCardClick } = useContext(AppContext);
   return (
     <span
-      className='text-body__span text-body__span--description'
+      className='text-body__menu text-body__menu--description'
       onClick={() =>
         handleBusinessCardClick(
           'description',
