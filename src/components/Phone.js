@@ -1,9 +1,7 @@
 import React, { useContext, useState } from 'react';
-import ReactDOM from 'react-dom';
+
 import { AppContext } from '../AppContext';
-import AboutMe from './AboutMe';
-import AboutMeInfo from './AboutMeInfo';
-import DescriptionInfo from './DescriptionInfo';
+
 import '../sass/style.scss';
 import styled, { css, keyframes, createGlobalStyle } from 'styled-components';
 import Info from './Info';
@@ -52,13 +50,12 @@ const Phone = (props) => {
     menuActive,
     prevTransform,
     currentTransform,
-    prevHeight,
-    currentHeight,
+
     prevTop,
     currentTop,
   } = useContext(AppContext);
   //
-  const animationStartTop = menuActive === 'start' ? '30%' : prevTop;
+  const animationStartTop = menuActive === 'start' ? '0%' : prevTop;
   const animationStartLeft = menuActive === 'start' ? '150%' : '51%';
   const fadeTime = menuActive === 'start' ? '10s' : '1s';
 
@@ -70,20 +67,18 @@ const Phone = (props) => {
   top:${animationStartTop};
   left:${animationStartLeft};
   transform: ${prevTransform};
-  height:${prevHeight};}
+ }
 
  
  
  
   100% {
   transform: ${currentTransform};
-  height: ${currentHeight};
+ 
   top: ${currentTop};
  }
   `;
 
-  console.log('prevHeight: ' + prevHeight);
-  console.log('currentHeight: ' + currentHeight);
   // animation black/white screen - works for start animation and changing menu
   const fade = keyframes`
  0%  {opacity:0;}

@@ -1,0 +1,28 @@
+.text-body {
+  position: absolute;
+  // width: 100vw;
+  // height: 150%;
+  top: -40px;
+  // left: -50%;
+  transform: skew(0deg, -8deg);
+  background: $color-body;
+  color: $color-font-body;
+  z-index: 1;
+
+  &__paragraph {
+    // color: red;
+    position: relative;
+    font-size: 3vw;
+    line-height: 1rem;
+  }
+
+  &__span {
+    color: white;
+    padding: 0 2px;
+
+    // class for each menu in case to customize each of them
+    // &--about-me {
+    //   // color: blue;
+    // }
+  }
+}

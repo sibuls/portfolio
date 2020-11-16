@@ -5,20 +5,17 @@ import BusinessCard from './BusinessCard';
 function Steps() {
   const { handleBusinessCardClick } = useContext(AppContext);
   return (
-    <div
-      className='menu  steps'
-      //  className='menu  steps  steps--unorganized'
+    <span
+      className='text-body__span text-body__span--steps'
       onClick={() =>
         handleBusinessCardClick(
           'steps',
-          'translate(-50%, 0%) skew(4deg, 12deg) scale(1.3) rotate(-5deg);',
-          '52%' /* height - default height is 50% */,
-          '25%' /* top -  default top is 30% */
+          'translate(-50%, 0%) skew(4deg, 12deg) scale(1.25) rotate(-5deg);'
         )
       }
     >
-      <BusinessCard text={'Steps'} />
-    </div>
+      Steps
+    </span>
   );
 }
 

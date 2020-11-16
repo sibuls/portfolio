@@ -6,21 +6,19 @@ const Projects = () => {
   const { handleBusinessCardClick } = useContext(AppContext);
 
   return (
-    <div
-      className='menu  projects'
-      // className='menu   projects projects--unorganized'
+    <span
+      className='text-body__span text-body__span--projects'
       onClick={() =>
         handleBusinessCardClick(
           'projects',
-          'translate(-50%, 0%) skew(8deg, -5deg) scale(1.2) rotate(-90deg); ',
-          '56%' /* height - default height is 50% */,
-          '21%' /* top -  default top is 30% */
+          'translate(-50%, 0%) skew(8deg, 5deg) scale(1.4) rotate(-90deg); ',
+
+          '-10%' /* top -  default top is 30% */
         )
       }
     >
-      {/* <BusinessCard text='Who am I' /> */}
-      <BusinessCard text='Projects' />
-    </div>
+      Projects
+    </span>
   );
 };
 

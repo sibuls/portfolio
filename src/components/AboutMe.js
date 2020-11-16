@@ -6,20 +6,17 @@ const AboutMe = () => {
   const { handleBusinessCardClick } = useContext(AppContext);
 
   return (
-    <div
-      className='menu about-me'
-      // className='menu about-me about-me--unorganized'
+    <span
+      className='text-body__span text-body__span--about-me'
       onClick={() =>
         handleBusinessCardClick(
           'aboutme',
-          ' translate(-50%, 0%) skew(4deg, 5deg) scale(1.25) rotate(-7deg);',
-          '51%;' /* height - default height is 50% */
+          ' translate(-50%, 0%) skew(4deg, 5deg) scale(1.3) rotate(-7deg);'
         )
       }
     >
-      {/* <BusinessCard text='Who am I' /> */}
-      <BusinessCard text='Who am I' />
-    </div>
+      Who am I{' '}
+    </span>
   );
 };
 

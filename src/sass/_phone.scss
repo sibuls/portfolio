@@ -4,14 +4,14 @@
   -o-transform: skew(15deg, 0deg);
   -ms-transform: skew(15deg, 0deg);
 
-  width: 50%;
-  height: 50%;
-  top: 30%;
-  left: 51%;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 50%;
   position: absolute;
 
   z-index: 6;
-  transform: translate(-50%, 0%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);
+  transform: translate(-50%, -50%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);
 
   // border: 4px dotted red;
 

@@ -7,10 +7,9 @@ export const defaultObject = {
     'translate(-50%, 0%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);',
   currentTransform:
     'translate(-50%, 0%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);',
-  prevHeight: '50%',
-  currentHeight: '',
-  prevTop: '30%',
-  currentTop: '30%',
+
+  prevTop: '0%',
+  currentTop: '0%',
   handleBusinessCardClick: () => {},
 };
 
