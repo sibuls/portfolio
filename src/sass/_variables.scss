@@ -69,20 +69,46 @@ $color-background-orange: linear-gradient(
   ),
   rgb(97, 68, 36);
 
-// color backround lighter
-$color-background-body: linear-gradient(
-    135deg,
-    rgba(white, 1) 1%,
-    rgba($color-gray-xxlight, 1) 5%,
-    rgba(white, 1) 10%,
-    rgba($color-gray-medium, 1) 30%,
-    rgba($color-gray-xxlight, 1) 60%,
-    rgba(white, 1) 70%,
-    rgba($color-gray-medium, 1) 80%,
-    rgba($color-gray-xxlight, 1) 90%,
-    rgba($color-gray-dark, 0.8) 100%
+// phone - frame color
+
+$color-phone-blue: linear-gradient(
+    115deg,
+    #16222a 1%,
+    #16222a 5%,
+    #16222a 10%,
+    #3a6073 30%,
+    #234657 70%,
+    #263641 80%,
+    #224252 90%,
+    #16222a 100%
   ),
-  $color-gray-light;
+  #3a6073;
+
+$color-phone-silver: linear-gradient(
+    135deg,
+    rgb(206, 206, 206) 10%,
+    rgb(174, 168, 168) 20%,
+    rgb(182, 181, 181) 30%,
+    rgb(177, 176, 176) 40%,
+    rgb(157, 157, 157) 50%,
+    rgb(133, 131, 131) 60%,
+    rgb(128, 126, 126) 70%,
+    rgb(143, 142, 142) 80%,
+    rgb(125, 123, 123) 90%,
+    rgb(116, 115, 115) 100%
+  ),
+  grey;
+
+$color-phone-black: linear-gradient(
+    82deg,
+    rgba(rgb(9, 9, 9), 1) 1%,
+    rgba(rgb(2, 2, 2), 1) 30%,
+    rgba(rgb(203, 176, 176), 1) 70%,
+    // rgba(rgb(7, 7, 7), 1) 80%,
+    rgba(rgb(0, 0, 0), 1) 90%,
+    rgba(rgb(21, 20, 20), 0.8) 100%
+  ),
+  rgb(16, 16, 16);
 
 // color of paper
 $color-paper: #e9e4c9;

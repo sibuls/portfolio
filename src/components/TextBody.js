@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AppContext } from '../AppContext';
 
 import AboutMe from './AboutMe';
 import Description from './Description';
@@ -8,9 +9,12 @@ import Contact from './Contact';
 import Dot from './Dot';
 
 const TextBody = (props) => {
-  // hooks declaration
+  const { dotColor, handleDotClick } = useContext(AppContext);
 
+  // hooks declaration
   const [isDotActive, setIsDotActive] = useState(false);
+
+  // end of hooks
 
   const wordShort = ' .call ';
   const wordLong = ' Object.defineProperty(e, if "__esModule" ';
@@ -25,7 +29,7 @@ const TextBody = (props) => {
 
   // handle
 
-  const handleDotsClick = () => {
+  const handleColorClick = () => {
     setIsDotActive(!isDotActive);
     console.log('klikkakakakkaa');
   };
@@ -34,6 +38,7 @@ const TextBody = (props) => {
     <React.Fragment>
       <div className='text-body'>
         <div className='text-body__paragraph'>
+          {/* <div className='laptop-box'></div> */}
           {sentenceShort}
           {sentenceShort}
           <AboutMe />
@@ -50,8 +55,7 @@ const TextBody = (props) => {
           {wordShort}
           {sentenceLong}
           {wordShort}
-
-          <span className='text-body__menu ' onClick={handleDotsClick}>
+          <span className='text-body__menu ' onClick={handleColorClick}>
             Choose your favourite color:{' '}
           </span>
           {sentenceShort}
@@ -64,10 +68,15 @@ const TextBody = (props) => {
                 : 'animation__dots-container none'
             }`}
           >
-            <Dot color={'white'} />
+            <Dot color={'blue'} />
             <Dot color={'black'} />
             <Dot color={'silver'} />
           </div>
+          {sentenceMedium}
+          {wordShort}
+
+          {/* <span className='text-body__menu '> ' '</span> */}
+
           {sentenceLong}
           {sentenceLong}
           {sentenceLong}

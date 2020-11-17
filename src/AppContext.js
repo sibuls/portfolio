@@ -10,7 +10,10 @@ export const defaultObject = {
 
   prevTop: '0%',
   currentTop: '0%',
+  prevDotColor: '',
+  currentDotColor: '',
   handleBusinessCardClick: () => {},
+  handleDotClick: () => {},
 };
 
 export const AppContext = createContext(defaultObject);

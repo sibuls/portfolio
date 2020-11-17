@@ -56,7 +56,7 @@ const Phone = (props) => {
   } = useContext(AppContext);
   //
   const animationStartTop = menuActive === 'start' ? '0%' : prevTop;
-  const animationStartLeft = menuActive === 'start' ? '150%' : '51%';
+  const animationStartLeft = menuActive === 'start' ? '150%' : '50%';
   const fadeTime = menuActive === 'start' ? '10s' : '1s';
 
   // --loading page animations--
@@ -187,11 +187,7 @@ const Phone = (props) => {
           frameAnime={frameAnime}
           phoneToTabletFrame={phoneToTabletFrame}
           // className='phone-part phone__frame'
-          className={`${
-            props.color === 'white'
-              ? 'phone-part phone__frame'
-              : 'phone-part phone__frame phone__frame--black'
-          }`}
+          className='phone-part phone__frame phone__frame--gold'
         ></Frame>
         <Glass
           glassAnime={glassAnime}
@@ -247,11 +243,7 @@ const Phone = (props) => {
         <PhoneBottom
           phoneBottomAnime={phoneBottomAnime}
           phoneToTabletBottom={phoneToTabletBottom}
-          className={`${
-            props.color === 'white'
-              ? 'phone-part phone__bottom'
-              : 'phone-part phone__bottom phone__bottom--black'
-          }`}
+          className='phone-part phone__bottom phone__bottom--gold'
         ></PhoneBottom>
       </DivAnimation>
     </React.Fragment>

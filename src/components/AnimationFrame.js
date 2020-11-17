@@ -1,5 +1,6 @@
 import React from 'react';
 import Dot from './Dot';
+import Laptop from './Laptop';
 import Phone from './Phone';
 import TextBody from './TextBody';
 
@@ -13,7 +14,7 @@ const AnimationFrame = () => {
       </div>
 
       <div className='animation__laptop-container'>
-        <Phone color={'black'} />
+        <Laptop color={'black'} />
       </div>
     </div>
   );

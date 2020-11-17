@@ -17,6 +17,12 @@ const App = () => {
 
   const [currentTop, setCurrentTop] = useState(defaultObject.currentTop);
 
+  const [currentDotColor, setCurrentDotColor] = useState(
+    defaultObject.currentDotColor
+  );
+
+  // end of  hooks
+
   // function which will get prevstate of our hooks
   const usePrevious = (value) => {
     const ref = useRef();
@@ -27,24 +33,22 @@ const App = () => {
   };
 
   const prevTransform = usePrevious(currentTransform);
-
   const prevTop = usePrevious(currentTop);
+  const prevDotColor = usePrevious(currentDotColor);
 
   // handles
 
-  const handleBusinessCardClick = (
-    menu,
-    transform,
-
-    top = '0%'
-  ) => {
-    // /*  height default 50% top deafult 30% , without default 'height' and 'top' doesnt work well */
-    // setIsAboutMeActive(!isAboutMeActive);
+  const handleBusinessCardClick = (menu, transform, top = '0%') => {
+    // /*  top deafult 0% , without default   'top' doesnt work well */
     setMenuActive(menu);
     setCurrentTransform(transform);
-
     setCurrentTop(top);
   };
+
+  const handleDotClick = (color) => {
+    setCurrentDotColor(color);
+  };
+
   const paper = () => {
     return {
       /* <div className='paper'>
@@ -69,10 +73,12 @@ const App = () => {
           menuActive: menuActive,
           prevTransform: prevTransform,
           currentTransform: currentTransform,
-
           prevTop: prevTop,
           currentTop: currentTop,
+          currentDotColor: currentDotColor,
+          prevDotColor: prevDotColor,
           handleBusinessCardClick: handleBusinessCardClick,
+          handleDotClick: handleDotClick,
         }}
       >
         {' '}

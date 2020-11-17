@@ -1,0 +1,232 @@
+.laptop {
+  // display: none;
+  // border: 12px dotted red;
+  position: absolute;
+  width: 200%;
+  height: 70%;
+
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(3deg) skew(0deg, 0deg);
+  // display: block;
+
+  @media (min-width: 1280px) {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%) rotate(3deg) skew(0deg, 0deg);
+    display: block;
+  }
+}
+
+.laptop-top {
+  -moz-transform: skew(-20deg, 0deg);
+  -webkit-transform: sskew(-20deg, 0deg);
+  -o-transform: skew(-20deg, 0deg);
+  -ms-transform: skew(-20deg, 0deg);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+
+  width: 55%;
+  height: 75%;
+
+  transform: translate(-50%, -50%) skew(-10deg, 0deg) scale(1) rotate(0deg);
+
+  z-index: 4;
+
+  @media (min-width: 1280px) {
+    top: 30%;
+    left: 50%;
+
+    width: 55%;
+    height: 75%;
+  }
+
+  &__frame {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 2px silver solid;
+    width: 100%;
+    height: 100%;
+    // box-shadow: -2px 2px 0px 0px lightgray, 2px 2px 0px 0px lightgray,
+    //   2px -2px 0px 0px lightgray, -2px -2px 0px 0px lightgray;
+    border-radius: 25px;
+    // background-color: #d6d6d6;
+    // background-color: #f5d5bf;
+    background-color: rgb(50, 50, 50);
+  }
+
+  &__screen {
+    background-color: white;
+    position: absolute;
+    box-shadow: 0px 0px 0px 1px rgb(80, 80, 80), 0px 0px 0px 1px rgb(60, 60, 60);
+    width: 90%;
+    height: 85%;
+    left: 5%;
+    top: 7.5%;
+    border-radius: 10px;
+    // background-color: #16a085;
+  }
+
+  &__back {
+    position: absolute;
+    top: 3px;
+    left: -3px;
+    // border: 1px green solid;
+    border-top: 0px solid #000;
+    border-left: 1px solid rgb(138, 135, 135);
+    border-right: 0px solid #000;
+    border-bottom: 1px solid rgb(121, 121, 121);
+    width: 100%;
+    height: 100%;
+    background-color: #adacad;
+    border-radius: 25px;
+    z-index: -1;
+  }
+
+  &__front-camera {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(128, 128, 128);
+  }
+}
+
+.laptop-main {
+  top: 86%;
+  left: 38%;
+
+  width: 55%;
+  height: 37%;
+
+  //   top: 30%;
+  //   left: 50%;
+
+  //   width: 35%;
+  //   height: 40%;
+
+  //   top: 30%;
+  //   left: 50%;
+
+  //   width: 35%;
+  //   height: 40%;
+
+  //   border: green 1px dotted;
+
+  position: absolute;
+
+  -moz-transform: rotate(43deg) skew(-40deg, -22deg);
+  -webkit-transform: rotate(43deg) skew(-40deg, -22deg);
+  -o-transform: rotate(43deg) skew(-40deg, -22deg);
+  -ms-transform: rotate(43deg) skew(-40deg, -22deg);
+  transform: translate(-50%, -50%) rotate(0deg) skew(-45deg, 0deg);
+
+  &__frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px silver solid;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 25px;
+
+    background-color: rgb(199, 199, 199);
+  }
+
+  &__keyboard {
+    background-color: rgb(199, 199, 199);
+    position: absolute;
+    // box-shadow: 0px 0px 0px 0px rgb(80, 80, 80), 0px 0px 0px 0px rgb(60, 60, 60);
+    width: 96%;
+    height: 96%;
+    left: 2%;
+    top: 2%;
+    border-radius: 10px;
+    // border: 1px solid grey;
+  }
+
+  &__keys {
+    background-color: rgb(75, 72, 72);
+    position: absolute;
+    // box-shadow: 0px 0px 0px 0px rgb(80, 80, 80), 0px 0px 0px 0px rgb(60, 60, 60);
+    width: 96%;
+    height: 50%;
+    left: 2%;
+    top: 2%;
+    border-radius: 10px;
+    // border: 1px solid grey;
+  }
+
+  //   &__bottom {
+  //     transform: rotate(0deg) skew(0deg, 0deg);
+
+  //     position: absolute;
+  //     bottom: -18px;
+  //     left: 18px;
+  //     // border: 1px green solid;
+  //     border-top: 2px solid rgb(138, 135, 135);
+  //     border-left: 1px solid rgb(138, 135, 135);
+  //     border-right: 4px solid rgb(138, 135, 135);
+  //     border-bottom: 4px solid rgb(121, 121, 121);
+  //     width: 100%;
+  //     height: 100%;
+  //     background-color: #adacad;
+  //     border-radius: 25px;
+  //     z-index: -1;
+  //   }
+  &__bottom2 {
+    transform: rotate(0deg) skew(0deg, 0deg);
+    transform-origin: left bottom;
+    position: absolute;
+    bottom: -16px;
+    right: -18px;
+    // border: 1px green solid;
+    border-top: 1px solid rgb(159, 157, 157);
+    border-left: 1px solid rgb(159, 157, 157);
+    border-right: 1px solid rgb(159, 157, 157);
+    border-bottom: 1px solid rgb(159, 157, 157);
+    width: 100%;
+    height: 100%;
+    background-color: #adacad;
+    border-radius: 25px;
+    z-index: -1;
+    transform: rotate(-0deg) skew(2deg, 0deg);
+  }
+}
+
+// @keyframes phonezoom {
+//   0% {
+//     transform: skew(30deg, -15deg) scale(0.25);
+//     top: 28%;
+//     left: 18%;
+//   }
+//   25% {
+//     transform: skew(30deg, -15deg) scale(0.5);
+//   }
+//   50% {
+//     transform: skew(30deg, -15deg) scale(0.75);
+//   }
+//   75% {
+//     transform: skew(30deg, -15deg) scale(1);
+//   }
+//   100% {
+//     transform: skew(15deg, 0deg) scale(1.2);
+//     top: 28%;
+//     left: 18%;
+//   }
+// }
+
+.screen-text {
+  padding: 5px;
+  color: grey;
+  font-family: sans-serif;
+}

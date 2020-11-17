@@ -1,20 +1,117 @@
 .animation__dot {
-  //   position: absolute;
-  width: 20px;
-  height: 20px;
+  position: absolute;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   border: double 3px rgb(114, 114, 114);
+  top: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  left: 0;
+  opacity: 1;
 
-  &--white {
-    background-color: rgba(255, 255, 255, 0.831);
+  &--anime {
+    animation: dots ease-in 2s forwards;
+    top: 100%;
+  }
+
+  &--blue {
+    background: rgb(3, 21, 50);
+    top: 100%;
+    left: 0;
   }
   &--black {
-    background-color: rgba(0, 0, 0, 0.701);
+    background: rgb(0, 0, 0);
+    top: 100%;
+    left: 50%;
   }
-  &--red {
-    background-color: rgba(255, 0, 0, 0.735);
-  }
+
   &--silver {
-    background-color: rgba(84, 84, 84, 0.701);
+    background: darkgrey;
+    top: 100%;
+    left: 100%;
+  }
+
+  &--main {
+    top: 9%;
+    width: 23px;
+    height: 23px;
+  }
+
+  &--top {
+    top: 18%;
+  }
+  &--middle {
+    top: 26%;
+  }
+  &--bottom {
+    top: 34%;
+  }
+
+  @keyframes dots {
+    0% {
+      top: calc((100%) + 0);
+    }
+    5% {
+      top: calc((100%) + 170px);
+    }
+    10% {
+      top: calc((100%) + 90px);
+    }
+    20% {
+      top: calc((100%) + 170px);
+    }
+    25% {
+      top: calc((100%) + 95px);
+    }
+    30% {
+      top: calc((100%) + 170px);
+    }
+    35% {
+      top: calc((100%) + 90px);
+    }
+    40% {
+      top: calc((100%) + 170px);
+    }
+    45% {
+      top: calc((100%) + 100px);
+    }
+    50% {
+      top: calc((100%) + 170px);
+    }
+    55% {
+      top: calc((100%) + 120px);
+    }
+    60% {
+      top: calc((100%) + 170px);
+    }
+    65% {
+      left: 0%;
+      top: calc((100%) + 140px);
+    }
+    70% {
+      top: calc((100%) + 170px);
+    }
+    75% {
+      top: calc((100%) + 150px);
+    }
+    80% {
+      top: calc((100%) + 170px);
+    }
+    85% {
+      top: calc((100%) + 160px);
+    }
+    90% {
+      top: calc((100%) + 170px);
+    }
+    90% {
+      top: calc((100%) + 165px);
+    }
+
+    100% {
+      left: 10%;
+
+      top: calc((100%) + 170px);
+    }
   }
 }
