@@ -1,14 +1,13 @@
 .animation__dot {
   position: absolute;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: double 3px rgb(114, 114, 114);
   top: 100%;
   transform: translate(-50%, -50%);
   z-index: 3;
   left: 0;
-  opacity: 1;
 
   &--anime {
     animation: dots ease-in 2s forwards;
@@ -34,8 +33,6 @@
 
   &--main {
     top: 9%;
-    width: 23px;
-    height: 23px;
   }
 
   &--top {
@@ -46,6 +43,9 @@
   }
   &--bottom {
     top: 34%;
+  }
+  &--opacity {
+    opacity: 0;
   }
 
   @keyframes dots {
@@ -86,7 +86,7 @@
       top: calc((100%) + 170px);
     }
     65% {
-      left: 0%;
+      left: 20%;
       top: calc((100%) + 140px);
     }
     70% {
@@ -109,7 +109,7 @@
     }
 
     100% {
-      left: 10%;
+      left: 20%;
 
       top: calc((100%) + 170px);
     }

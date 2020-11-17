@@ -48,10 +48,11 @@
   &__laptop-container {
     position: absolute;
     width: 50vw;
-    height: 90vw;
-    top: 1100px;
+    height: 100vw;
+    top: 1150px;
     left: 50%;
     transform: translate(-50%, -50%);
+    perspective: 600px;
 
     // grid-area: laptop;
     // border: 2px dotted yellow;

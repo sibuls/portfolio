@@ -34,6 +34,10 @@ const TextBody = (props) => {
     console.log('klikkakakakkaa');
   };
 
+  const handleRotateClick = () => {
+    console.log('krotatetetetetetetetetteteeee ee');
+  };
+
   return (
     <React.Fragment>
       <div className='text-body'>
@@ -76,8 +80,9 @@ const TextBody = (props) => {
           {wordShort}
 
           {/* <span className='text-body__menu '> ' '</span> */}
-
+          <span className='text-body__menu'>rotate</span>
           {sentenceLong}
+
           {sentenceLong}
           {sentenceLong}
           <Contact />

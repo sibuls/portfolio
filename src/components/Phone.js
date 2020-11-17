@@ -178,9 +178,7 @@ const Phone = (props) => {
       <DivAnimation
         phoneShowMain={phoneShowMain}
         // className='phone '
-        className={`${
-          props.color === 'white' ? 'phone' : 'phone phone--black'
-        }`}
+        className='phone  '
       >
         {' '}
         <Frame

@@ -10,8 +10,8 @@ export const defaultObject = {
 
   prevTop: '0%',
   currentTop: '0%',
-  prevDotColor: '',
-  currentDotColor: '',
+  prevDotColor: 'blue',
+  currentDotColor: 'blue',
   handleBusinessCardClick: () => {},
   handleDotClick: () => {},
 };

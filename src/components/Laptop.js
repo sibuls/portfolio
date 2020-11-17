@@ -10,31 +10,33 @@ const DivAnimation = styled.div`
 `;
 
 const PhoneBottomBorder = styled.div`
-  animation: 7s 0s ${(props) => props.phoneBottomBorderAnime} ease-out forwards;
+  animation: 10s 0s ${(props) => props.phoneBottomBorderAnime} ease-out forwards;
 `;
 
 const PhoneBottom = styled.div`
-  animation: 9s 0s ${(props) => props.phoneBottomAnime} ease-out forwards;
+  // animation: 9s 0s ${(props) => props.phoneBottomAnime} ease-out forwards;
+  animation: 1s 0s ${(props) => props.phoneBottomAnime} ease-out forwards;
 `;
 const Frame = styled.div`
-  animation: 12s 0s ${(props) => props.frameAnime} ease-out forwards;
+  // animation: 12s 0s ${(props) => props.frameAnime} ease-out forwards;
+  animation: 1s 0s ${(props) => props.frameAnime} ease-out forwards;
 `;
 
-const Camera = styled.div`
-  animation: 1s 0s ${(props) => props.accesoriesAnime} ease-out forwards;
+const CameraBox = styled.div`
+  animation: 1s 0s ${(props) => props.cameraBoxAnime} ease-out forwards;
 `;
 
 const BackCameraMain = styled.div`
   animation: 8.5s 0s ${(props) => props.backCameraAnime} ease-out forwards;
 `;
 const BackCameraTop = styled.div`
-  animation: 2.8s 0s ${(props) => props.backCameraAnime} ease-out forwards;
+  animation: 3.2s 0s ${(props) => props.backCameraAnime} ease-out forwards;
 `;
 const BackCameraMiddle = styled.div`
-  animation: 2.2s 0s ${(props) => props.backCameraAnime} ease-out forwards;
+  animation: 5.8s 0s ${(props) => props.backCameraAnime} ease-out forwards;
 `;
 const BackCameraBottom = styled.div`
-  animation: 3.1s 0s ${(props) => props.backCameraAnime} ease-out forwards;
+  animation: 4.5s 0s ${(props) => props.backCameraAnime} ease-out forwards;
 `;
 // end of assign components to animations
 
@@ -64,68 +66,134 @@ const Laptop = (props) => {
   //  second animation of phone parts - white frame
 
   //  fifth animation on phone parts - accesories: button, camera, speaker
-  const accesoriesAnime = keyframes`
-  0% { opacity:0;}
-  60% { opacity:0;}
-  100% {opacity:1;}
-  `;
 
   const backCameraAnime = keyframes`
     0% {  ${
-      currentDotColor
-        ? 'opacity:1;  background:rgba(0, 0, 0, 0);'
-        : 'opacity:0;'
-    }
+      !prevDotColor
+        ? 'opacity:0;  left:20%;'
+        : 'left:20%; opacity:1; background:white;'
+    } }
  
-    ${prevDotColor && currentDotColor ? 'opacity:1; ' : 'opacity:0;'}
-        // top:0;
-        left:10%;
+
+
+    
+        59.9% { 
+         
+
+          ${
+            currentDotColor == 'blue'
+              ? 'opacity:0; background:rgb(3, 21, 50);'
+              : null
+          }
+         
+          ${currentDotColor == 'black' ? 'opacity:0; background:black;' : null}
+          ${
+            currentDotColor == 'silver'
+              ? 'opacity:0; background:darkgrey;'
+              : null
+          }
+          ${!prevDotColor ? 'opacity:0;  left:20%;' : 'left:20%; opacity:1;'} 
+          }
+
+    
+
+
+
+        60% { 
+         ${
+           currentDotColor == 'blue'
+             ? 'opacity:1; background:rgb(3, 21, 50);'
+             : 'opacity:0;'
+         }
+         ${currentDotColor == 'black' ? 'opacity:1; background:black;' : null}
+         ${
+           currentDotColor == 'silver'
+             ? 'opacity:1; background:darkgrey;'
+             : null
+         }
+
         }
 
 
-        90% {  ${
-          currentDotColor && !prevDotColor
-            ? '  box-shadow: 0px 0px 2px 0px #b3b2b1;'
-            : null
-        }}
-
+        99% { 
+          ${
+            currentDotColor == 'blue'
+              ? 'opacity:1; background:rgb(3, 21, 50);'
+              : 'opacity:0;'
+          }
+          ${currentDotColor == 'black' ? 'opacity:1; background:black;' : null}
+          ${
+            currentDotColor == 'silver'
+              ? 'opacity:1; background:darkgrey;'
+              : null
+          }
  
-        99.8% {   ${
-          currentDotColor
-            ? 'opacity:1;  background:rgba(0, 0, 0, 0);'
-            : 'opacity:0; '
-        }
-        ${prevDotColor && currentDotColor ? 'opacity:1; ' : 'opacity:0;'}
-        // top:0;
-        left:10%;
-        }
+         }
 
-        99.9% {   ${
-          currentDotColor
-            ? 'opacity:1;  background:rgba(0, 0, 0, 0)'
-            : 'opacity:0;'
-        }
-        ${prevDotColor && currentDotColor ? 'opacity:1; ' : 'opacity:0;'}
-        // top:0;
-        left:10%;
+        99% {   ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}  
+       
+          left:20%;
+        
+
+       
+         ${
+           currentDotColor === 'blue'
+             ? 'background:rgba(255, 214, 250, 1);'
+             : null
+         }
+         ${
+           currentDotColor === 'black'
+             ? 'background:rgba(255, 214, 250, 1);'
+             : null
+         }
+         ${
+           currentDotColor === 'silver'
+             ? 'background:rgba(255, 214, 250, 1);'
+             : null
+         }
+
         }
 
         100% {   ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}  
        
-          left:10%;
-          // width: 18px;
-          // height: 18px;
-       
-         ${currentDotColor === 'blue' ? 'background:rgb(3, 21, 50)' : null}
-         ${currentDotColor === 'black' ? 'background:black' : null}
-         ${currentDotColor === 'silver' ? 'background:darkgrey' : null}
+        left:20%;
+      
 
-        }
+     
+       ${
+         currentDotColor === 'blue'
+           ? 'background:rgba(255, 214, 250, 0.8);'
+           : null
+       }
+       ${
+         currentDotColor === 'black'
+           ? 'background:rgba(255, 214, 250, 0.8);'
+           : null
+       }
+       ${
+         currentDotColor === 'silver'
+           ? 'background:rgba(255, 214, 250, 1);'
+           : null
+       }
+
+      }
   `;
-  const phoneBottomBorderAnime = keyframes`
+
+  const cameraBoxAnime = keyframes`
   0% {   opacity:0;}
   80% {   opacity:0;}
    100% { ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}
+    }
+  `;
+
+  const phoneBottomBorderAnime = keyframes`
+  0% {   opacity:0;}
+  10% {   opacity:0;}
+  11% { ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}
+}
+  90% { ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}
+    }
+   100% { ${currentDotColor ? 'opacity:0;' : 'opacity:0;'}
     }
   `;
 
@@ -142,7 +210,6 @@ const Laptop = (props) => {
 
   `;
 
-  console.log(prevDotColor);
   // --end of loading page animations--
 
   //--start animations: transform phone to tablet--
@@ -150,16 +217,20 @@ const Laptop = (props) => {
   // return Phone function
   return (
     <React.Fragment>
-      <DivAnimation phoneShowMain={phoneShowMain} className='phone  '>
+      <DivAnimation phoneShowMain={phoneShowMain} className='phone '>
         {' '}
         <Frame
           frameAnime={frameAnime}
           className={`phone-part phone__frame phone__frame--${currentDotColor}`}
+
+          // className={`animation__dot animation__dot--${props.color}   ${
+          //   props.color === dotColor ? 'animation__dot--anime' : null
+          // }         `}
         ></Frame>
-        <Camera
-          accesoriesAnime={accesoriesAnime}
-          className='phone-part phone__dot-camera none'
-        ></Camera>
+        <CameraBox
+          cameraBoxAnime={cameraBoxAnime}
+          className='phone-part phone__camera-box'
+        ></CameraBox>
         <BackCameraMain
           backCameraAnime={backCameraAnime}
           className={`animation__dot animation__dot--main`}
@@ -174,7 +245,7 @@ const Laptop = (props) => {
         ></BackCameraMiddle>
         <BackCameraBottom
           backCameraAnime={backCameraAnime}
-          className={`animation__dot animation__dot--bottom`}
+          className={`animation__dot animation__dot--bottom animation__dot--opacity`}
         ></BackCameraBottom>
         <PhoneBottom
           phoneBottomAnime={phoneBottomAnime}
