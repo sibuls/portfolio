@@ -10,6 +10,7 @@
   position: absolute;
   z-index: 1;
   // border: red 1px dotted;
+  transform: translate(-50%, 0%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);
 
   &-part {
     position: absolute;
@@ -191,13 +192,15 @@
     width: 2%;
     height: 10%;
     border-radius: 50%;
-    // background-color: lighten($color-phone-background, 5%);
+
     background: linear-gradient(
         120deg,
         rgba(218, 215, 215, 0.9) 1%,
         rgb(130, 129, 128) 100%
       ),
       silver;
+
+    background: rgba(255, 214, 250, 0.8);
     box-shadow: 0px 0px 2px 0px #b3b2b1;
   }
 

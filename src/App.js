@@ -20,6 +20,11 @@ const App = () => {
   const [currentDotColor, setCurrentDotColor] = useState(
     defaultObject.currentDotColor
   );
+  const [isDotAnimated, setIsDotAnimated] = useState(
+    defaultObject.isDotAnimated
+  );
+
+  const [isFlipped, setIsFlipped] = useState(defaultObject.isFlipped);
 
   // end of  hooks
 
@@ -47,6 +52,12 @@ const App = () => {
 
   const handleDotClick = (color) => {
     setCurrentDotColor(color);
+    setIsDotAnimated(true);
+  };
+
+  const handleRotateClick = () => {
+    console.log('app roate click !');
+    setIsFlipped(!isFlipped);
   };
 
   const paper = () => {
@@ -77,8 +88,11 @@ const App = () => {
           currentTop: currentTop,
           currentDotColor: currentDotColor,
           prevDotColor: prevDotColor,
+          isFlipped: isFlipped,
+          isDotAnimated: isDotAnimated,
           handleBusinessCardClick: handleBusinessCardClick,
           handleDotClick: handleDotClick,
+          handleRotateClick: handleRotateClick,
         }}
       >
         {' '}

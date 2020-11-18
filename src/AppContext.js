@@ -2,6 +2,7 @@ import { createContext } from 'react';
 
 export const defaultObject = {
   isAboutMeActive: false,
+  isFlipped: false,
   menuActive: 'start',
   prevTransfrom:
     'translate(-50%, 0%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);',
@@ -10,10 +11,12 @@ export const defaultObject = {
 
   prevTop: '0%',
   currentTop: '0%',
-  prevDotColor: 'blue',
-  currentDotColor: 'blue',
+  prevDotColor: '',
+  currentDotColor: '',
+  isDotAnimated: false,
   handleBusinessCardClick: () => {},
   handleDotClick: () => {},
+  handleRotateClick: () => {},
 };
 
 export const AppContext = createContext(defaultObject);

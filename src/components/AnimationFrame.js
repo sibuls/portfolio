@@ -1,7 +1,9 @@
 import React from 'react';
 import Dot from './Dot';
+import Flip from './Flip';
 import Laptop from './Laptop';
 import Phone from './Phone';
+
 import TextBody from './TextBody';
 
 const AnimationFrame = () => {
@@ -12,9 +14,10 @@ const AnimationFrame = () => {
       <div className='animation__phone-container'>
         <Phone color={'white'} />
       </div>
-
       <div className='animation__laptop-container'>
-        <Laptop color={'black'} />
+        <Flip />
+
+        {/* <Laptop /> */}
       </div>
     </div>
   );

@@ -9,7 +9,9 @@ import Contact from './Contact';
 import Dot from './Dot';
 
 const TextBody = (props) => {
-  const { dotColor, handleDotClick } = useContext(AppContext);
+  const { dotColor, handleDotClick, handleRotateClick } = useContext(
+    AppContext
+  );
 
   // hooks declaration
   const [isDotActive, setIsDotActive] = useState(false);
@@ -32,10 +34,6 @@ const TextBody = (props) => {
   const handleColorClick = () => {
     setIsDotActive(!isDotActive);
     console.log('klikkakakakkaa');
-  };
-
-  const handleRotateClick = () => {
-    console.log('krotatetetetetetetetetteteeee ee');
   };
 
   return (
@@ -80,7 +78,9 @@ const TextBody = (props) => {
           {wordShort}
 
           {/* <span className='text-body__menu '> ' '</span> */}
-          <span className='text-body__menu'>rotate</span>
+          <span className='text-body__menu' onClick={handleRotateClick}>
+            rotate
+          </span>
           {sentenceLong}
 
           {sentenceLong}

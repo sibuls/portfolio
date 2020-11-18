@@ -52,10 +52,9 @@
     top: 1150px;
     left: 50%;
     transform: translate(-50%, -50%);
-    perspective: 600px;
 
     // grid-area: laptop;
-    // border: 2px dotted yellow;
+    border: 2px dotted yellow;
     z-index: 1;
   }
 
@@ -68,4 +67,26 @@
     width: 100vw;
     height: 50vw;
   }
+}
+
+.red {
+  width: 200px;
+  height: 300px;
+  position: relative;
+
+  // top: 1150px;
+  left: 20px;
+  background: rgba(255, 0, 0, 0.29);
+  border: white;
+}
+
+.blue {
+  width: 200px;
+  height: 300px;
+  position: relative;
+
+  // top: 1150px;
+  left: 20px;
+  background: rgba(0, 0, 255, 0.249);
+  border: orange;
 }

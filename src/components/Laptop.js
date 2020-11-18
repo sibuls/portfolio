@@ -14,12 +14,12 @@ const PhoneBottomBorder = styled.div`
 `;
 
 const PhoneBottom = styled.div`
-  // animation: 9s 0s ${(props) => props.phoneBottomAnime} ease-out forwards;
-  animation: 1s 0s ${(props) => props.phoneBottomAnime} ease-out forwards;
+  animation: 9s 0s ${(props) => props.phoneBottomAnime} ease-out forwards;
+  // animation: 1s 0s ${(props) => props.phoneBottomAnime} ease-out forwards;
 `;
 const Frame = styled.div`
-  // animation: 12s 0s ${(props) => props.frameAnime} ease-out forwards;
-  animation: 1s 0s ${(props) => props.frameAnime} ease-out forwards;
+  animation: 12s 0s ${(props) => props.frameAnime} ease-out forwards;
+  // animation: 1s 0s ${(props) => props.frameAnime} ease-out forwards;
 `;
 
 const CameraBox = styled.div`
@@ -42,22 +42,28 @@ const BackCameraBottom = styled.div`
 
 // --- main function start ---
 
-const Laptop = (props) => {
-  const { currentDotColor, prevDotColor } = useContext(AppContext);
+const Laptop = () => {
+  const {
+    currentDotColor,
+    prevDotColor,
+    isFlipped,
+    isDotAnimated,
+  } = useContext(AppContext);
 
   // main animation - makes whole phone visible
   const phoneShowMain = keyframes`
   0% {
  
   // transform: translate(-50%, 0%) skew(21deg, -7deg) scale(1.15) rotate(10deg) ;
-  transform: translate(-50%, 0%)   scale(1.15) skew(0deg, -8deg);
-  opacity:0; 
+ 
+   transform: translate(-50%, 0%)   scale(1.15) skew(0deg, -8deg);
+    opacity:0; 
  }
 
   100% {
-  transform: translate(-50%, 0%)   scale(1.15) skew(0deg, -8deg);
-  opacity:1; 
- 
+   transform: translate(-50%, 0%)   scale(1.15) skew(0deg, -8deg);
+   opacity:1; 
+   ${isFlipped ? 'opacity:0; ' : null} 
  }
   `;
 
@@ -68,8 +74,10 @@ const Laptop = (props) => {
   //  fifth animation on phone parts - accesories: button, camera, speaker
 
   const backCameraAnime = keyframes`
+
+
     0% {  ${
-      !prevDotColor
+      !prevDotColor && !isFlipped
         ? 'opacity:0;  left:20%;'
         : 'left:20%; opacity:1; background:white;'
     } }
@@ -81,18 +89,26 @@ const Laptop = (props) => {
          
 
           ${
-            currentDotColor == 'blue'
+            currentDotColor === 'blue' && !isFlipped
               ? 'opacity:0; background:rgb(3, 21, 50);'
               : null
           }
          
-          ${currentDotColor == 'black' ? 'opacity:0; background:black;' : null}
           ${
-            currentDotColor == 'silver'
+            currentDotColor === 'black' && !isFlipped
+              ? 'opacity:0; background:black;'
+              : null
+          }
+          ${
+            currentDotColor === 'silver' && !isFlipped
               ? 'opacity:0; background:darkgrey;'
               : null
           }
-          ${!prevDotColor ? 'opacity:0;  left:20%;' : 'left:20%; opacity:1;'} 
+          ${
+            !prevDotColor && !isFlipped
+              ? 'opacity:0;  left:20%;'
+              : 'left:20%; opacity:1;'
+          } 
           }
 
     
@@ -101,13 +117,17 @@ const Laptop = (props) => {
 
         60% { 
          ${
-           currentDotColor == 'blue'
+           currentDotColor == 'blue' && !isFlipped
              ? 'opacity:1; background:rgb(3, 21, 50);'
              : 'opacity:0;'
          }
-         ${currentDotColor == 'black' ? 'opacity:1; background:black;' : null}
          ${
-           currentDotColor == 'silver'
+           currentDotColor == 'black' && !isFlipped
+             ? 'opacity:1; background:black;'
+             : null
+         }
+         ${
+           currentDotColor == 'silver' && !isFlipped
              ? 'opacity:1; background:darkgrey;'
              : null
          }
@@ -117,61 +137,67 @@ const Laptop = (props) => {
 
         99% { 
           ${
-            currentDotColor == 'blue'
+            currentDotColor == 'blue' && !isFlipped
               ? 'opacity:1; background:rgb(3, 21, 50);'
               : 'opacity:0;'
           }
-          ${currentDotColor == 'black' ? 'opacity:1; background:black;' : null}
           ${
-            currentDotColor == 'silver'
+            currentDotColor == 'black' && !isFlipped
+              ? 'opacity:1; background:black;'
+              : null
+          }
+          ${
+            currentDotColor == 'silver' && !isFlipped
               ? 'opacity:1; background:darkgrey;'
               : null
           }
  
          }
 
-        99% {   ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}  
+        99% {   ${currentDotColor && !isFlipped ? 'opacity:1;' : 'opacity:0;'}  
        
           left:20%;
         
 
        
          ${
-           currentDotColor === 'blue'
+           currentDotColor === 'blue' && !isFlipped
              ? 'background:rgba(255, 214, 250, 1);'
              : null
          }
          ${
-           currentDotColor === 'black'
+           currentDotColor === 'black' && !isFlipped
              ? 'background:rgba(255, 214, 250, 1);'
              : null
          }
          ${
-           currentDotColor === 'silver'
+           currentDotColor === 'silver' && !isFlipped
              ? 'background:rgba(255, 214, 250, 1);'
              : null
          }
 
         }
 
-        100% {   ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}  
+        100% {   ${
+          currentDotColor && !isFlipped ? 'opacity:1;' : 'opacity:0;'
+        }  
        
         left:20%;
       
 
      
        ${
-         currentDotColor === 'blue'
+         currentDotColor === 'blue' && !isFlipped
            ? 'background:rgba(255, 214, 250, 0.8);'
            : null
        }
        ${
-         currentDotColor === 'black'
+         currentDotColor === 'black' && !isFlipped
            ? 'background:rgba(255, 214, 250, 0.8);'
            : null
        }
        ${
-         currentDotColor === 'silver'
+         currentDotColor === 'silver' && !isFlipped
            ? 'background:rgba(255, 214, 250, 1);'
            : null
        }
@@ -180,33 +206,33 @@ const Laptop = (props) => {
   `;
 
   const cameraBoxAnime = keyframes`
-  0% {   opacity:0;}
-  80% {   opacity:0;}
-   100% { ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}
+  0% {  ${!isFlipped} opacity:0;}
+  80% { ${!isFlipped}  opacity:0;}
+   100% { ${currentDotColor && !isFlipped ? 'opacity:1;' : 'opacity:0;'}
     }
   `;
 
   const phoneBottomBorderAnime = keyframes`
-  0% {   opacity:0;}
-  10% {   opacity:0;}
-  11% { ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}
+  0% {  ${!isFlipped}  opacity:0;}
+  10% {  ${!isFlipped} opacity:0;}
+  11% { ${currentDotColor && !isFlipped ? 'opacity:1;' : 'opacity:0;'}
 }
-  90% { ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}
+  90% { ${currentDotColor && !isFlipped ? 'opacity:1;' : 'opacity:0;'}
     }
-   100% { ${currentDotColor ? 'opacity:0;' : 'opacity:0;'}
+   100% { ${currentDotColor && !isFlipped ? 'opacity:0;' : 'opacity:0;'}
     }
   `;
 
   const frameAnime = keyframes`
-  0% {  opacity:0; }
-  90% {  opacity:0; }
-  100% { ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}
+  0% { ${!isFlipped} opacity:0; }
+  90% { ${!isFlipped} opacity:0; }
+  100% { ${currentDotColor && !isFlipped ? 'opacity:1;' : 'opacity:0;'}
   `;
 
   const phoneBottomAnime = keyframes`
-  0% {   opacity:0;}
-  90% {  opacity:0; }
-  100% { ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}
+  0% {  ${!isFlipped} opacity:0;}
+  90% { ${!isFlipped} opacity:0; }
+  100% { ${currentDotColor && !isFlipped ? 'opacity:1;' : 'opacity:0;'}
 
   `;
 
@@ -222,10 +248,6 @@ const Laptop = (props) => {
         <Frame
           frameAnime={frameAnime}
           className={`phone-part phone__frame phone__frame--${currentDotColor}`}
-
-          // className={`animation__dot animation__dot--${props.color}   ${
-          //   props.color === dotColor ? 'animation__dot--anime' : null
-          // }         `}
         ></Frame>
         <CameraBox
           cameraBoxAnime={cameraBoxAnime}
