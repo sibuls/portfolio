@@ -1,7 +1,5 @@
 .animation {
   position: relative;
-  // background-color: rgba(56, 51, 109, 0.612);
-  // border: rgb(148, 28, 15) dotted 5px;
   z-index: 1;
   top: 50%;
   left: 50%;
@@ -19,45 +17,61 @@
 
   &__phone-container {
     position: absolute;
-    // grid-area: phone;
+
     width: 50vw;
     height: 90vw;
-    top: 380px;
+    bottom: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     // border: 4px blueviolet dotted;
     z-index: 1;
 
     @media (min-width: 414px) {
-      top: 400px;
+      bottom: 20%;
     }
-  }
-
-  &__dots-container {
-    position: relative;
-    height: 25vw;
-    margin-left: 50vw;
-    transform: translate(-50%, -50%) scale(1.15);
-    z-index: 1;
-    // display: flex;
-    // justify-content: space-around;
-    // align-items: flex-end;
-    // border: red dotted 1px;
+    @media (min-height: 780px) {
+      width: 50vw;
+      height: 100vw;
+      // bottom: 30%;
+    }
   }
 
   &__laptop-container {
     position: absolute;
     width: 50vw;
     height: 100vw;
-    top: 1150px;
+    top: 50px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
+    // border: 2px dotted orange;
+  }
+  &__laptop-box {
+    position: absolute;
+    width: 50vw;
+    height: 100vw;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0%);
 
-    // grid-area: laptop;
-    border: 2px dotted yellow;
+    // border: 2px dotted white;
     z-index: 1;
   }
 
+  &__dots-box {
+    position: relative;
+    height: 35%;
+    width: 50vw;
+    // top: calc(44%); /*   0% - half dots size (20px)*/
+    top: 45%;
+    left: 50%;
+
+    transform: translate(-50%, 0%);
+    z-index: 2;
+    background: transparent;
+    // border: rgb(34, 255, 0) dotted 1px;
+    // transform: translate(-50%, -50%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);
+  }
+
   @media (max-resolution: 1dppx) and (min-width: 1280px) {
     width: 100vw;
     height: 50vw;
@@ -69,24 +83,23 @@
   }
 }
 
-.red {
-  width: 200px;
-  height: 300px;
+.back {
   position: relative;
+  width: 50vw;
+  height: 100vw;
 
-  // top: 1150px;
-  left: 20px;
-  background: rgba(255, 0, 0, 0.29);
-  border: white;
+  // grid-area: laptop;
+  // background: rgba(211, 72, 22, 0.249);
+
+  // border: 2px dotted red;
+  // z-index: 1;
 }
 
-.blue {
-  width: 200px;
-  height: 300px;
+.front {
   position: relative;
+  width: 50vw;
+  height: 100vw;
 
-  // top: 1150px;
-  left: 20px;
-  background: rgba(0, 0, 255, 0.249);
-  border: orange;
+  // background: rgba(0, 0, 255, 0.249);
+  // border: black dotted 2px;
 }

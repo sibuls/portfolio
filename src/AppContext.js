@@ -14,6 +14,7 @@ export const defaultObject = {
   prevDotColor: '',
   currentDotColor: '',
   isDotAnimated: false,
+  showWarning: false,
   handleBusinessCardClick: () => {},
   handleDotClick: () => {},
   handleRotateClick: () => {},

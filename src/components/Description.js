@@ -10,7 +10,7 @@ const Description = () => {
       onClick={() =>
         handleBusinessCardClick(
           'description',
-          'translate(-50%, 0%) skew(21deg, -5deg) scale(1.2) rotate(-2deg);'
+          'translate(-50%, 0%) skew(21deg, -5deg) scale(1.2) rotate(5deg);'
           // 'translate(-50%, 0%) skew(21deg, -5deg) scale(1.5) rotate(-32deg);'
         )
       }

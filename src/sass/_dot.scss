@@ -1,48 +1,52 @@
 .animation__dot {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 1.8rem;
+  height: 1.8rem;
   border-radius: 50%;
   border: double 3px rgb(114, 114, 114);
-  top: 100%;
+  top: -100%;
   transform: translate(-50%, -50%);
   z-index: 3;
-  left: 0;
+  left: 50%;
 
   &--anime {
     animation: dots ease-in 2s forwards;
-    top: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &--blue {
     background: rgb(3, 21, 50);
-    top: 100%;
-    left: 0;
+    top: -100%;
+
+    left: 25%;
   }
   &--black {
     background: rgb(0, 0, 0);
-    top: 100%;
+    top: -100%;
+
     left: 50%;
   }
 
   &--silver {
     background: darkgrey;
-    top: 100%;
-    left: 100%;
+    top: -100%;
+
+    left: 75%;
   }
 
   &--main {
-    top: 9%;
+    top: 20%;
   }
 
   &--top {
-    top: 18%;
+    top: 40%;
   }
   &--middle {
-    top: 26%;
+    top: 60%;
   }
   &--bottom {
-    top: 34%;
+    top: 80%;
   }
   &--opacity {
     opacity: 0;
@@ -50,68 +54,68 @@
 
   @keyframes dots {
     0% {
-      top: calc((100%) + 0);
+      top: -100%;
     }
     5% {
-      top: calc((100%) + 170px);
+      top: 80%;
     }
     10% {
-      top: calc((100%) + 90px);
+      top: 10%;
     }
     20% {
-      top: calc((100%) + 170px);
+      top: 80%;
     }
     25% {
-      top: calc((100%) + 95px);
+      top: 28%;
     }
     30% {
-      top: calc((100%) + 170px);
+      top: 80%;
     }
     35% {
-      top: calc((100%) + 90px);
+      top: 38%;
     }
     40% {
-      top: calc((100%) + 170px);
+      top: 80%;
     }
     45% {
-      top: calc((100%) + 100px);
+      top: 50%;
     }
     50% {
-      top: calc((100%) + 170px);
+      top: 80%;
     }
     55% {
-      top: calc((100%) + 120px);
+      top: 60%;
     }
     60% {
-      top: calc((100%) + 170px);
+      top: 80%;
     }
     65% {
       left: 20%;
-      top: calc((100%) + 140px);
+      top: 65%;
     }
     70% {
-      top: calc((100%) + 170px);
+      top: 80%;
     }
     75% {
-      top: calc((100%) + 150px);
+      top: 72%;
     }
     80% {
-      top: calc((100%) + 170px);
+      top: 80%;
     }
     85% {
-      top: calc((100%) + 160px);
+      top: 75%;
     }
     90% {
-      top: calc((100%) + 170px);
+      top: 80%;
     }
     90% {
-      top: calc((100%) + 165px);
+      top: 78%;
     }
 
     100% {
       left: 20%;
 
-      top: calc((100%) + 170px);
+      top: 80%;
     }
   }
 }

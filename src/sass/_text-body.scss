@@ -1,14 +1,55 @@
 .text-body {
   position: absolute;
   width: 100vw;
-  // height: 150%;
-  top: -40px;
-  // left: -50%;
+
   transform: skew(0deg, -8deg);
   background: $color-body;
   color: $color-font-body;
-  z-index: 1;
+
   text-align: center;
+
+  &--up {
+    height: 120vh;
+    // border: 4px rgb(73, 142, 99) dotted;
+    overflow: hidden;
+  }
+
+  // &--break {
+  //   position: absolute;
+
+  //   top: 100vh;
+  //   height: 100px;
+  //   background: rgba(106, 82, 82, 0.208);
+  // }
+  &--down {
+    top: 120vh;
+    height: 100vh;
+    padding-top: 150px;
+
+    background: rgba(213, 178, 178, 0.036);
+  }
+
+  &__phone-container {
+    position: absolute;
+
+    width: 50vw;
+    height: 90vw;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    // border: 4px blueviolet dotted;
+    z-index: 1;
+
+    @media (min-width: 414px) {
+      bottom: 20%;
+    }
+    @media (min-height: 780px) {
+      width: 50vw;
+      height: 100vw;
+      // bottom: 30%;
+    }
+  }
+
   &__paragraph {
     // color: red;
     position: relative;
@@ -16,15 +57,19 @@
     line-height: 1rem;
   }
 
+  & span {
+    padding: 0 2px;
+  }
   &__menu {
     color: rgb(218, 216, 216);
     padding: 0 2px;
     text-shadow: 0px 0px 8px white;
 
     // class for each menu in case to customize each of them
-    // &--about-me {
-    //   // color: blue;
-    // }
+    &--color {
+      position: absolute;
+      top: 20px;
+    }
   }
 
   &__info {

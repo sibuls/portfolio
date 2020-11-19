@@ -2,17 +2,21 @@ import React, { useContext, useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 
 import { AppContext } from '../AppContext';
-import Laptop from './Laptop';
-import Phone from './Phone';
-import Front from './Front';
-import Back from './Back';
+
+import CardBack from './CardBack';
+import CardFront from './CardFront';
 
 const Flip = () => {
   const { isFlipped } = useContext(AppContext);
   return (
-    <ReactCardFlip isFlipped={isFlipped} flipDirection='horizontal'>
-      <Back>This is the back of the card.</Back>
-      <Front>This is the front of the card.</Front>
+    <ReactCardFlip
+      isFlipped={isFlipped}
+      flipDirection='horizontal'
+      flipSpeedBackToFront='0.3'
+      flipSpeedFrontToBack='0.3'
+    >
+      <CardBack>This is the front of the card.</CardBack>
+      <CardFront>This is the front of the card.</CardFront>
     </ReactCardFlip>
   );
 };

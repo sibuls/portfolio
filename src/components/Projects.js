@@ -11,9 +11,9 @@ const Projects = () => {
       onClick={() =>
         handleBusinessCardClick(
           'projects',
-          'translate(-50%, 0%) skew(8deg, 5deg) scale(1.4) rotate(-90deg); ',
+          'translate(-50%, 0%) skew(8deg, 5deg) scale(1.2) rotate(-75deg); ',
 
-          '-10%' /* top -  default top is 30% */
+          '-20%' /* top -  default top is 0% */
         )
       }
     >

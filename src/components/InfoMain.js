@@ -5,9 +5,10 @@ import BusinessCard from './BusinessCard';
 import ContactInfo from './ContactInfo';
 import DescriptionInfo from './DescriptionInfo';
 import ProjectsInfo from './ProjectsInfo';
+import StartInfo from './StartInfo';
 import StepsInfo from './StepsInfo';
 
-const Info = () => {
+const InfoMain = () => {
   const { isAboutMeActive, menuActive } = useContext(AppContext);
 
   const menu = menuActive;
@@ -48,8 +49,19 @@ const Info = () => {
           </div>
         );
         break;
+      case 'main':
+        return (
+          <div className='info info--description'>
+            <StartInfo />
+          </div>
+        );
+        break;
       default:
-        return <div>Choose any option from cards. </div>;
+        return (
+          <div className='info info--description'>
+            <StartInfo />
+          </div>
+        );
       // code block
     }
   };
@@ -57,4 +69,4 @@ const Info = () => {
   return <React.Fragment>{menuSwitch(menu)}</React.Fragment>;
 };
 
-export default Info;
+export default InfoMain;

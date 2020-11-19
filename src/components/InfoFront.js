@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AboutMeInfo(props) {
+const InfoFront = () => {
   return (
     <div>
       <p className='screen-text speech'>
@@ -19,18 +19,8 @@ function AboutMeInfo(props) {
         got into it I knew that I want to turn it into a full-time job. We'll
         see what comes out...{' '}
       </p>
-
-      {/* <p className='screen-text'>I'm web designer</p>
-      <p className='screen-text'>
-        I'll make project of your webiste depending on your preferences.
-      </p>
-      <p className='screen-text'>I'm web developer</p>
-      <p className='screen-text'>
-        I'll translate this project to computer language so it can be
-        distributed worldwide
-      </p> */}
     </div>
   );
-}
+};
 
-export default AboutMeInfo;
+export default InfoFront;

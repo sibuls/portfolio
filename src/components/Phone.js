@@ -4,11 +4,12 @@ import { AppContext } from '../AppContext';
 
 import '../sass/style.scss';
 import styled, { css, keyframes, createGlobalStyle } from 'styled-components';
-import Info from './Info';
+
+import InfoMain from './InfoMain';
 
 // assign components to animations - have to be outside of the function, but we can get to all animation by props
 const DivAnimation = styled.div`
-  animation: 2s ${(props) => props.phoneShowMain} ease-out forwards;
+  animation: 0.5s ${(props) => props.phoneShowMain} ease-out forwards;
 `;
 
 const PhoneBottom = styled.div`
@@ -17,20 +18,16 @@ const PhoneBottom = styled.div`
 `;
 const Frame = styled.div`
   animation: 3s 0s ${(props) => props.frameAnime} ease-out 1;
-  // 4s 1s ${(props) => props.phoneToTabletFrame} ease-out forwards;
 `;
 const Screen = styled.div`
   animation: 5s 0s ${(props) => props.screenAnime} ease-out 1 // ,
 ;
 `;
 const Browser = styled.div`
-  animation: 
-  // 1s 0s ${(props) => props.phoneToTabletBrowser} ease-out forwards,
-    ${(props) => props.fadeTime} ${(props) => props.fade} ease-out 1;
+  animation: ${(props) => props.fadeTime} ${(props) => props.fade} ease-out 1;
 `;
 const Glass = styled.div`
   animation: 4s 0s ${(props) => props.glassAnime} ease-out 1;
-  // 4s 1.5s ${(props) => props.phoneToTabletGlass} ease-out forwards;
 `;
 const Button = styled.div`
   animation: 6s 0s ${(props) => props.accesoriesAnime} ease-out 1;
@@ -53,6 +50,8 @@ const Phone = (props) => {
 
     prevTop,
     currentTop,
+    showWarning,
+    handleBusinessCardClick,
   } = useContext(AppContext);
   //
   const animationStartTop = menuActive === 'start' ? '0%' : prevTop;
@@ -69,12 +68,8 @@ const Phone = (props) => {
   transform: ${prevTransform};
  }
 
- 
- 
- 
   100% {
   transform: ${currentTransform};
- 
   top: ${currentTop};
  }
   `;
@@ -95,7 +90,7 @@ const Phone = (props) => {
  100% {'opacity:1' }
  `;
 
-  // fist animation of phone parts - gold bottom
+  // first animation of phone parts - gold bottom
   const phoneBottomAnime = keyframes`
   0% {${menuActive === 'start' ? 'top: 60%; left: 51%; opacity:0;' : null}}
   `;
@@ -151,24 +146,11 @@ const Phone = (props) => {
   100% {${menuActive === 'steps' ? '  ' : null}}
   `;
 
-  // third animation of transform - browser
-
-  // const phoneToTabletScreen = keyframes`
-  // 0% {${menuActive === 'steps' ? '  background:black; ' : null}}
-  // 30% {${menuActive === 'steps' ? ' background:black;  ' : null}}
-
-  // 99% {${menuActive === 'steps' ? 'background:black;  ' : null}}
-
-  // 100% {${menuActive === 'steps' ? ' ' : null}}
-  // `;
-
   const phoneToTabletBrowser = keyframes`
   0% {${menuActive === 'steps' ? ' opacity:0;' : null}}
   60% {${menuActive === 'steps' ? '  opacity:0;' : null}}
   100% {${menuActive === 'steps' ? '  ' : null}}
   `;
-
-  // fourth animation of transform -accesories
 
   //--end animations: transform phone to tablet--
   //
@@ -177,14 +159,12 @@ const Phone = (props) => {
     <React.Fragment>
       <DivAnimation
         phoneShowMain={phoneShowMain}
-        // className='phone '
-        className='phone  '
+        className='phone  phone--main'
       >
         {' '}
         <Frame
           frameAnime={frameAnime}
           phoneToTabletFrame={phoneToTabletFrame}
-          // className='phone-part phone__frame'
           className='phone-part phone__frame phone__frame--gold'
         ></Frame>
         <Glass
@@ -194,18 +174,15 @@ const Phone = (props) => {
         ></Glass>
         <Screen
           screenAnime={screenAnime}
-          // phoneToTabletScreen={phoneToTabletScreen}
           className='phone-part phone__screen phone__screen--modelx'
         >
           <Browser
-            // screenTime={screenTime}
-            // screenFade={screenFade}
             fade={fade}
             fadeTime={fadeTime}
             phoneToTabletBrowser={phoneToTabletBrowser}
             className='phone__browser'
           >
-            <Info />
+            <InfoMain />
           </Browser>
         </Screen>
         <Microphone
@@ -218,16 +195,21 @@ const Phone = (props) => {
         ></Camera>
         <Button
           accesoriesAnime={accesoriesAnime}
-          className='phone-part phone__home-button'
-          className={`${
-            props.color === 'white'
-              ? 'phone-part phone__home-button phone__home-button--modelx'
-              : 'phone-part phone__home-button phone__home-button--black'
-          }`}
+          className='phone-part phone__home-button phone__home-button--modelx'
         >
-          {props.color === 'white' ? (
-            <div className='phone-part phone__home-button-inside'></div>
-          ) : null}
+          <div
+            className='phone-part phone__home-button-inside'
+            onClick={() =>
+              handleBusinessCardClick(
+                'main',
+                'translate(-50%, 0%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);',
+                '0%' /* top -  default top is 0% */,
+                menuActive === 'main' || menuActive === 'start'
+                  ? true
+                  : false /*  trigged fot button */
+              )
+            }
+          ></div>
         </Button>
         {/* <div className='phone-part phone__arrow'>
           <div className='phone-part  phone__triangle'></div>

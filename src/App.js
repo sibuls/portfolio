@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { AppContext, defaultObject } from './AppContext';
 import AnimationFrame from './components/AnimationFrame';
-import TextBody from './components/TextBody';
 
 const App = () => {
   // hooks
@@ -26,6 +25,8 @@ const App = () => {
 
   const [isFlipped, setIsFlipped] = useState(defaultObject.isFlipped);
 
+  const [showWarning, setShowWarning] = useState(defaultObject.showWarning);
+
   // end of  hooks
 
   // function which will get prevstate of our hooks
@@ -43,11 +44,12 @@ const App = () => {
 
   // handles
 
-  const handleBusinessCardClick = (menu, transform, top = '0%') => {
+  const handleBusinessCardClick = (menu, transform, top = '0%', warning) => {
     // /*  top deafult 0% , without default   'top' doesnt work well */
     setMenuActive(menu);
     setCurrentTransform(transform);
     setCurrentTop(top);
+    setShowWarning(warning);
   };
 
   const handleDotClick = (color) => {
@@ -56,7 +58,6 @@ const App = () => {
   };
 
   const handleRotateClick = () => {
-    console.log('app roate click !');
     setIsFlipped(!isFlipped);
   };
 
@@ -90,6 +91,7 @@ const App = () => {
           prevDotColor: prevDotColor,
           isFlipped: isFlipped,
           isDotAnimated: isDotAnimated,
+          showWarning: showWarning,
           handleBusinessCardClick: handleBusinessCardClick,
           handleDotClick: handleDotClick,
           handleRotateClick: handleRotateClick,
