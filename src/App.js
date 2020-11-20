@@ -25,6 +25,10 @@ const App = () => {
 
   const [isFlipped, setIsFlipped] = useState(defaultObject.isFlipped);
 
+  const [isFlippedDone, setIsFlippedDone] = useState(
+    defaultObject.isFlippedDone
+  );
+
   const [showWarning, setShowWarning] = useState(defaultObject.showWarning);
 
   // end of  hooks
@@ -56,6 +60,16 @@ const App = () => {
     setCurrentDotColor(color);
     setIsDotAnimated(true);
   };
+
+  const initialRotate = () => {
+    setIsFlippedDone(true);
+    setIsFlipped(true);
+    console.log('fliped odne aotate!!!!');
+  };
+
+  setTimeout(() => {
+    isDotAnimated && !isFlippedDone ? initialRotate() : null;
+  }, 12000);
 
   const handleRotateClick = () => {
     setIsFlipped(!isFlipped);
@@ -92,6 +106,7 @@ const App = () => {
           isFlipped: isFlipped,
           isDotAnimated: isDotAnimated,
           showWarning: showWarning,
+          isFlippedDone: isFlippedDone,
           handleBusinessCardClick: handleBusinessCardClick,
           handleDotClick: handleDotClick,
           handleRotateClick: handleRotateClick,

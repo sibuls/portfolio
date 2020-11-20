@@ -23,7 +23,7 @@ const PhoneFront = () => {
         </div> */}
 
       <div
-        className={`phone-part phone__bottom phone__bottom--${currentDotColor}`}
+        className={`phone-part phone__bottom phone__bottom--model-android phone__bottom--${currentDotColor}`}
       ></div>
     </div>
   );

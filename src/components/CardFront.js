@@ -8,11 +8,11 @@ const CardFront = () => {
 
   // hooks
 
-  const [isAnimated, setIsAnimated] = useState('front opacity');
+  // const [isAnimated, setIsAnimated] = useState('front opacity');
 
-  setTimeout(() => {
-    isDotAnimated ? setIsAnimated('front') : null;
-  }, 8000);
+  // setTimeout(() => {
+  //   isDotAnimated ? setIsAnimated('front') : null;
+  // }, 8000);
 
   return (
     <div className={isFlipped ? 'front   ' : 'front opacity '}>

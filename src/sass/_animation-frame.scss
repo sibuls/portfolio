@@ -38,8 +38,8 @@
 
   &__laptop-container {
     position: absolute;
-    width: 50vw;
-    height: 100vw;
+    width: 60vw;
+    height: 120vw;
     top: 50px;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -47,8 +47,8 @@
   }
   &__laptop-box {
     position: absolute;
-    width: 50vw;
-    height: 100vw;
+    width: 60vw;
+    height: 120vw;
     top: 40%;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -58,10 +58,10 @@
   }
 
   &__dots-box {
-    position: relative;
+    position: absolute;
     height: 35%;
-    width: 50vw;
-    // top: calc(44%); /*   0% - half dots size (20px)*/
+    width: 60vw;
+
     top: 45%;
     left: 50%;
 
@@ -85,8 +85,8 @@
 
 .back {
   position: relative;
-  width: 50vw;
-  height: 100vw;
+  width: 60vw;
+  height: 120vw;
 
   // grid-area: laptop;
   // background: rgba(211, 72, 22, 0.249);
@@ -96,9 +96,9 @@
 }
 
 .front {
+  width: 60vw;
+  height: 120vw;
   position: relative;
-  width: 50vw;
-  height: 100vw;
 
   // background: rgba(0, 0, 255, 0.249);
   // border: black dotted 2px;

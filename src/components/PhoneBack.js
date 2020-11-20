@@ -9,19 +9,19 @@ const DivAnimation = styled.div`
 `;
 
 const PhoneBottomBorder = styled.div`
-  animation: 9.2s 0s ${(props) => props.phoneBottomBorderAnime} ease-out
+  animation: 6.2s 0s ${(props) => props.phoneBottomBorderAnime} ease-out
     forwards;
 `;
 
 const PhoneBottom = styled.div`
-  animation: 7s 0s ${(props) => props.phoneBottomAnime} ease-out forwards;
+  animation: 5s 0s ${(props) => props.phoneBottomAnime} ease-out forwards;
 `;
 const Frame = styled.div`
-  animation: 7.1s 0s ${(props) => props.frameAnime} ease-out forwards;
+  animation: 5.1s 0s ${(props) => props.frameAnime} ease-out forwards;
 `;
 
 const CameraBox = styled.div`
-  animation: 5s 0s ${(props) => props.cameraBoxAnime} ease-out forwards;
+  animation: 3s 0s ${(props) => props.cameraBoxAnime} ease-out forwards;
 `;
 
 const BackCameraMain = styled.div`
@@ -139,10 +139,27 @@ const PhoneBack = () => {
   `;
 
   const cameraBoxAnime = keyframes`
-  0% {   background:transparent;
+ 
+  0% { ${
+    currentDotColor
+      ? 'border:white 1px solid; background:transparent;   box-shadow: 0px 0px 0px 0px #414141;'
+      : 'background:transparent;   box-shadow: 0px 0px 0px 0px #414141; '
   }
-  90% {   background:transparent;}
-   100% { ${currentDotColor ? 'background:black;' : 'background:transparent;'}
+   }
+ 
+
+    90% { ${
+      currentDotColor
+        ? 'border:white 1px solid; background:transparent;   box-shadow: 0px 0px 0px 0px #414141;'
+        : 'background:transparent;   box-shadow: 0px 0px 0px 0px #414141; '
+    }
+     }
+
+   100% { ${
+     currentDotColor
+       ? 'border:white 0px solid; background:black;  box-shadow: 1px 1px 0px 1px #414141;'
+       : 'background:transparent;  '
+   }
     }
   `;
 
