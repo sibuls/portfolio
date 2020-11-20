@@ -16,6 +16,7 @@ const AnimationFrame = () => {
     handleDotClick,
     handleRotateClick,
     isDotAnimated,
+    isFlippedDone,
   } = useContext(AppContext);
 
   // hooks declaration
@@ -44,7 +45,7 @@ const AnimationFrame = () => {
 
   setTimeout(() => {
     isDotAnimated ? setRotateClassName('text-body__menu') : null;
-  }, 8000);
+  }, 11000);
 
   return (
     <React.Fragment>
@@ -87,7 +88,7 @@ const AnimationFrame = () => {
 
           {sentenceLong}
           <span className={rotateClassName} onClick={handleRotateClick}>
-            rotate
+            Rotate phone
           </span>
           <Contact />
 

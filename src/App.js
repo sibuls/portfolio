@@ -8,6 +8,7 @@ const App = () => {
   const [isAboutMeActive, setIsAboutMeActive] = useState(
     defaultObject.isAboutMeActive
   );
+  const [count, setCount] = useState(0);
   const [menuActive, setMenuActive] = useState(defaultObject.menuActive);
 
   const [currentTransform, setCurrentTransform] = useState(
@@ -61,19 +62,19 @@ const App = () => {
     setIsDotAnimated(true);
   };
 
+  const handleRotateClick = () => {
+    setIsFlipped(!isFlipped);
+    setIsFlippedDone(true);
+  };
+
   const initialRotate = () => {
     setIsFlippedDone(true);
     setIsFlipped(true);
-    console.log('fliped odne aotate!!!!');
   };
 
   setTimeout(() => {
-    isDotAnimated && !isFlippedDone ? initialRotate() : null;
-  }, 12000);
-
-  const handleRotateClick = () => {
-    setIsFlipped(!isFlipped);
-  };
+    isDotAnimated && !isFlipped && !isFlippedDone ? initialRotate() : null;
+  }, 9000);
 
   const paper = () => {
     return {
