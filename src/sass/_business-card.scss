@@ -24,14 +24,15 @@
 
   &--glass {
     background: $color-background-orange;
-    background: rgb(28, 46, 37);
+    // background: rgba(82, 82, 82, 0.687);
+    background: rgba(63, 63, 63, 0.851);
     left: 50%;
-    top: 50%;
+    top: 52%;
     width: 104%;
-    height: 102%;
+    height: 106%;
     transform: translate(-50%, -50%);
     overflow: hidden;
-    opacity: 0.9;
+    // opacity: 0.9;
   }
 
   &__box {
@@ -39,7 +40,7 @@
     height: 100%;
     top: 50%;
     left: 50%;
-    border: white dotted 2px;
+    // border: white dotted 2px;
     transform: translate(-50%, -50%);
   }
 
@@ -114,6 +115,7 @@
       z-index: 3;
       transform: translate(-50%, -50%) rotate(10deg);
       opacity: 0.1;
+      border: grey 1px;
     }
 
     &--linkedin {

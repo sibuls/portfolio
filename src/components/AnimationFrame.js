@@ -100,6 +100,10 @@ const AnimationFrame = () => {
           {sentenceMedium}
           {sentenceShort}
           {sentenceShort}
+          {/*
+           */}
+          {sentenceMedium}
+          {sentenceMedium}
           <span
             className='text-body__menu   '
             onClick={() => handleFooterClick('email')}
