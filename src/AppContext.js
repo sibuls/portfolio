@@ -17,10 +17,14 @@ export const defaultObject = {
   isDotAnimated: false,
   showWarning: false,
   footer: 'start',
+  email: false,
+  linkedin: false,
   handleBusinessCardClick: () => {},
   handleDotClick: () => {},
   handleRotateClick: () => {},
   handleFooterClick: () => {},
+  handleEmailClick: () => {},
+  handleLinkedinClick: () => {},
 };
 
 export const AppContext = createContext(defaultObject);

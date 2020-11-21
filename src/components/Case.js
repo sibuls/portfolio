@@ -17,7 +17,7 @@ const Email = styled.div`
 `;
 
 const Case = () => {
-  const { footer } = useContext(AppContext);
+  const { footer, email, linkedin } = useContext(AppContext);
 
   const caseAnime = keyframes`
   0% {${footer === 'start' ? 'opacity:1' : ' opacity:1 '} }
@@ -28,19 +28,19 @@ const Case = () => {
  }`;
 
   const linkedinAnime = keyframes`
-         0% {${footer === 'linkedin' ? '  top: 50%; ' : '  top: -25%; '} }
+         0% {${linkedin ? '  top: 50%; ' : '  top: -8%; '} }
        
          100% { 
    
-            ${footer === 'linkedin' ? '  top: -25%; ' : '  top: 50%; '} 
+            ${linkedin ? '  top: -8%; ' : '  top: 50%; '} 
         }`;
 
   const emailAnime = keyframes`
-        0% {${footer === 'email' ? 'top: 50% ' : '  top: -15%; '} }
+        0% {${email ? 'top: 50% ' : '  top: -28%; '} }
       
         100% { 
         
-           ${footer === 'email' ? 'top: -15% ' : '  top: 50%; '} 
+           ${email ? 'top: -35% ' : '  top: 50%; '} 
        }`;
 
   console.log(footer);
@@ -50,16 +50,6 @@ const Case = () => {
         className='business-card business-card--case '
         caseAnime={caseAnime}
       >
-        <Linkedin
-          linkedinAnime={linkedinAnime}
-          className='business-card business-card__box business-card--hidden'
-        >
-          <BusinessCard
-            name={'linkedin'}
-            title={'Linkedin'}
-            content={'Sebastian Orlowski'}
-          />
-        </Linkedin>
         <Email
           emailAnime={emailAnime}
           className=' business-card  business-card__box business-card--hidden'
@@ -70,6 +60,16 @@ const Case = () => {
             content={'sebo.orlowski@gmail.com'}
           />
         </Email>
+        <Linkedin
+          linkedinAnime={linkedinAnime}
+          className='business-card business-card__box business-card--hidden'
+        >
+          <BusinessCard
+            name={'linkedin'}
+            title={'Linkedin'}
+            content={'Sebastian Orlowski'}
+          />
+        </Linkedin>
         <div className='business-card business-card--glass'>
           <p>Business cards </p>
           <p>holder</p>

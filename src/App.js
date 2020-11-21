@@ -32,7 +32,8 @@ const App = () => {
 
   const [showWarning, setShowWarning] = useState(defaultObject.showWarning);
 
-  const [footer, setFooter] = useState(defaultObject.footer);
+  const [email, setEmail] = useState(defaultObject.email);
+  const [linkedin, setLinkedin] = useState(defaultObject.linkedin);
   // end of  hooks
 
   // function which will get prevstate of our hooks
@@ -68,8 +69,12 @@ const App = () => {
     setIsFlippedDone(true);
   };
 
-  const handleFooterClick = (footer) => {
-    setFooter(footer);
+  const handleEmailClick = () => {
+    setEmail(!email);
+  };
+
+  const handleLinkedinClick = () => {
+    setLinkedin(!linkedin);
   };
 
   const initialRotate = () => {
@@ -113,11 +118,15 @@ const App = () => {
           isDotAnimated: isDotAnimated,
           showWarning: showWarning,
           isFlippedDone: isFlippedDone,
-          footer: footer,
+          // footer: footer,
+          linkedin: linkedin,
+          email: email,
           handleBusinessCardClick: handleBusinessCardClick,
           handleDotClick: handleDotClick,
           handleRotateClick: handleRotateClick,
-          handleFooterClick: handleFooterClick,
+          // handleFooterClick: handleFooterClick,
+          handleEmailClick: handleEmailClick,
+          handleLinkedinClick: handleLinkedinClick,
         }}
       >
         {' '}

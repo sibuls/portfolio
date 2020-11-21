@@ -20,6 +20,8 @@ const AnimationFrame = () => {
     handleDotClick,
     handleRotateClick,
     handleFooterClick,
+    handleEmailClick,
+    handleLinkedinClick,
   } = useContext(AppContext);
 
   // hooks declaration
@@ -106,24 +108,24 @@ const AnimationFrame = () => {
           {sentenceMedium}
           <span
             className='text-body__menu   '
-            onClick={() => handleFooterClick('email')}
+            onClick={() => handleEmailClick('email')}
           >
             Email
           </span>
           {sentenceMedium}
           <span
             className='text-body__menu   '
-            onClick={() => handleFooterClick('linkedin')}
+            onClick={() => handleLinkedinClick('linkedin')}
           >
             Linkedin
           </span>
           {sentenceMedium}
-          <span
+          {/* <span
             className='text-body__menu   '
             onClick={() => handleFooterClick('hide')}
           >
             Hide business cards
-          </span>
+          </span> */}
           {/* <Contact /> */}
           {sentenceLong} {sentenceLong}{' '}
           <div className='animation__laptop-container'>
