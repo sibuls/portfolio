@@ -70,7 +70,10 @@ const Case = () => {
             content={'sebo.orlowski@gmail.com'}
           />
         </Email>
-        <div className='business-card business-card--glass'></div>
+        <div className='business-card business-card--glass'>
+          <p>Business cards </p>
+          <p>holder</p>
+        </div>
         {/* <BusinessCard name={'glass'} /> */}
       </DivAnimation>{' '}
     </React.Fragment>
