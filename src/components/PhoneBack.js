@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AppContext } from '../AppContext';
 import '../sass/style.scss';
 import styled, { keyframes } from 'styled-components';
+import BusinessCard from './BusinessCard';
 
 // assign components to animations - have to be outside of the function, but we can get to all animation by props
 const DivAnimation = styled.div`
@@ -189,7 +190,7 @@ const PhoneBack = () => {
   const phoneBottomAnime = keyframes`
   0% {   opacity:0;}
   90% {   opacity:0; }
-  100% { ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}
+  100% { ${currentDotColor ? 'opacity:1;' : 'opacity:0;'}}
 
   `;
 

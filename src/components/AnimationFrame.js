@@ -9,14 +9,17 @@ import Contact from './Contact';
 import Dot from './Dot';
 import Flip from './Flip';
 import Phone from './Phone';
+import BusinessCard from './BusinessCard';
+import Case from './Case';
 
 const AnimationFrame = () => {
   const {
     dotColor,
-    handleDotClick,
-    handleRotateClick,
     isDotAnimated,
     isFlippedDone,
+    handleDotClick,
+    handleRotateClick,
+    handleFooterClick,
   } = useContext(AppContext);
 
   // hooks declaration
@@ -77,7 +80,7 @@ const AnimationFrame = () => {
             {/* <PhoneFront /> */}
           </div>
         </div>
-        <div className='text-body text-body--break'></div>
+
         <div className='text-body text-body--down'>
           {wordShort}
           <span className='text-body__menu  text-body__menu--color '>
@@ -85,13 +88,40 @@ const AnimationFrame = () => {
           </span>
           {sentenceShort}
           {/*  */}
-
           {sentenceLong}
+          {sentenceMedium}
           <span className={rotateClassName} onClick={handleRotateClick}>
             Rotate phone
           </span>
-          <Contact />
-
+          {sentenceMedium}
+          {sentenceMedium}
+          {sentenceMedium}
+          {sentenceMedium}
+          {sentenceMedium}
+          {sentenceShort}
+          {sentenceShort}
+          <span
+            className='text-body__menu   '
+            onClick={() => handleFooterClick('email')}
+          >
+            Email
+          </span>
+          {sentenceMedium}
+          <span
+            className='text-body__menu   '
+            onClick={() => handleFooterClick('linkedin')}
+          >
+            Linkedin
+          </span>
+          {sentenceMedium}
+          <span
+            className='text-body__menu   '
+            onClick={() => handleFooterClick('hide')}
+          >
+            Hide business cards
+          </span>
+          {/* <Contact /> */}
+          {sentenceLong} {sentenceLong}{' '}
           <div className='animation__laptop-container'>
             {' '}
             <div className='animation__dots-box'>
@@ -102,6 +132,11 @@ const AnimationFrame = () => {
             <div className='animation__laptop-box'>
               <Flip />
             </div>
+          </div>
+          <div className='footer'>
+            {' '}
+            {/* <div className='business-card business-card--case'></div> */}
+            <Case />
           </div>
         </div>
       </div>

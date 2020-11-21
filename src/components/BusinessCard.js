@@ -20,9 +20,9 @@ const BusinessCard = (props) => {
   const textFunctions =
     'import {AppContext} from ../AppContext  @media (min-width: 1280px) position: absolute width: 80%;height:80%';
   const card = (
-    <div className='business-card'>
+    <div className={`business-card business-card--${props.name}`}>
       <div className='business-card__title'>
-        <p className='business-card__content'>{props.text}</p>
+        <p className='business-card__paragraph'>{props.title}</p>
       </div>
 
       <div className='business-card__square business-card__square--hideTitle'></div>
@@ -32,7 +32,14 @@ const BusinessCard = (props) => {
       <div className='business-card__square business-card__square--textcode'>
         <p>{textCode}</p>
       </div>
-      <div className='business-card__square business-card__square--draw'>
+      <div
+        className={`business-card__square business-card__square--draw business-card__square--${props.name} `}
+      >
+        <div className='business-card__content'>
+          <p className='business-card__paragraph business-card__paragraph--content'>
+            {props.content}
+          </p>
+        </div>
         {pencil}
       </div>
       <div className='business-card__square business-card__square--small'></div>

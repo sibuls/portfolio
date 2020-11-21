@@ -164,7 +164,7 @@ const Phone = (props) => {
         {' '}
         <Frame
           frameAnime={frameAnime}
-          phoneToTabletFrame={phoneToTabletFrame}
+          // phoneToTabletFrame={phoneToTabletFrame}
           className='phone-part phone__frame phone__frame--gold'
         ></Frame>
         <Glass
@@ -179,7 +179,7 @@ const Phone = (props) => {
           <Browser
             fade={fade}
             fadeTime={fadeTime}
-            phoneToTabletBrowser={phoneToTabletBrowser}
+            // phoneToTabletBrowser={phoneToTabletBrowser}
             className='phone__browser'
           >
             <InfoMain />

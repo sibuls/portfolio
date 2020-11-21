@@ -12,84 +12,8 @@ body {
 }
 .wrapper {
   position: relative;
-  height: 250vh;
+  // min-height: 250vh;
   width: 100vw;
   overflow: hidden;
   background-color: $color-body;
-  // border: 12px dotted blue;
-  // display: flex;
-  // justify-content: center;
-  // justify-items: center;
-  // align-content: center;
-
-  // @media (max-resolution: 1dppx) and (min-width: 1280px) {
-  //   width: 100vw;
-  //   height: 50vw;
-  // }
-
-  // @media (max-resolution: 1dppx) and (min-width: 1280px) {
-  //   width: 100vw;
-  //   height: 50vw;
-  // }
-
-  // background: white;
 }
-
-// .topbar {
-//   display: none;
-
-//   @media (max-resolution: 1dppx) {
-//     position: absolute;
-//     top: 0;
-
-//     width: 100vw;
-//     height: 6.8vh;
-//     z-index: 4;
-//     background-color: white;
-//     border: black solid 2px;
-//     padding: 2vh 0 2vh 1rem;
-//     display: flex;
-//   }
-
-//   @media (max-resolution: 1dppx) and (min-width: 370px) and (max-width: 380px) {
-//     height: 8.5vh;
-//     padding: 3vh 0 3vh 1rem;
-//   }
-
-//   @media (min-width: 1024px) {
-//     display: none;
-//   }
-// }
-
-// .bottombar {
-//   display: none;
-
-//   // @media (max-resolution: 1dppx) {
-//   //   position: absolute;
-//   //   bottom: 0%;
-//   //   width: 100vw;
-//   //   height: 6.3vh;
-//   //   z-index: 4;
-//   //   background-color: white;
-//   //   border: black solid 2px;
-//   //   padding: 2vh 0 2vh 1rem;
-//   //   display: flex;
-//   //   // align-self: center;
-//   // }
-
-//   @media (max-resolution: 1dppx) and (min-width: 370px) and (max-width: 380px) {
-//     position: absolute;
-//     bottom: 0%;
-//     width: 100vw;
-//     height: 6vh;
-//     z-index: 4;
-//     background-color: rgb(136, 63, 63);
-//     border: black solid 2px;
-//     padding: 2vh 0 2vh 1rem;
-//     display: flex;
-//   }
-
-//   @media (min-width: 1024px) {
-//     display: none;
-//   }
-// }

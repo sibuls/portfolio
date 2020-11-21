@@ -1,0 +1,11 @@
+.footer {
+  position: absolute;
+  top: calc(168vw + 50px + 30vh);
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100vw;
+  height: 50vw;
+  //   border: blue dotted 4px;
+  //   background: red;
+  z-index: 4;
+}

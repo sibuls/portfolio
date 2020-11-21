@@ -32,6 +32,7 @@ const App = () => {
 
   const [showWarning, setShowWarning] = useState(defaultObject.showWarning);
 
+  const [footer, setFooter] = useState(defaultObject.footer);
   // end of  hooks
 
   // function which will get prevstate of our hooks
@@ -65,6 +66,10 @@ const App = () => {
   const handleRotateClick = () => {
     setIsFlipped(!isFlipped);
     setIsFlippedDone(true);
+  };
+
+  const handleFooterClick = (footer) => {
+    setFooter(footer);
   };
 
   const initialRotate = () => {
@@ -108,9 +113,11 @@ const App = () => {
           isDotAnimated: isDotAnimated,
           showWarning: showWarning,
           isFlippedDone: isFlippedDone,
+          footer: footer,
           handleBusinessCardClick: handleBusinessCardClick,
           handleDotClick: handleDotClick,
           handleRotateClick: handleRotateClick,
+          handleFooterClick: handleFooterClick,
         }}
       >
         {' '}

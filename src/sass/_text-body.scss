@@ -1,53 +1,30 @@
 .text-body {
-  position: absolute;
+  position: relative;
   width: 100vw;
-
   transform: skew(0deg, -8deg);
   background: $color-body;
   color: $color-font-body;
-
   text-align: center;
 
   &--up {
     height: 120vh;
     // border: 4px rgb(73, 142, 99) dotted;
     overflow: hidden;
+    // border: 4px dotted red;
   }
 
-  // &--break {
-  //   position: absolute;
-
-  //   top: 100vh;
-  //   height: 100px;
-  //   background: rgba(106, 82, 82, 0.208);
-  // }
+  &--footer {
+    height: 50vh;
+    // background: rgba(22, 115, 155, 0.208);
+  }
   &--down {
-    top: 120vh;
-    height: 100vh;
+    // top: 120vh;
+    height: 200vh;
     padding-top: 150px;
+    // border: 4px dotted yellow;
 
-    background: rgba(213, 178, 178, 0.036);
-  }
-
-  &__phone-container {
-    position: absolute;
-
-    width: 50vw;
-    height: 90vw;
-    bottom: 20%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    // border: 4px blueviolet dotted;
-    z-index: 1;
-
-    @media (min-width: 414px) {
-      bottom: 20%;
-    }
-    @media (min-height: 780px) {
-      width: 50vw;
-      height: 100vw;
-      // bottom: 30%;
-    }
+    // background: rgba(135, 36, 36, 0.495);
+    padding-bottom: 40px;
   }
 
   &__paragraph {

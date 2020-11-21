@@ -1,12 +1,11 @@
 .animation {
   position: relative;
   z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
   width: 100vw;
-  height: 250vh;
+  // height: 250vh;
   align-content: flex-start;
+  // border: brown 4px dotted;
 
   // display: grid;
   // grid-template:

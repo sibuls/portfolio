@@ -16,9 +16,11 @@ export const defaultObject = {
   currentDotColor: '',
   isDotAnimated: false,
   showWarning: false,
+  footer: 'start',
   handleBusinessCardClick: () => {},
   handleDotClick: () => {},
   handleRotateClick: () => {},
+  handleFooterClick: () => {},
 };
 
 export const AppContext = createContext(defaultObject);
