@@ -52,7 +52,7 @@ const Case = () => {
       >
         <Email
           emailAnime={emailAnime}
-          className=' business-card  business-card__box business-card--hidden'
+          className=' business-card  business-card__box  '
         >
           <BusinessCard
             name={'email'}
@@ -62,7 +62,7 @@ const Case = () => {
         </Email>
         <Linkedin
           linkedinAnime={linkedinAnime}
-          className='business-card business-card__box business-card--hidden'
+          className='business-card business-card__box business-card__box--linkedin '
         >
           <BusinessCard
             name={'linkedin'}

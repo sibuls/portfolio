@@ -3,7 +3,7 @@ import { AppContext } from '../AppContext';
 
 import PhoneBack from './PhoneBack';
 
-const CardBack = () => {
+const CardBack = (props) => {
   // AppContext
   const { isFlipped } = useContext(AppContext);
 
