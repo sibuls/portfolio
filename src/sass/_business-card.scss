@@ -155,7 +155,9 @@
       z-index: 3;
       transform: translate(-50%, -50%) rotate(10deg);
       opacity: 1;
-      animation: movecard 2s ease-in infinite;
+      // &--move {
+      //   animation: movecard 2s ease-in infinite;
+      // }
     }
     &--email {
       top: 80%;
@@ -165,6 +167,9 @@
       z-index: 3;
       transform: translate(-50%, -50%) rotate(10deg);
       opacity: 1;
+      // &--move {
+      //   animation: movecard 2s ease-in infinite;
+      // }
     }
 
     &--hideTitle {
@@ -216,20 +221,20 @@
   }
 }
 
-@keyframes movecard {
-  0% {
-    top: 70%;
-  }
-  25% {
-    top: 65%;
-  }
-  50% {
-    top: 60%;
-  }
-  75% {
-    top: 65%;
-  }
-  100% {
-    top: 70%;
-  }
-}
+// @keyframes movecard {
+//   0% {
+//     top: 70%;
+//   }
+//   25% {
+//     top: 68%;
+//   }
+//   50% {
+//     top: 65%;
+//   }
+//   75% {
+//     top: 68%;
+//   }
+//   100% {
+//     top: 70%;
+//   }
+// }

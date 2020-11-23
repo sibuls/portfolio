@@ -19,6 +19,14 @@
   &--description {
     top: 10%;
     right: 10%;
+    color: orange;
+
+    @media (min-width: 481px) and (max-width: 767px) {
+      color: blue;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      color: red;
+    }
   }
   &--steps {
     top: 12%;
@@ -34,7 +42,7 @@
     transform: translateY(-100%);
   }
   &--email {
-    top: 5%;
+    top: 10%;
     right: 10%;
     z-index: 99;
   }

@@ -27,7 +27,10 @@ body {
   @media (min-height: 780px) {
     height: 250vh;
   }
-  @media (min-height: 1024px) {
-    height: 290vh;
+  @media (min-width: 481px) and (max-width: 767px) {
+    height: 330vh;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    height: 330vh;
   }
 }

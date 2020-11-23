@@ -35,6 +35,7 @@ const App = () => {
 
   const [email, setEmail] = useState(defaultObject.email);
   const [linkedin, setLinkedin] = useState(defaultObject.linkedin);
+  // const [footer, setFooter] = useState(defaultObject.footer);
   // end of  hooks
 
   // function which will get prevstate of our hooks
@@ -72,10 +73,12 @@ const App = () => {
 
   const handleEmailClick = () => {
     setEmail(!email);
+    // setFooter('email');
   };
 
   const handleLinkedinClick = () => {
     setLinkedin(!linkedin);
+    // setFooter('linkedin');
   };
 
   const initialRotate = () => {
@@ -127,7 +130,7 @@ const App = () => {
           handleBusinessCardClick: handleBusinessCardClick,
           handleDotClick: handleDotClick,
           handleRotateClick: handleRotateClick,
-          // handleFooterClick: handleFooterClick,
+
           handleEmailClick: handleEmailClick,
           handleLinkedinClick: handleLinkedinClick,
         }}
