@@ -1,14 +1,10 @@
 .animation {
   position: absolute;
-  // z-index: 1;
 
   width: 100vw;
-  height: 250vh;
+  height: 100%;
   top: 0;
   left: 0;
-  // height: 250vh;
-  // align-content: flex-start;
-  // border: brown 4px dotted;
 
   display: grid;
   grid-template:
@@ -19,90 +15,106 @@
   grid-template-rows: auto auto auto;
   grid-template-columns: auto;
 
-  // background-color: rgba(255, 0, 0, 0.432);
-  // border: white 4px dotted;
-
-  &__android {
-    // padding-top: 150px;
-    position: relative;
-    background: rgba(34, 162, 216, 0.762);
-    // background: rgb(17, 70, 39);
-
-    // padding-bottom: 40px;
-    // overflow: hidden;
-    grid-area: android;
-    height: 120vh;
-  }
   &__iphone {
-    // overflow: hidden;
     position: relative;
-    background: rgba(143, 82, 7, 0.427);
-    // background: rgb(17, 70, 39);
-
+    border: rgb(171, 111, 8) dotted 2px;
     grid-area: iphone;
     height: 100vh;
-  }
 
+    // media query
+
+    @media (min-height: 720px) {
+      height: 90vh;
+    }
+    @media (min-height: 780px) {
+      height: 90vh;
+    }
+    @media (min-height: 1024px) {
+      height: 100vh;
+    }
+  }
+  &__android {
+    position: relative;
+    grid-area: android;
+    height: 120vh;
+    border: rgb(17, 150, 173) dotted 2px;
+
+    // media query
+    @media (min-height: 720px) {
+      height: 110vh;
+    }
+    @media (min-height: 780px) {
+      height: 100vh;
+    }
+    @media (min-height: 1024px) {
+      height: 120vh;
+    }
+  }
   &__footer {
     position: relative;
-    // border: 4px dotted rgb(15, 10, 72);
-    background: rgb(17, 70, 39);
     grid-area: footer;
+    border: rgb(232, 229, 229) dotted 1px;
+    height: 70vh;
+
+    // media query
+    @media (min-height: 720px) {
+      height: 60vh;
+    }
+    @media (min-height: 780px) {
+      height: 60vh;
+    }
+    @media (min-height: 1024px) {
+      height: 70vh;
+    }
   }
 
   &__iphone-container {
     position: relative;
 
-    height: 120vh;
     width: 50vw;
     height: 90vw;
-    // bottom: 20%;
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // border: 4px blueviolet dotted;
-    z-index: 1;
-    // height: 100vh;
 
-    @media (min-width: 414px) {
-      // bottom: 20%;
-    }
-    @media (min-height: 780px) {
-      width: 50vw;
-      height: 100vw;
-      // bottom: 30%;
+    z-index: 1;
+
+    @media (min-height: 1024px) {
+      width: 40vw;
+      height: 80vw;
     }
   }
 
   &__android-container {
     position: absolute;
     width: 60vw;
-    height: 120vw;
-    top: 50px;
+    height: 162vw; /* android-box size + dots-box size  */
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0%);
-    // border: 2px dotted orange;
-    // height: 150vh;
-    background: rgba(209, 158, 29, 0.564);
+    transform: translate(-50%, -50%);
   }
   &__android-box {
     position: absolute;
     width: 60vw;
     height: 120vw;
-    top: 40%;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    background: rgba(139, 189, 110, 0.345);
-    // border: 2px dotted white;
+
     z-index: 1;
   }
 
   &__footer-container {
     position: relative;
+    top: 60%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) skew(22deg, -5deg) rotate(10deg);
 
-    width: 100vw;
-    height: 50vw;
-    // border: white 2px solid;
+    width: 70vw;
+    height: 35vw;
+    border: dotted 1px grey;
   }
 
   &__dots-box {
@@ -110,15 +122,26 @@
     height: 35%;
     width: 60vw;
 
-    top: 45%;
+    top: 5%;
     left: 50%;
 
     transform: translate(-50%, 0%);
     z-index: 2;
     background: transparent;
-    background-color: rgba(255, 0, 0, 0.303);
-    // border: rgb(34, 255, 0) dotted 1px;
-    // transform: translate(-50%, -50%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);
+
+    &--cover {
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+
+      top: -100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+
+      background-color: $color-body;
+      background-color: rgba(10, 45, 10, 0.534);
+    }
   }
 
   @media (max-resolution: 1dppx) and (min-width: 1280px) {
@@ -142,6 +165,11 @@
 
   // border: 2px dotted red;
   // z-index: 1;
+
+  // @media (min-height: 1024px) {
+  //   width: 50vw;
+  //   height: 100vw;
+  // }
 }
 
 .front {
@@ -151,4 +179,9 @@
 
   // background: rgba(0, 0, 255, 0.249);
   // border: black dotted 2px;
+
+  // @media (min-height: 1024px) {
+  //   width: 50vw;
+  //   height: 100vw;
+  // }
 }

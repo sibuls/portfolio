@@ -8,30 +8,31 @@
   transform: translate(-50%, -50%);
   z-index: 3;
   left: 50%;
-  // background-color: $color-body;
+  background-color: $color-body;
 
   &--anime {
     animation: dots ease-in 2s forwards;
     top: 50%;
-    transform: translate(-50%, -50%);
+
+    // transform: translate(-50%, -50%);
   }
 
   &--blue {
     background: rgb(3, 21, 50);
-    top: -100%;
+    // top: -100%;
 
     left: 25%;
   }
   &--black {
     background: rgb(0, 0, 0);
-    top: -100%;
+    // top: -100%;
 
     left: 50%;
   }
 
   &--silver {
     background: darkgrey;
-    top: -100%;
+    // top: -100%;
 
     left: 75%;
   }

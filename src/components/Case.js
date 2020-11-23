@@ -17,7 +17,13 @@ const Email = styled.div`
 `;
 
 const Case = () => {
-  const { footer, email, linkedin } = useContext(AppContext);
+  const {
+    footer,
+    email,
+    linkedin,
+    handleLinkedinClick,
+    handleEmailClick,
+  } = useContext(AppContext);
 
   const caseAnime = keyframes`
   0% {${footer === 'start' ? 'opacity:1' : ' opacity:1 '} }
@@ -53,6 +59,7 @@ const Case = () => {
         <Email
           emailAnime={emailAnime}
           className=' business-card  business-card__box  '
+          // onClick={() => handleEmailClick('email')}
         >
           <BusinessCard
             name={'email'}
@@ -63,6 +70,7 @@ const Case = () => {
         <Linkedin
           linkedinAnime={linkedinAnime}
           className='business-card business-card__box business-card__box--linkedin '
+          // onClick={() => handleLinkedinClick('linkedin')}
         >
           <BusinessCard
             name={'linkedin'}

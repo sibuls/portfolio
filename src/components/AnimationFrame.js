@@ -53,19 +53,20 @@ const AnimationFrame = () => {
     <React.Fragment>
       <div className='animation'>
         <div className='animation__android'>
-          <span className='menu  menu--color '>
-            Choose your favourite color:{' '}
-          </span>
-
           {rotate}
 
           <div className='animation__android-container'>
-            <div className='animation__dots-box'>
-              <Dot color={'blue'} />
-              <Dot color={'black'} />
-              <Dot color={'silver'} />
-            </div>
             <div className='animation__android-box'>
+              <div className='animation__dots-box'>
+                <div className='animation__dots-box animation__dots-box--cover'>
+                  <span className='menu  menu--color '>
+                    Choose your favourite color:{' '}
+                  </span>
+                </div>
+                <Dot color={'blue'} />
+                <Dot color={'black'} />
+                <Dot color={'silver'} />
+              </div>
               <Flip />
             </div>
           </div>
@@ -81,20 +82,21 @@ const AnimationFrame = () => {
           </div>
         </div>
         <div className='animation__footer'>
+          {' '}
+          <span
+            className='menu menu--email  '
+            onClick={() => handleEmailClick('email')}
+          >
+            Email
+          </span>
+          <span
+            className='menu  menu--linkedin '
+            onClick={() => handleLinkedinClick('linkedin')}
+          >
+            Linkedin
+          </span>
           <div className='animation__footer-container'>
             <Case />
-            <span
-              className='menu menu--email  '
-              onClick={() => handleEmailClick('email')}
-            >
-              Email
-            </span>
-            <span
-              className='menu  menu--linkedin '
-              onClick={() => handleLinkedinClick('linkedin')}
-            >
-              Linkedin
-            </span>
           </div>
         </div>
       </div>

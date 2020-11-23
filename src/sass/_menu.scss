@@ -1,44 +1,46 @@
 .menu {
   position: absolute;
-  color: rgb(228, 226, 226);
+  // transform: translate(-50%, -50%);
 
-  text-shadow: 2px -2px 6px rgba(254, 254, 254, 0.788);
+  color: rgb(255, 255, 255);
   font-size: 1rem;
-
-  // &__info {
-  //   color: rgb(83, 21, 21);
-  // }
+  letter-spacing: 0.1rem;
+  text-shadow: 1px 1px 14px rgba(158, 153, 153, 0.502);
 
   &--color {
-    top: 2vh;
+    top: 15%;
     left: 10%;
+    text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
   }
   &--aboutme {
-    top: 5%;
-    left: 10%;
+    top: 3%;
+    left: 15%;
   }
   &--description {
     top: 10%;
     right: 10%;
   }
   &--steps {
-    top: 10%;
-    left: 10%;
+    top: 12%;
+    left: 5%;
   }
   &--projects {
-    top: 80%;
+    bottom: 10%;
     left: 10%;
   }
   &--rotate {
-    top: 80%;
-    left: 5%;
+    bottom: 0%;
+    left: 25%;
+    transform: translateY(-100%);
   }
   &--email {
-    top: 80%;
-    left: 5%;
+    top: 5%;
+    right: 10%;
+    z-index: 99;
   }
   &--linkedin {
-    top: 80%;
-    left: 5%;
+    bottom: 10%;
+    left: 35%;
+    z-index: 99;
   }
 }

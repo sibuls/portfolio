@@ -2,7 +2,8 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100vw;
-  height: 250vh;
+  // height: 320vh;
+  background-color: $color-body;
 }
 
 .none {
@@ -17,6 +18,16 @@ body {
   width: 100vw;
   overflow: hidden;
   // background-color: $color-body;
-  height: 250vh;
+  height: 290vh;
   transform: skew(0deg, -8deg);
+
+  @media (min-height: 720px) {
+    height: 260vh;
+  }
+  @media (min-height: 780px) {
+    height: 250vh;
+  }
+  @media (min-height: 1024px) {
+    height: 290vh;
+  }
 }

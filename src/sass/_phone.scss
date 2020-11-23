@@ -18,16 +18,16 @@
     height: 100%;
   }
 
-  &--front {
-    // left: 0%;
-    // transform: translate(-50%, -50%);
-    // border-radius: 30px;
-  }
-  &--back {
-    // left: 0%;
-    // transform: translate(-50%, -50%);
-    // border-radius: 30px;
-  }
+  // &--front {
+  //   // left: 0%;
+  //   // transform: translate(-50%, -50%);
+  //   // border-radius: 30px;
+  // }
+  // &--back {
+  //   // left: 0%;
+  //   // transform: translate(-50%, -50%);
+  //   // border-radius: 30px;
+  // }
   &-part {
     position: absolute;
     width: 100%;
@@ -38,6 +38,9 @@
     top: 0%;
     left: 0%;
     border-radius: 25px;
+    @media (min-height: 1024px) {
+      border-radius: 50px;
+    }
 
     &--gold {
       border: 1px $color-phone-frame solid;
@@ -49,16 +52,25 @@
       background: $color-phone-black;
       border: 1px black solid;
       border-radius: 30px;
+      @media (min-height: 1024px) {
+        border-radius: 60px;
+      }
     }
     &--blue {
       background: $color-phone-blue;
       border: 1px rgb(34, 48, 72) solid;
       border-radius: 30px;
+      @media (min-height: 1024px) {
+        border-radius: 60px;
+      }
     }
     &--silver {
       background: $color-phone-silver;
       border: 1px rgb(97, 97, 97) solid;
       border-radius: 30px;
+      @media (min-height: 1024px) {
+        border-radius: 60px;
+      }
     }
   }
 
@@ -71,6 +83,9 @@
     box-shadow: -1px 1px 2px 0px grey;
     z-index: 1;
     border-radius: 25px;
+    @media (min-height: 1024px) {
+      border-radius: 50px;
+    }
   }
 
   &__screen {
@@ -104,6 +119,9 @@
       left: 1%;
       top: 1%;
       border-radius: 30px;
+      @media (min-height: 1024px) {
+        border-radius: 60px;
+      }
 
       border-top: black 0.8rem solid;
       border-bottom: black 1.2rem solid;
@@ -126,6 +144,10 @@
     left: -3%;
     border-radius: 25px;
     z-index: -1;
+
+    @media (min-height: 1024px) {
+      border-radius: 60px;
+    }
 
     &--gold {
       background: linear-gradient(
@@ -166,10 +188,17 @@
     &--border {
       border: 1px solid rgb(215, 215, 215);
       background: rgba(255, 255, 255, 0);
+
+      @media (min-height: 1024px) {
+        border-radius: 50px;
+      }
     }
 
     &--model-android {
       border-radius: 30px;
+      @media (min-height: 1024px) {
+        border-radius: 60px;
+      }
     }
   }
 
