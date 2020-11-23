@@ -1,32 +1,71 @@
 .animation {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  // z-index: 1;
 
   width: 100vw;
+  height: 250vh;
+  top: 0;
+  left: 0;
   // height: 250vh;
-  align-content: flex-start;
+  // align-content: flex-start;
   // border: brown 4px dotted;
 
-  // display: grid;
-  // grid-template:
-  //   'phone'
-  //   'laptop';
-  // grid-template-rows:  auto;
-  // grid-template-columns: auto;
+  display: grid;
+  grid-template:
+    'iphone'
+    'android'
+    'footer';
 
-  &__phone-container {
-    position: absolute;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
 
+  // background-color: rgba(255, 0, 0, 0.432);
+  // border: white 4px dotted;
+
+  &__android {
+    // padding-top: 150px;
+    position: relative;
+    background: rgba(34, 162, 216, 0.762);
+    // background: rgb(17, 70, 39);
+
+    // padding-bottom: 40px;
+    // overflow: hidden;
+    grid-area: android;
+    height: 120vh;
+  }
+  &__iphone {
+    // overflow: hidden;
+    position: relative;
+    background: rgba(143, 82, 7, 0.427);
+    // background: rgb(17, 70, 39);
+
+    grid-area: iphone;
+    height: 100vh;
+  }
+
+  &__footer {
+    position: relative;
+    // border: 4px dotted rgb(15, 10, 72);
+    background: rgb(17, 70, 39);
+    grid-area: footer;
+  }
+
+  &__iphone-container {
+    position: relative;
+
+    height: 120vh;
     width: 50vw;
     height: 90vw;
-    bottom: 20%;
+    // bottom: 20%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: translate(-50%, -50%);
     // border: 4px blueviolet dotted;
     z-index: 1;
+    // height: 100vh;
 
     @media (min-width: 414px) {
-      bottom: 20%;
+      // bottom: 20%;
     }
     @media (min-height: 780px) {
       width: 50vw;
@@ -35,7 +74,7 @@
     }
   }
 
-  &__laptop-container {
+  &__android-container {
     position: absolute;
     width: 60vw;
     height: 120vw;
@@ -43,17 +82,27 @@
     left: 50%;
     transform: translate(-50%, 0%);
     // border: 2px dotted orange;
+    // height: 150vh;
+    background: rgba(209, 158, 29, 0.564);
   }
-  &__laptop-box {
+  &__android-box {
     position: absolute;
     width: 60vw;
     height: 120vw;
     top: 40%;
     left: 50%;
     transform: translate(-50%, 0%);
-
+    background: rgba(139, 189, 110, 0.345);
     // border: 2px dotted white;
     z-index: 1;
+  }
+
+  &__footer-container {
+    position: relative;
+
+    width: 100vw;
+    height: 50vw;
+    // border: white 2px solid;
   }
 
   &__dots-box {
@@ -67,6 +116,7 @@
     transform: translate(-50%, 0%);
     z-index: 2;
     background: transparent;
+    background-color: rgba(255, 0, 0, 0.303);
     // border: rgb(34, 255, 0) dotted 1px;
     // transform: translate(-50%, -50%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);
   }

@@ -7,13 +7,13 @@ const Projects = () => {
 
   return (
     <span
-      className='text-body__menu text-body__menu--projects'
+      className='menu menu--projects'
       onClick={() =>
         handleBusinessCardClick(
           'projects',
-          'translate(-50%, 0%) skew(8deg, 5deg) scale(1.2) rotate(-75deg); ',
+          'translate(-50%, 0%) skew(8deg, 5deg) scale(1.2) rotate(-95deg); ',
 
-          '-20%' /* top -  default top is 0% */
+          '0%' /* top -  default top is 0% */
         )
       }
     >

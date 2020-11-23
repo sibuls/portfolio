@@ -1,129 +1,44 @@
 .menu {
-  position: relative;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: 15%;
-}
+  position: absolute;
+  color: rgb(228, 226, 226);
 
-// .about-me {
-//   position: relative;
-//   // top: 15%;
-//   // left: 25%;
-//   // z-index: -6;
-//   // transform: translate(-50%, -50%) rotate(-15deg);
-//   text-align: right;
-//   z-index: 3;
-//   text-decoration: underline;
+  text-shadow: 2px -2px 6px rgba(254, 254, 254, 0.788);
+  font-size: 1rem;
 
-//   &--unorganized {
-//     left: 70%;
-//     transform: translate(-50%, -50%) rotate(-5deg);
+  // &__info {
+  //   color: rgb(83, 21, 21);
+  // }
 
-//     left: 28%;
-//     z-index: 1;
-//     transform: translate(-50%, -50%) rotate(0deg);
-//     text-align: left;
-//     top: 15%;
-//     z-index: 2;
-//   }
-// }
-
-.description {
-  top: 19%;
-  left: 40%;
-  z-index: -5;
-  transform: translate(-50%, -50%) rotate(-10deg);
-  text-align: right;
-  z-index: 3;
-
-  &--unorganized {
-    top: 21%;
-    left: 70%;
-    transform: translate(-50%, -50%) rotate(0deg);
-
-    top: 82%;
-    left: 35%;
-    left: 28%;
-    z-index: 2;
-    transform: translate(-50%, -50%) rotate(-5deg);
-    text-align: left;
-    top: 21%;
-    z-index: 4;
+  &--color {
+    top: 2vh;
+    left: 10%;
   }
-}
-
-.steps {
-  top: 23%;
-  left: 55%;
-  z-index: -1;
-  transform: translate(-50%, -50%) rotate(-5deg);
-  text-align: right;
-  z-index: 5;
-
-  &--unorganized {
-    top: 27%;
-    left: 22%;
-    transform: translate(-50%, -50%) rotate(5deg);
-
-    left: 28%;
-    z-index: 2;
-    transform: translate(-50%, -50%) rotate(-5deg);
-    text-align: left;
-
-    z-index: 4;
+  &--aboutme {
+    top: 5%;
+    left: 10%;
   }
-}
-
-// .responsive {
-//   top: 32%;
-//   left: 70%;
-//   z-index: -1;
-//   transform: translate(-50%, -50%) rotate(0deg);
-//   text-align: right;
-
-//   &--unorganized {
-//     top: 44%;
-//     right: -33%;
-//     transform: translate(-50%, -50%) rotate(-20deg);
-//   }
-// }
-.projects {
-  top: 80%;
-
-  left: 37%;
-  z-index: 1;
-  transform: translate(-50%, -50%) rotate(0deg);
-  text-align: left;
-
-  &--unorganized {
-    top: 15%;
-    left: 25%;
-    z-index: -6;
-    transform: translate(-50%, -50%) rotate(-15deg);
-    text-align: right;
-    z-index: 3;
-    left: 70%;
-    transform: translate(-50%, -50%) rotate(-5deg);
+  &--description {
+    top: 10%;
+    right: 10%;
   }
-}
-
-.contact {
-  top: 86%;
-
-  left: 37%;
-  z-index: 2;
-  transform: translate(-50%, -50%) rotate(-5deg);
-  text-align: left;
-
-  &--unorganized {
-    top: 19%;
-    left: 40%;
-    z-index: -5;
-    transform: translate(-50%, -50%) rotate(-10deg);
-    text-align: right;
-    z-index: 5;
-    top: 21%;
-    left: 70%;
-    transform: translate(-50%, -50%) rotate(0deg);
+  &--steps {
+    top: 10%;
+    left: 10%;
+  }
+  &--projects {
+    top: 80%;
+    left: 10%;
+  }
+  &--rotate {
+    top: 80%;
+    left: 5%;
+  }
+  &--email {
+    top: 80%;
+    left: 5%;
+  }
+  &--linkedin {
+    top: 80%;
+    left: 5%;
   }
 }

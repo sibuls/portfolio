@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { AppContext, defaultObject } from './AppContext';
 import AnimationFrame from './components/AnimationFrame';
+import Background from './components/Background';
 
 const App = () => {
   // hooks
@@ -104,6 +105,8 @@ const App = () => {
 
   return (
     <div className='wrapper'>
+      <Background />
+
       <AppContext.Provider
         value={{
           isAboutMeActive: isAboutMeActive,

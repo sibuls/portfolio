@@ -7,7 +7,7 @@ const AboutMe = () => {
 
   return (
     <span
-      className='text-body__menu text-body__menu--about-me'
+      className='menu menu--aboutme'
       onClick={() =>
         handleBusinessCardClick(
           'aboutme',

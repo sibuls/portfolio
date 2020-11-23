@@ -6,7 +6,7 @@ const Contact = () => {
 
   return (
     <span
-      className='text-body__menu text-body__menu--contact'
+      className='menu menu--contact'
       onClick={() =>
         handleBusinessCardClick(
           'contact',
