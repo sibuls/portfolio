@@ -67,7 +67,10 @@ const AnimationFrame = () => {
                 <Dot color={'black'} />
                 <Dot color={'silver'} />
               </div>
-              <Flip />
+              <div className='phone--flip'>
+                {' '}
+                <Flip />
+              </div>
             </div>
           </div>
         </div>

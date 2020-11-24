@@ -11,6 +11,14 @@
     left: 10%;
     border-top: $color-gray-light 1px solid;
     border-left: $color-gray-light 1px solid;
+
+    &--linkedin {
+      width: 35%;
+    }
+
+    &--email {
+      width: 28%;
+    }
   }
   .pencil {
     position: absolute;
@@ -42,21 +50,5 @@
       clip-path: polygon(0 50%, 100% 100%, 100% 0);
       background: $color-businesscard-background-pencil;
     }
-
-    // border top and bottom - both should have 50% of "pencil" container height (100% height in total)
-    // normal triangle can't made gradient border so the option is make our "traingle" transparent and rest triangles with background color with z-index:1 in parent
-    // &__inside {
-    //   content: ' ';
-    //   position: absolute;
-    //   top: -1px;
-    //   left: -1px;
-    //   width: 0;
-    //   height: 0;
-    //   border-top: 0.8rem solid $color-businesscard-background;
-    //   border-right: 3rem solid transparent;
-    //   border-bottom: 0.8rem solid $color-businesscard-background;
-    // }
-
-    // left and right padding are different cause of pen positon. Padding doesnt affect to other group of pens   because of different "text align in each 'menu' "
   }
 }

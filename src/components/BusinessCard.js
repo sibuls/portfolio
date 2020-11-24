@@ -19,7 +19,7 @@ const BusinessCard = (props) => {
   const pencil = (
     <div className='pencil-container'>
       {' '}
-      <div className='pencil-line'></div>
+      <div className={`pencil-line pencil-line--${props.name}`}></div>
       <div className='pencil'>
         <div className='pencil__triangle'>
           <div className='pencil__inside'></div>
@@ -36,13 +36,13 @@ const BusinessCard = (props) => {
   const paperAnime = keyframes`
    0% {${email ? '  ' : null}
      }
-   50% {${email || linkedin ? 'top:75%; left:48%' : null}
+   50% {${email || linkedin ? 'top:74%;  ' : null}
    }
   }
 
    100% {
 
-      ${email ? ' ' : null}
+       
      
   }`;
 
@@ -54,6 +54,8 @@ const BusinessCard = (props) => {
 
   // );
 
+  console.log(props.name);
+
   return (
     <div>
       {' '}
@@ -61,7 +63,7 @@ const BusinessCard = (props) => {
         <div className='business-card__title'>
           <p className='business-card__paragraph'>{props.title}</p>
         </div>
-        <div className='business-card__square business-card__square--hideTitle'></div>
+        {/* <div className='business-card__square business-card__square--hideTitle'></div> */}
         <div className='business-card__square business-card__square--textfunctions'>
           <p>{textFunctions}</p>
         </div>

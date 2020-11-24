@@ -5,13 +5,14 @@
   background: $color-body;
   color: $color-font-body;
 
-  background: rgb(17, 70, 39);
+  background: $color-background;
 
   .body__text {
     font-size: 0.8rem;
     line-height: 1.2rem;
     text-align: center;
 
-    color: rgba(189, 189, 189, 0.269);
+    color: rgba(189, 189, 189, 0.146);
+    color: rgba(189, 189, 189, 0.543);
   }
 }

@@ -16,25 +16,13 @@
   text-transform: uppercase;
   box-shadow: 0px 0px 3px 0px rgb(141, 147, 144);
 
-  // &__box {
-  //   position: absolute;
-  //   z-index: 55;
-  //   left: 50%;
-  //   top: 50%;
-  //   width: 100%;
-  //   height: 100%;
-  //   transform: translate(-50%, -50%);
-  //   border: white 1px solid;
-
-  //   background: #000;
-  // }
-
   &--hidden {
     overflow: hidden;
   }
 
   &--glass {
     background: rgba(33, 33, 33, 0.913);
+    background: rgba(19, 32, 52, 0.92);
     left: 50%;
     top: 52%;
     width: 108%;
@@ -42,7 +30,7 @@
     transform: translate(-50%, -50%);
 
     z-index: 8;
-    box-shadow: -3px 3px 3px 1px rgb(28, 63, 48);
+    box-shadow: -3px 3px 3px 1px rgba(53, 53, 53, 0.858);
 
     // opacity: 0.9;
     text-align: left;
@@ -83,6 +71,12 @@
     height: 100%;
   }
 
+  &__holder {
+    color: rgba(133, 131, 131, 0.452);
+
+    padding-left: $main-padding;
+  }
+
   &--linkedin {
     left: 50%;
     top: 50%;
@@ -94,7 +88,7 @@
     overflow: hidden;
   }
   &--email {
-    left: 50%;
+    left: 49%;
     top: 50%;
     width: 100%;
     height: 100%;
@@ -148,7 +142,7 @@
     letter-spacing: 0.1rem;
 
     &--linkedin {
-      top: 70%;
+      top: 72%;
       left: 45%;
       width: 65%;
       height: 100%;
@@ -160,7 +154,7 @@
       // }
     }
     &--email {
-      top: 80%;
+      top: 76%;
       left: 45%;
       width: 85%;
       height: 100%;
@@ -181,6 +175,7 @@
       opacity: 0.3;
       transform: translate(-50%, -50%) rotate(-5deg);
       z-index: -1;
+      background: red;
     }
     &--textfunctions {
       top: 60%;
@@ -220,21 +215,3 @@
     height: 100%;
   }
 }
-
-// @keyframes movecard {
-//   0% {
-//     top: 70%;
-//   }
-//   25% {
-//     top: 68%;
-//   }
-//   50% {
-//     top: 65%;
-//   }
-//   75% {
-//     top: 68%;
-//   }
-//   100% {
-//     top: 70%;
-//   }
-// }

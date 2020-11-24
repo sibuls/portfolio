@@ -2,53 +2,91 @@
   position: absolute;
   // transform: translate(-50%, -50%);
 
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
+  color: rgb(213, 209, 209);
+  color: orange;
+  color: darken($color-body, 5%);
+  font-weight: bold;
+
+  font-size: 1.2rem;
   letter-spacing: 0.1rem;
   text-shadow: 1px 1px 14px rgba(158, 153, 153, 0.502);
+  text-shadow: 8px 8px 10px rgba(3, 8, 34, 0.899),
+    6px 6px 14px rgba(200, 201, 205, 0.899);
 
   &--color {
     top: 15%;
     left: 10%;
     text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+    color: rgba(198, 195, 195, 0.927);
   }
   &--aboutme {
-    top: 3%;
+    top: 5%;
     left: 15%;
+    @media (min-width: 1200px) {
+      top: 10%;
+      left: 8%;
+    }
   }
   &--description {
-    top: 10%;
-    right: 10%;
-    color: orange;
+    // color: orange;
+    top: 12%;
+    right: 6%;
 
     @media (min-width: 481px) and (max-width: 767px) {
       color: blue;
     }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      color: red;
+
+    @media (min-width: 768px) {
+      // color: red;
+    }
+    @media (min-width: 1024px) {
+      // color: rgb(205, 213, 61);
+    }
+    @media (min-width: 1200px) {
+      // color: rgb(255, 255, 255);
+      top: 20%;
+      right: 10%;
     }
   }
   &--steps {
-    top: 12%;
+    top: 72%;
     left: 5%;
+    @media (min-width: 1200px) {
+      top: 60%;
+      left: 80%;
+    }
   }
   &--projects {
-    bottom: 10%;
-    left: 10%;
+    bottom: 5%;
+    left: 35%;
+    @media (min-width: 1200px) {
+      bottom: 25%;
+      left: 15%;
+    }
   }
   &--rotate {
     bottom: 0%;
     left: 25%;
     transform: translateY(-100%);
+    z-index: 9;
   }
   &--email {
     top: 10%;
     right: 10%;
-    z-index: 99;
+    z-index: 2;
+    @media (min-width: 1200px) {
+      top: 10%;
+      right: 10%;
+    }
   }
   &--linkedin {
     bottom: 10%;
     left: 35%;
-    z-index: 99;
+    z-index: 2;
+
+    @media (min-width: 1200px) {
+      bottom: 20%;
+      left: 15%;
+    }
   }
 }

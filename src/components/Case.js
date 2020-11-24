@@ -79,8 +79,8 @@ const Case = () => {
           />
         </Linkedin>
         <div className='business-card business-card--glass'>
-          <p>Business cards </p>
-          <p>holder</p>
+          <p className='business-card__holder'>Business card </p>
+          <p className='business-card__holder'>holder</p>
         </div>
         {/* <BusinessCard name={'glass'} /> */}
       </DivAnimation>{' '}

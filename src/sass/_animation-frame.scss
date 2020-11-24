@@ -17,9 +17,9 @@
 
   &__iphone {
     position: relative;
-    border: rgb(171, 111, 8) dotted 2px;
+    // border: rgb(171, 111, 8) dotted 2px;
     grid-area: iphone;
-    height: 100vh;
+    height: 110vh;
 
     // media query
 
@@ -32,15 +32,21 @@
     @media (min-width: 481px) and (max-width: 767px) {
       height: 100vh;
     }
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) {
       height: 100vh;
+    }
+    @media (min-width: 1024px) {
+      height: 100vh;
+    }
+    @media (min-width: 1200px) {
+      height: 110vh;
     }
   }
   &__android {
     position: relative;
     grid-area: android;
     height: 120vh;
-    border: rgb(17, 150, 173) dotted 2px;
+    // border: rgb(17, 150, 173) dotted 2px;
 
     // media query
     @media (min-height: 720px) {
@@ -49,17 +55,24 @@
     @media (min-height: 780px) {
       height: 100vh;
     }
-    @media (min-width: 481px) and (max-width: 767px) {
-      height: 150vh;
+    @media (min-width: 481px) and (max-width: 767.98px) {
+      height: 140vh;
     }
-    @media (min-width: 768px) and (max-width: 1024px) {
-      height: 150vh;
+
+    @media (min-width: 768px) {
+      height: 140vh;
+    }
+    @media (min-width: 1024px) {
+      height: 140vh;
+    }
+    @media (min-width: 1200px) {
+      height: 160vh;
     }
   }
   &__footer {
     position: relative;
     grid-area: footer;
-    border: rgb(232, 229, 229) dotted 1px;
+    // border: rgb(232, 229, 229) dotted 1px;
     height: 70vh;
 
     // media query
@@ -69,10 +82,16 @@
     @media (min-height: 780px) {
       height: 60vh;
     }
-    @media (min-width: 481px) and (max-width: 767px) {
+    @media (min-width: 481px) and (max-width: 767.98px) {
       height: 80vh;
     }
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) {
+      height: 80vh;
+    }
+    @media (min-width: 1024px) {
+      height: 80vh;
+    }
+    @media (min-width: 1200px) {
       height: 80vh;
     }
   }
@@ -89,13 +108,22 @@
 
     z-index: 1;
 
-    @media (min-width: 481px) and (max-width: 767px) {
+    @media (min-width: 481px) and (max-width: 767.98px) {
       width: 35vw;
       height: 70vw;
     }
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) {
       width: 35vw;
       height: 70vw;
+    }
+
+    @media (min-width: 1024px) {
+      width: 35vw;
+      height: 70vw;
+    }
+    @media (min-width: 1200px) {
+      width: 35vh;
+      height: 70vh;
     }
   }
 
@@ -106,6 +134,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    // background: rgba(201, 201, 185, 0.488);
+    @media (min-width: 481px) {
+      width: 50vw;
+      height: 145vw; /* android-box size + dots-box size  */
+    }
+    @media (min-width: 1200px) {
+      width: 25vw;
+      height: 72.5vw; /* android-box size + dots-box size  */
+    }
   }
   &__android-box {
     position: absolute;
@@ -114,8 +151,17 @@
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
+    // background: rgba(92, 92, 12, 0.557);
 
     z-index: 1;
+    @media (min-width: 481px) {
+      width: 50vw;
+      height: 100vw;
+    }
+    @media (min-width: 1200px) {
+      width: 25vw;
+      height: 50vw;
+    }
   }
 
   &__footer-container {
@@ -123,11 +169,20 @@
     top: 60%;
     left: 50%;
     transform-origin: center center;
-    transform: translate(-50%, -50%) skew(22deg, -5deg) rotate(10deg);
+    transform: translate(-50%, -50%) skew(20deg, -5deg) rotate(7deg);
 
-    width: 70vw;
+    width: 72vw;
     height: 35vw;
     border: dotted 1px grey;
+    @media (min-width: 481px) {
+      width: 50vw;
+      height: 25vw;
+    }
+
+    @media (min-width: 1200px) {
+      width: 30vw;
+      height: 15vw;
+    }
   }
 
   &__dots-box {
@@ -141,6 +196,16 @@
     transform: translate(-50%, 0%);
     z-index: 2;
     background: transparent;
+    // background: $color-body;
+    // background: rgba(172, 108, 13, 0.488);
+
+    @media (min-width: 481px) {
+      width: 50vw;
+      // height: 31.5%;
+    }
+    @media (min-width: 1200px) {
+      width: 25vw;
+    }
 
     &--cover {
       position: absolute;
@@ -153,7 +218,7 @@
       z-index: 3;
 
       background-color: $color-body;
-      background-color: rgba(10, 45, 10, 0.534);
+      // background-color: rgba(10, 45, 10, 0.534);
     }
   }
 
@@ -169,9 +234,10 @@
 }
 
 .back {
-  position: relative;
-  width: 60vw;
-  height: 120vw;
+  // position: absolute;
+  // width: 50vw;
+  // height: 100vw;
+  // left: 50%;
 
   // grid-area: laptop;
   // background: rgba(211, 72, 22, 0.249);
@@ -186,9 +252,9 @@
 }
 
 .front {
-  width: 60vw;
-  height: 120vw;
-  position: relative;
+  // width: 60vw;
+  // height: 120vw;
+  // position: relative;
 
   // background: rgba(0, 0, 255, 0.249);
   // border: black dotted 2px;
