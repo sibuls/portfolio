@@ -7,6 +7,10 @@ import AboutMe from './AboutMe';
 //   animation: 0s 0s ${(props) => props.caseAnime} ease-out forwards;
 // `;
 
+const Paper = styled.div`
+  animation: 2s 0s ${(props) => props.paperAnime} linear infinite;
+`;
+
 const BusinessCard = (props) => {
   const {
     footer,
@@ -29,10 +33,6 @@ const BusinessCard = (props) => {
     </div>
   );
 
-  const Paper = styled.div`
-    animation: 2s 0s ${(props) => paperAnime} linear infinite;
-  `;
-
   const paperAnime = keyframes`
    0% {${email ? '  ' : null}
      }
@@ -54,7 +54,7 @@ const BusinessCard = (props) => {
 
   // );
 
-  console.log(props.name);
+  // console.log(props.name);
 
   return (
     <div>

@@ -12,7 +12,7 @@ function AboutMeInfo(props) {
 
       <p className='screen-text speech'>
         I have worked in several professions in my live - gardener, miner (yeap
-        :)), waiter, restaurant manager. I have always thought that you have to
+        :), waiter, restaurant manager. I have always thought that you have to
         like what you do, especially if we spend most of the day in work. I
         alwyas wanted to create something thats why I started to learn CSS, Js,
         React and many others which I didn't even hear about a few years ago.

@@ -1,3 +1,18 @@
+.screen-text {
+  padding: 5px;
+  position: relative;
+  background: $color-speech;
+  border-radius: 0.5rem;
+  color: white;
+  margin: 0 0 $main-padding $main-padding;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: left;
+
+  &--technologies {
+    margin: $main-padding / 2;
+  }
+}
 .speech {
   position: relative;
   background: $color-speech;
@@ -7,6 +22,10 @@
   font-size: 1rem;
   line-height: 1.2rem;
   text-align: left;
+
+  span {
+    text-decoration: line-through;
+  }
 
   &:after {
     content: '';

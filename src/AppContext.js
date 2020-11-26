@@ -2,6 +2,7 @@ import { createContext } from 'react';
 
 export const defaultObject = {
   isAboutMeActive: false,
+  //
   isFlipped: false,
   isFlippedDone: false,
   menuActive: 'start',
@@ -13,13 +14,14 @@ export const defaultObject = {
   prevTop: '0%',
   currentTop: '0%',
   prevDotColor: '',
+  //
   currentDotColor: '',
   isDotAnimated: false,
   showWarning: false,
   footer: 'start',
   email: false,
   linkedin: false,
-  handleBusinessCardClick: () => {},
+  handleCardClick: () => {},
   handleDotClick: () => {},
   handleRotateClick: () => {},
   handleFooterClick: () => {},

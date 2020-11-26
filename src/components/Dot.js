@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import { AppContext } from '../AppContext';
 
-const Dot = (props) => {
+const Dot = ({ color }) => {
   // appcontext
   const { currentDotColor, prevDotColor, handleDotClick } = useContext(
     AppContext
@@ -10,12 +10,12 @@ const Dot = (props) => {
 
   return (
     <div
-      className={`animation__dot animation__dot--${props.color}   ${
-        props.color === currentDotColor && !prevDotColor
+      className={`animation__dot animation__dot--${color}   ${
+        color === currentDotColor && !prevDotColor
           ? 'animation__dot--anime'
           : null
       }         `}
-      onClick={() => handleDotClick(props.color)}
+      onClick={() => handleDotClick(color)}
     ></div>
   );
 };

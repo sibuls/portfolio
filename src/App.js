@@ -36,6 +36,7 @@ const App = () => {
   const [email, setEmail] = useState(defaultObject.email);
   const [linkedin, setLinkedin] = useState(defaultObject.linkedin);
   // const [footer, setFooter] = useState(defaultObject.footer);
+
   // end of  hooks
 
   // function which will get prevstate of our hooks
@@ -51,9 +52,16 @@ const App = () => {
   const prevTop = usePrevious(currentTop);
   const prevDotColor = usePrevious(currentDotColor);
 
+  document.addEventListener('scroll', (e) => {
+    if (window.pageYOffset > window.innerHeight) {
+      // setIsDotAnimated(true);
+      // setCurrentDotColor('silver');
+    }
+  });
+
   // handles
 
-  const handleBusinessCardClick = (menu, transform, top = '0%', warning) => {
+  const handleCardClick = (menu, transform, top = '0%', warning) => {
     // /*  top deafult 0% , without default   'top' doesnt work well */
     setMenuActive(menu);
     setCurrentTransform(transform);
@@ -89,6 +97,8 @@ const App = () => {
   setTimeout(() => {
     isDotAnimated && !isFlipped && !isFlippedDone ? initialRotate() : null;
   }, 9000);
+
+  // if (window.pageYOffset > 780)
 
   const paper = () => {
     return {
@@ -127,7 +137,7 @@ const App = () => {
           // footer: footer,
           linkedin: linkedin,
           email: email,
-          handleBusinessCardClick: handleBusinessCardClick,
+          handleCardClick: handleCardClick,
           handleDotClick: handleDotClick,
           handleRotateClick: handleRotateClick,
 

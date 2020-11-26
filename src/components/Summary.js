@@ -2,25 +2,28 @@ import React, { useContext } from 'react';
 import { AppContext, defaultObject } from '../AppContext';
 import BusinessCard from './BusinessCard';
 
-function Steps() {
+const Summary = () => {
   const { handleBusinessCardClick } = useContext(AppContext);
+
   return (
-    <div className='menu steps'>
+    <div className='menu summary'>
       <div className='menu__shadow menu__shadow--top'></div>
+      <div className='menu__square menu__square--top'></div>{' '}
       <div
-        className='menu__text menu__text--top'
+        className='menu__text'
         onClick={() =>
           handleBusinessCardClick(
-            'steps',
-            'translate(-50%, 0%) skew(4deg, 12deg) scale(1.25) rotate(-5deg);'
+            'projects',
+            'translate(-50%, 0%) skew(8deg, 5deg) scale(1.2) rotate(-95deg); ',
+
+            '-10%' /* top -  default top is 0% */
           )
         }
       >
-        <p>Steps</p>
+        <p> Summary</p>
       </div>
-      <div className='menu__square menu__square--top'></div>{' '}
     </div>
   );
-}
+};
 
-export default Steps;
+export default Summary;

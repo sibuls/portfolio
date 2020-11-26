@@ -15,7 +15,7 @@ $color-gray-dark: #949494;
 $color-font: grey;
 
 // body
-$color-body: rgb(53, 53, 53);
+
 $color-font-body: rgba(222, 222, 222, 0.16);
 
 $color-body: rgb(21, 38, 63);
@@ -163,9 +163,9 @@ $color-businesscard-background-pencil: linear-gradient(
   rgb(171, 168, 168);
 
 // color speech
-$color-speech: darken(#0081ff, 5%);
-$color-speech: #04488c;
+
 $color-speech: #04488ce3;
+$color-speech: rgb(25, 45, 75);
 // $color-speech: #043d76e0;
 // $color-speech: lighten(rgba(36, 65, 103, 0.934), 0%);
 $color-speech-question: lightgrey;

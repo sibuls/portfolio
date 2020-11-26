@@ -47,6 +47,7 @@ const PhoneBack = () => {
     prevDotColor,
     isFlipped,
     isDotAnimated,
+    handleRotateClick,
   } = useContext(AppContext);
 
   // main animation - makes whole phone visible
@@ -199,11 +200,13 @@ const PhoneBack = () => {
   //--start animations: transform phone to tablet--
 
   // return Phone function
+
   return (
     <React.Fragment>
       <DivAnimation
         phoneShowMain={phoneShowMain}
         className=' phone phone--back'
+        onClick={handleRotateClick}
       >
         {' '}
         <Frame

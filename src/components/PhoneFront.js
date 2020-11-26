@@ -3,16 +3,21 @@ import { AppContext } from '../AppContext';
 import InfoFront from './InfoFront';
 
 const PhoneFront = () => {
-  const { currentDotColor, prevDotColor, isFlipped } = useContext(AppContext);
+  const {
+    currentDotColor,
+    prevDotColor,
+    isFlipped,
+    handleRotateClick,
+  } = useContext(AppContext);
 
   return (
-    <div className='phone  phone--front'>
+    <div className='phone  phone--front' onClick={handleRotateClick}>
       <div
         className={`phone-part phone__frame phone__frame--${currentDotColor}`}
       ></div>
       <div className='phone-part phone__glass'></div>
       <div className='phone-part phone__screen phone__screen--model-android'>
-        <div className='phone__browser'>
+        <div className='phone__browser phone__browser--technologies'>
           <InfoFront />
         </div>
       </div>

@@ -4,9 +4,10 @@ import AboutMeInfo from './AboutMeInfo';
 import BusinessCard from './BusinessCard';
 import ContactInfo from './ContactInfo';
 import DescriptionInfo from './DescriptionInfo';
-import ProjectsInfo from './ProjectsInfo';
+
 import StartInfo from './StartInfo';
 import StepsInfo from './StepsInfo';
+import SummaryInfo from './SummaryInfo';
 
 const InfoMain = () => {
   const { isAboutMeActive, menuActive } = useContext(AppContext);
@@ -38,7 +39,7 @@ const InfoMain = () => {
       case 'projects':
         return (
           <div className='info info--description'>
-            <ProjectsInfo />
+            <SummaryInfo />
           </div>
         );
         break;

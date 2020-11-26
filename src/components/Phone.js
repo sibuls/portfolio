@@ -51,7 +51,7 @@ const Phone = (props) => {
     prevTop,
     currentTop,
     showWarning,
-    handleBusinessCardClick,
+    handleCardClick,
   } = useContext(AppContext);
   //
   const animationStartTop = menuActive === 'start' ? '0%' : prevTop;
@@ -200,9 +200,9 @@ const Phone = (props) => {
           <div
             className='phone-part phone__home-button-inside'
             onClick={() =>
-              handleBusinessCardClick(
+              handleCardClick(
                 'main',
-                'translate(-50%, 0%) skew(15deg, 0deg) scale(1.2) rotate(-5deg);',
+                'translate(-50%, 0%) skew(15deg, 0deg) scale(1.2) rotate(-365deg);',
                 '0%' /* top -  default top is 0% */,
                 menuActive === 'main' || menuActive === 'start'
                   ? true

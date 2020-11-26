@@ -5,12 +5,15 @@ import PhoneBack from './PhoneBack';
 
 const CardBack = (props) => {
   // AppContext
-  const { isFlipped } = useContext(AppContext);
+  const { isFlipped, handleRotateClick } = useContext(AppContext);
 
   // hooks
 
   return (
-    <div className={isFlipped ? 'back opacity  ' : 'back  '}>
+    <div
+      className={isFlipped ? 'back opacity  ' : 'back  '}
+      // onClick={handleRotateClick}
+    >
       <PhoneBack />
     </div>
   );

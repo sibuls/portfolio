@@ -25,6 +25,11 @@ const Case = () => {
     handleEmailClick,
   } = useContext(AppContext);
 
+  const handleCardsClick = () => {
+    handleLinkedinClick();
+    handleEmailClick();
+  };
+
   const caseAnime = keyframes`
   0% {${footer === 'start' ? 'opacity:1' : ' opacity:1 '} }
        
@@ -59,7 +64,7 @@ const Case = () => {
         <Email
           emailAnime={emailAnime}
           className=' business-card  business-card__box  '
-          // onClick={() => handleEmailClick('email')}
+          onClick={() => handleEmailClick('email')}
         >
           <BusinessCard
             name={'email'}
@@ -70,7 +75,7 @@ const Case = () => {
         <Linkedin
           linkedinAnime={linkedinAnime}
           className='business-card business-card__box business-card__box--linkedin '
-          // onClick={() => handleLinkedinClick('linkedin')}
+          onClick={() => handleLinkedinClick('linkedin')}
         >
           <BusinessCard
             name={'linkedin'}
@@ -78,11 +83,13 @@ const Case = () => {
             content={'Sebastian Orlowski'}
           />
         </Linkedin>
-        <div className='business-card business-card--glass'>
+        <div
+          className='business-card business-card--glass'
+          onClick={handleCardsClick}
+        >
           <p className='business-card__holder'>Business card </p>
           <p className='business-card__holder'>holder</p>
         </div>
-        {/* <BusinessCard name={'glass'} /> */}
       </DivAnimation>{' '}
     </React.Fragment>
   );

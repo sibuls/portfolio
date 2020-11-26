@@ -17,9 +17,9 @@
 
   &__iphone {
     position: relative;
-    // border: rgb(171, 111, 8) dotted 2px;
+    // border: rgb(171, 111, 8) dotted 4px;
     grid-area: iphone;
-    height: 110vh;
+    height: 120vh;
 
     // media query
 
@@ -73,7 +73,7 @@
     position: relative;
     grid-area: footer;
     // border: rgb(232, 229, 229) dotted 1px;
-    height: 70vh;
+    height: 60vh;
 
     // media query
     @media (min-height: 720px) {
@@ -134,6 +134,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    // border: red dotted 1px;
+
     // background: rgba(201, 201, 185, 0.488);
     @media (min-width: 481px) {
       width: 50vw;
@@ -151,7 +153,9 @@
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
+    z-index: 2;
     // background: rgba(92, 92, 12, 0.557);
+    // border: white 1px dotted;
 
     z-index: 1;
     @media (min-width: 481px) {
@@ -165,11 +169,11 @@
   }
 
   &__footer-container {
-    position: relative;
-    top: 60%;
+    position: absolute;
+    bottom: 10%;
     left: 50%;
     transform-origin: center center;
-    transform: translate(-50%, -50%) skew(20deg, -5deg) rotate(7deg);
+    transform: translate(-50%, 0%) skew(20deg, -5deg) rotate(7deg);
 
     width: 72vw;
     height: 35vw;
@@ -194,7 +198,7 @@
     left: 50%;
 
     transform: translate(-50%, 0%);
-    z-index: 2;
+    // z-index: 2;
     background: transparent;
     // background: $color-body;
     // background: rgba(172, 108, 13, 0.488);
