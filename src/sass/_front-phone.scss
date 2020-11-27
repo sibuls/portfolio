@@ -1,0 +1,135 @@
+.technologies {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  // border: 1px dashed rgb(96, 83, 61);
+
+  // &__title {
+  //   margin-top: $main-padding;
+  // }
+
+  &__container {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    // border: 1px dashed rgb(96, 83, 61);
+
+    &--all {
+      opacity: 0;
+      // border: 2px dashed rgb(46, 130, 74);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-around;
+    }
+  }
+  &__date {
+    position: absolute;
+    opacity: 0;
+    top: 10%;
+    left: 100%;
+    text-align: center;
+    width: 100%;
+    // border: orange 2px dotted;
+  }
+  &__box {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: -25%;
+    width: 40%;
+    height: 50%;
+    // border: red 2px dotted;
+    align-items: center;
+    // margin: 0 auto;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-content: center;
+
+    &--all {
+      display: flex;
+      position: relative;
+      opacity: 1;
+      top: 0%;
+      left: 0%;
+      width: 27%;
+      height: 20%;
+      transform: translate(0%, 0%);
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+.projects {
+  width: 100%;
+  height: 100%;
+  // border: red 1px dotted;
+
+  &__box {
+    width: 100%;
+    // height: 100%;
+    margin: $main-padding 0;
+    // border: rgb(38, 143, 71) 1px dotted;
+  }
+
+  &__galery {
+    width: 90%;
+    height: 90%;
+    // border: red 2px dotted;
+    display: flex;
+    align-items: center;
+    margin: $main-padding auto;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+.cv {
+  // position: absolute;
+  width: 100%;
+  height: 100%;
+  // transform: translate(-50%, -50%);
+  // left: 50%;
+  // top: 50%;
+
+  // border: 1px orange dotted;
+  // background: orangered;
+
+  &__menu {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    // align-content: center;
+    align-items: center;
+    margin-bottom: $main-padding / 2;
+  }
+
+  &__button {
+    background-color: rgb(93, 95, 96);
+    font-size: 1.2rem;
+    padding: $main-padding / 2 0;
+    border: double white 3px;
+    border-radius: 1rem;
+    width: 45%;
+    color: white;
+    z-index: 2;
+    width: 40%;
+
+    // align-items: center;
+  }
+  &__body {
+    width: 100%;
+    height: 80%;
+    // background: green;
+
+    // border: 1px rgb(19, 57, 90) dotted;
+  }
+}

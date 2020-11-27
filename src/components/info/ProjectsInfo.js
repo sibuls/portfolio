@@ -4,15 +4,15 @@ import photo from '../../images/preview.jpg';
 const ProjectsInfo = () => {
   return (
     <div className='projects'>
-      <p className='screen-text  speech speech--question'>Galery of projects</p>
+      <p className='screen-text speech speech--question  speech--technologies'>
+        Are they any projects?
+      </p>
 
       <div className='projects__box'>
         {' '}
         <p className='screen-text speech  '>
-          Website with free locally advertisments
-        </p>
-        <p className='screen-text speech  '>
-          This project is just part of bigger which is not finihsed yet.
+          Project I am currently working on. Website with free locally
+          advertisments
         </p>
         <div className='projects__galery'>
           <img className='projects__image' src={photo} alt='house' />

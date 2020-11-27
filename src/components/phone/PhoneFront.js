@@ -28,30 +28,20 @@ const PhoneFront = () => {
       ></div>
       <div className='phone-part phone__glass'></div>
       <div className='phone-part phone__screen phone__screen--model-android'>
-        <div className='phone__browser  '>
-          {/* <div className='cv'>
-            <p
-              className='   cv__menu '
-
-              // onClick={() => handleCv('tools')}
-            >
-              Tools
-            </p>
-            <p
-              className=' cv__menu    '
-
-              // onClick={() => handleCv('projects')}
-            >
-              Projects
-            </p>
-          </div> */}
-          <div
-            className='cv__body'
-            //  onClick={handleRotateClick}
-          >
-            {cv === 'tools' ? <TechnologiesInfo /> : <ProjectsInfo />}
+        <div className='phone__browser phone__browser--cv '>
+          <div className='cv'>
+            <div className='cv__body' onClick={handleRotateClick}>
+              {cv === 'tools' ? <TechnologiesInfo /> : <ProjectsInfo />}
+            </div>
+            <div className='cv__menu'>
+              <p className='cv__button' onClick={() => handleCv('tools')}>
+                Tools
+              </p>
+              <p className='cv__button' onClick={() => handleCv('projects')}>
+                Projects
+              </p>{' '}
+            </div>
           </div>
-          {/* <StartInfo />{' '} */}
         </div>
       </div>
       <div className='phone-part phone__microphone phone__microphone--second'></div>
