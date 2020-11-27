@@ -2,8 +2,8 @@ import React, { useContext, useState } from 'react';
 import { AppContext } from '../AppContext';
 
 import Dot from './Dot';
-import Flip from './Flip';
-import Phone from './Phone';
+import Flip from './flip/Flip';
+import Phone from './phone/Phone';
 
 import Case from './Case';
 
@@ -47,23 +47,23 @@ const AnimationFrame = () => {
       <div className='animation'>
         <div className='animation__android'>
           {/* {rotate} */}
-
+          {/* 
+          <Menu
+            name={'cv'}
+            text={'Projects'}
+            handleClick={() =>
+              handleCardClick(
+                'aboutme',
+                'translate(-50%, 0%) skew(4deg, 12deg) scale(1.25) rotate(-5deg);'
+              )
+            }
+          /> */}
           <div className='animation__android-container'>
             <div className='animation__android-box'>
               <div className='animation__dots-box'>
                 <div className='animation__dots-box animation__dots-box--cover'>
                   {rotate}
 
-                  <Menu
-                    name={'cv'}
-                    text={'Projects'}
-                    handleClick={() =>
-                      handleCardClick(
-                        'aboutme',
-                        'translate(-50%, 0%) skew(4deg, 12deg) scale(1.25) rotate(-5deg);'
-                      )
-                    }
-                  />
                   <span className='menu  menu--color '>
                     Choose your favourite color:{' '}
                   </span>
@@ -86,7 +86,7 @@ const AnimationFrame = () => {
             handleClick={() =>
               handleCardClick(
                 'aboutme',
-                'translate(-50%, 0%) skew(4deg, 12deg) scale(1.25) rotate(-5deg);'
+                'translate(-50%, 0%) skew(4deg, 12deg) scale(1.25) rotate(0deg);'
               )
             }
           />
@@ -107,28 +107,24 @@ const AnimationFrame = () => {
             handleClick={() =>
               handleCardClick(
                 'steps',
-                'translate(-50%, 0%) skew(4deg, 12deg) scale(1.25) rotate(-5deg);'
+                'translate(-50%, 0%) skew(6deg, 12deg) scale(1.2) rotate(4deg);'
               )
             }
           />
           <Menu
             name={'summary'}
-            text={'Summary'}
+            text={'FAQ'}
             ontop={true}
             handleClick={() =>
               handleCardClick(
                 'projects',
-                'translate(-50%, 0%) skew(8deg, 5deg) scale(1.2) rotate(-95deg); ',
+                // 'translate(-50%, 0%) skew(8deg, 5deg) scale(1.2) rotate(-95deg); ',
+                'translate(-50%, 0%) skew(5deg, 5deg) scale(1.25) rotate(-4deg); '
 
-                '-10%' /* top -  default top is 0% */
+                // '-10%' /* top -  default top is 0% */
               )
             }
           />
-
-          {/* <AboutMe /> */}
-          {/* <Description /> */}
-          {/* <Steps />
-          <Projects /> */}
 
           <div className='animation__iphone-container'>
             <Phone />

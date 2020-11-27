@@ -12,10 +12,15 @@ const Menu = (props) => {
       ) : null}
       <div
         className={`menu__square  ${
-          props.ontop ? 'menu__square--ontop' : null
+          props.name === 'rotate-phone' ? 'menu__square--rotate' : null
         }`}
       ></div>{' '}
-      <div className='menu__text' onClick={props.handleClick}>
+      <div
+        className={`menu__text  ${
+          props.name === 'rotate-phone' ? 'menu__text--rotate' : null
+        }`}
+        onClick={props.handleClick}
+      >
         <p> {props.text} </p>
       </div>
     </div>

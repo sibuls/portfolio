@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { AppContext } from '../AppContext';
+import { AppContext } from '../../AppContext';
 
-import PhoneBack from './PhoneBack';
+import PhoneBack from '../phone/PhoneBack';
 
 const CardBack = (props) => {
   // AppContext
@@ -12,6 +12,8 @@ const CardBack = (props) => {
   return (
     <div
       className={isFlipped ? 'back opacity  ' : 'back  '}
+      // className={isFlipped ? 'back   ' : 'back  '}
+
       // onClick={handleRotateClick}
     >
       <PhoneBack />

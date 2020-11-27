@@ -9,7 +9,7 @@ const App = () => {
   const [isAboutMeActive, setIsAboutMeActive] = useState(
     defaultObject.isAboutMeActive
   );
-  const [count, setCount] = useState(0);
+
   const [menuActive, setMenuActive] = useState(defaultObject.menuActive);
 
   const [currentTransform, setCurrentTransform] = useState(

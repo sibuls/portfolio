@@ -9,10 +9,36 @@
   line-height: 1.2rem;
   text-align: left;
 
-  &--technologies {
-    margin: $main-padding / 2;
-  }
+  // &--title {
+  //   text-align: center;
+  //   margin: $main-padding / 2;
+  // }
 }
+
+.cv {
+  // border: orange 2px dotted;
+  // position: absolute;
+  margin: 6px 0 26px;
+
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  &__menu {
+    background-color: rgb(93, 95, 96);
+    font-size: 1.2rem;
+    padding: $main-padding 0;
+    border: double white 3px;
+    border-radius: 1rem;
+    width: 45%;
+    color: white;
+    z-index: 2;
+  }
+
+  // &__body {
+  //   // border: green 2px dotted;
+  // }
+}
+
 .speech {
   position: relative;
   background: $color-speech;

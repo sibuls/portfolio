@@ -55,6 +55,14 @@
   height: 20vw;
 }
 
+// .cv {
+//   bottom: 0%;
+//   left: 0%;
+//   transform: rotate(10deg);
+//   width: 40vw;
+//   height: 20vw;
+// }
+
 .linkedin {
   top: 3%;
   left: 2%;
@@ -102,21 +110,34 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: $color-businesscard-background-pencil;
+    // background: $color-businesscard-background-pencil;
+
     opacity: 0.7;
 
     border-radius: 5px;
 
+    // background: linear-gradient(
+    //     130deg,
+    //     rgba(rgb(174, 173, 173), 1) 0%,
+    //     rgba(rgb(99, 99, 99), 1) 100%
+    //   ),
+    //   $color-gray-dark;
+
     background: linear-gradient(
         130deg,
-        rgba(rgb(174, 173, 173), 1) 0%,
-        rgba(rgb(99, 99, 99), 1) 100%
+        $color-body 0%,
+        rgba(rgb(18, 34, 46), 1) 100%
       ),
       $color-gray-dark;
 
-    // &--ontop {
-    // z-index: 2;
-    // }
+    &--rotate {
+      background: linear-gradient(
+          130deg,
+          rgba(rgb(174, 173, 173), 1) 0%,
+          rgba(rgb(99, 99, 99), 1) 100%
+        ),
+        $color-gray-dark;
+    }
   }
 
   &__shadow {
@@ -145,9 +166,10 @@
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
 
-    text-shadow: 2px -2px 4px rgba(186, 187, 191, 0.899);
+    text-shadow: 0px 0px 2px rgba(186, 187, 191, 0.899);
 
     color: $color-body;
+    color: rgba(230, 229, 229, 0.988);
 
     text-align: center;
     display: flex;
@@ -155,6 +177,10 @@
     justify-content: center;
 
     z-index: 3;
+
+    &--rotate {
+      color: $color-body;
+    }
 
     &--shadow {
       font-size: 1.1rem;

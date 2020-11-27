@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
-import { AppContext, defaultObject } from '../AppContext';
+import { AppContext, defaultObject } from '../../AppContext';
 import AboutMeInfo from './AboutMeInfo';
-import BusinessCard from './BusinessCard';
-import ContactInfo from './ContactInfo';
+
 import DescriptionInfo from './DescriptionInfo';
 
 import StartInfo from './StartInfo';
 import StepsInfo from './StepsInfo';
-import SummaryInfo from './SummaryInfo';
+import SummaryInfo from './FAQInfo';
 
 const InfoMain = () => {
   const { isAboutMeActive, menuActive } = useContext(AppContext);
@@ -43,13 +42,7 @@ const InfoMain = () => {
           </div>
         );
         break;
-      case 'contact':
-        return (
-          <div className='info info--description'>
-            <ContactInfo />
-          </div>
-        );
-        break;
+
       case 'main':
         return (
           <div className='info info--description'>

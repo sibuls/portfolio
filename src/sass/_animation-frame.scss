@@ -253,6 +253,9 @@
   //   width: 50vw;
   //   height: 100vw;
   // }
+
+  backface-visibility: hidden;
+  backface-visibility: inherit;
 }
 
 .front {
@@ -267,4 +270,6 @@
   //   width: 50vw;
   //   height: 100vw;
   // }
+  backface-visibility: hidden;
+  backface-visibility: inherit;
 }

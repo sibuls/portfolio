@@ -1,15 +1,23 @@
-import React from 'react';
-import html from '../images/html.jpg';
-import css from '../images/css.jpg';
-import js from '../images/js.jpg';
-import react from '../images/react.jpg';
-import bootstrap from '../images/bootstrap.jpg';
-import npm from '../images/npm.jpg';
-import node from '../images/node.jpg';
-import webpack from '../images/webpack.jpg';
-import git from '../images/git.jpg';
+import React, { useContext } from 'react';
+import { AppContext } from '../../AppContext';
+import html from '../../images/html.jpg';
+import css from '../../images/css.jpg';
+import js from '../../images/js.jpg';
+import react from '../../images/react.jpg';
+import bootstrap from '../../images/bootstrap.jpg';
+import npm from '../../images/npm.jpg';
+import node from '../../images/node.jpg';
+import webpack from '../../images/webpack.jpg';
+import git from '../../images/git.jpg';
 
-const InfoFront = () => {
+const TechnologiesInfo = () => {
+  const {
+    currentDotColor,
+    prevDotColor,
+    isFlipped,
+    handleRotateClick,
+  } = useContext(AppContext);
+
   return (
     <div className='technologies'>
       <p className='screen-text  speech speech--question technologies__title'>
@@ -81,4 +89,4 @@ const InfoFront = () => {
   );
 };
 
-export default InfoFront;
+export default TechnologiesInfo;

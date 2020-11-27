@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 
-import { AppContext } from '../AppContext';
+import { AppContext } from '../../AppContext';
 
 import CardBack from './CardBack';
 import CardFront from './CardFront';

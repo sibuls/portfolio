@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
-import { AppContext } from '../AppContext';
-import PhoneFront from './PhoneFront';
+import { AppContext } from '../../AppContext';
+import Phone from '../phone/Phone';
+import PhoneFront from '../phone/PhoneFront';
 
 const CardFront = () => {
   // AppContext
@@ -16,7 +17,9 @@ const CardFront = () => {
 
   return (
     <div className={isFlipped ? 'front   ' : 'front opacity '}>
+      {/* <div className={isFlipped ? 'front   ' : 'front  '}> */}
       <PhoneFront />
+      {/* <Phone /> */}
     </div>
   );
 };

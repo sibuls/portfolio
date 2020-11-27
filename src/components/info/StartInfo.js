@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { AppContext, defaultObject } from '../AppContext';
+import { AppContext, defaultObject } from '../../AppContext';
 
 const MainInfo = () => {
   const { showWarning, menuActive } = useContext(AppContext);

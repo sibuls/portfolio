@@ -3,7 +3,7 @@ import { createContext } from 'react';
 export const defaultObject = {
   isAboutMeActive: false,
   //
-  isFlipped: false,
+  isFlipped: true,
   isFlippedDone: false,
   menuActive: 'start',
   prevTransfrom:
@@ -15,7 +15,7 @@ export const defaultObject = {
   currentTop: '0%',
   prevDotColor: '',
   //
-  currentDotColor: '',
+  currentDotColor: 'silver',
   isDotAnimated: false,
   showWarning: false,
   footer: 'start',

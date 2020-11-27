@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { AppContext } from '../AppContext';
-import AboutMe from './AboutMe';
 
 // const DivAnimation = styled.div`
 //   animation: 0s 0s ${(props) => props.caseAnime} ease-out forwards;

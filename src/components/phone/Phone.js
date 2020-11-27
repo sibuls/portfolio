@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
 
-import { AppContext } from '../AppContext';
+import { AppContext } from '../../AppContext';
 
-import '../sass/style.scss';
+import '../../sass/style.scss';
 import styled, { css, keyframes, createGlobalStyle } from 'styled-components';
 
-import InfoMain from './InfoMain';
+import InfoMain from '../info/InfoMain';
+
+import StartInfo from '../info/StartInfo';
 
 // assign components to animations - have to be outside of the function, but we can get to all animation by props
 const DivAnimation = styled.div`
@@ -155,11 +157,13 @@ const Phone = (props) => {
   //--end animations: transform phone to tablet--
   //
   // return Phone function
+
   return (
     <React.Fragment>
       <DivAnimation
         phoneShowMain={phoneShowMain}
         className='phone  phone--main'
+        // className='phone  phone--front'
       >
         {' '}
         <Frame
@@ -183,6 +187,7 @@ const Phone = (props) => {
             className='phone__browser'
           >
             <InfoMain />
+            {/* <StartInfo /> */}
           </Browser>
         </Screen>
         <Microphone
