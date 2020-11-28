@@ -12,7 +12,7 @@
 }
 
 .description {
-  top: 8%;
+  top: 6%;
   right: 5%;
   width: 30vw;
   height: 25vw;
@@ -36,10 +36,11 @@
 }
 
 .steps {
-  bottom: 8%;
+  bottom: 2%;
+  // top: 15%;
   left: 3%;
-  width: 20vw;
-  height: 35vw;
+  width: 30vw;
+  height: 30vw;
   transform: rotate(6deg);
 
   @media (min-width: 1200px) {
@@ -49,18 +50,19 @@
 }
 .summary {
   bottom: 0%;
-  right: 16%;
+  // top: 25%;
+  right: 8%;
   transform: rotate(10deg);
-  width: 40vw;
-  height: 20vw;
+  width: 35vw;
+  height: 15vw;
 }
 
 .linkedin {
   top: 3%;
   left: 2%;
   // z-index: 2;
-  width: 40vw;
-  height: 14vw;
+  width: 35vw;
+  height: 15vw;
   transform: rotate(-5deg);
 
   @media (min-width: 1200px) {
@@ -73,8 +75,8 @@
   top: 0%;
   right: 8%;
   // z-index: 2;
-  width: 35vw;
-  height: 20vw;
+  width: 30vw;
+  height: 25vw;
   transform: rotate(8deg);
 
   @media (min-width: 1200px) {
@@ -84,9 +86,9 @@
 }
 
 .rotate-phone {
-  bottom: 3%;
-  right: 5%;
-  width: 25vw;
+  bottom: 2%;
+  right: 2%;
+  width: 35vw;
   height: 15vw;
   // z-index: -1;
 

@@ -25,6 +25,8 @@ const App = () => {
     defaultObject.isDotAnimated
   );
 
+  const [isRotated, setIsRotated] = useState(defaultObject.isRotated);
+
   const [isFlipped, setIsFlipped] = useState(defaultObject.isFlipped);
 
   const [isFlippedDone, setIsFlippedDone] = useState(
@@ -35,7 +37,11 @@ const App = () => {
 
   const [email, setEmail] = useState(defaultObject.email);
   const [linkedin, setLinkedin] = useState(defaultObject.linkedin);
+
+  const [cv, setCv] = useState(defaultObject.cv);
   // const [footer, setFooter] = useState(defaultObject.footer);
+
+  // const [delay, setDelay] = useState(defaultObject.delay);
 
   // end of  hooks
 
@@ -51,6 +57,7 @@ const App = () => {
   const prevTransform = usePrevious(currentTransform);
   const prevTop = usePrevious(currentTop);
   const prevDotColor = usePrevious(currentDotColor);
+  const prevIsFlippedDone = usePrevious(isFlippedDone);
 
   document.addEventListener('scroll', (e) => {
     if (window.pageYOffset > window.innerHeight) {
@@ -92,6 +99,16 @@ const App = () => {
   const initialRotate = () => {
     setIsFlippedDone(true);
     setIsFlipped(true);
+
+    setTimeout(() => {
+      setIsRotated(true);
+      console.log('obrocone');
+    }, 5000);
+  };
+
+  const handleCv = (cv) => {
+    setCv(cv);
+    console.log('zmiana na ' + cv);
   };
 
   setTimeout(() => {
@@ -134,15 +151,19 @@ const App = () => {
           isDotAnimated: isDotAnimated,
           showWarning: showWarning,
           isFlippedDone: isFlippedDone,
-          // footer: footer,
+
           linkedin: linkedin,
           email: email,
+
+          // isRotated: isRotated,
+          cv: cv,
           handleCardClick: handleCardClick,
           handleDotClick: handleDotClick,
           handleRotateClick: handleRotateClick,
 
           handleEmailClick: handleEmailClick,
           handleLinkedinClick: handleLinkedinClick,
+          handleCv: handleCv,
         }}
       >
         {' '}

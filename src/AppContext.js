@@ -3,7 +3,7 @@ import { createContext } from 'react';
 export const defaultObject = {
   isAboutMeActive: false,
   //
-  isFlipped: true,
+  isFlipped: false,
   isFlippedDone: false,
   menuActive: 'start',
   prevTransfrom:
@@ -15,18 +15,22 @@ export const defaultObject = {
   currentTop: '0%',
   prevDotColor: '',
   //
-  currentDotColor: 'silver',
+  currentDotColor: '',
   isDotAnimated: false,
   showWarning: false,
   footer: 'start',
   email: false,
   linkedin: false,
+  cv: '',
+  // isRotated: false,
+  // delay: 11,
   handleCardClick: () => {},
   handleDotClick: () => {},
   handleRotateClick: () => {},
   handleFooterClick: () => {},
   handleEmailClick: () => {},
   handleLinkedinClick: () => {},
+  handleCv: () => {},
 };
 
 export const AppContext = createContext(defaultObject);

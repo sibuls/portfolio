@@ -12,15 +12,11 @@ const PhoneFront = () => {
     currentDotColor,
     prevDotColor,
     isFlipped,
+    cv,
+    handleCv,
     handleRotateClick,
   } = useContext(AppContext);
 
-  const [cv, setCv] = useState('tools');
-
-  const handleCv = (cv) => {
-    setCv(cv);
-    console.log('zmiana na ' + cv);
-  };
   return (
     <div className='phone  phone--front'>
       <div

@@ -77,16 +77,37 @@
   }
 
   &__galery {
+    position: relative;
+    // top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 90%;
     height: 90%;
     // border: red 2px dotted;
-    display: flex;
-    align-items: center;
-    margin: $main-padding auto;
+    // display: flex;
+    // align-items: center;
+    // margin: $main-padding auto;
+    animation: projectsanime 2s ease-in;
   }
 
   &__image {
     width: 100%;
+  }
+}
+
+@keyframes projectsanime {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+  }
+  50% {
+  }
+  75% {
+  }
+  100% {
+    opacity: 1;
   }
 }
 

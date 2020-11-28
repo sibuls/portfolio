@@ -54,7 +54,6 @@ const Case = () => {
            ${email ? 'top: -35% ' : '  top: 50%; '} 
        }`;
 
-  console.log(footer);
   return (
     <React.Fragment>
       <DivAnimation
