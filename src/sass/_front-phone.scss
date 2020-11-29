@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  // border: 1px dashed rgb(96, 83, 61);
+  // border: 2px dashed rgb(96, 83, 61);
 
   // &__title {
   //   margin-top: $main-padding;
@@ -13,7 +13,7 @@
     width: 100%;
     height: 80%;
     bottom: 0;
-    // border: 1px dashed rgb(96, 83, 61);
+    // border: 3px dashed rgb(31, 22, 7);
 
     &--all {
       opacity: 0;
@@ -135,21 +135,28 @@
 
   &__button {
     background-color: rgb(93, 95, 96);
-    font-size: 1.2rem;
-    padding: $main-padding / 2 0;
+    font-size: 1rem;
+    padding: $main-padding / 3 0;
     border: double white 3px;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     width: 45%;
     color: white;
     z-index: 2;
     width: 40%;
+
+    @media (orientation: landscape) {
+      font-size: 0.8rem;
+      padding: $main-padding / 4 0;
+
+      margin-top: $main-padding / 2;
+    }
 
     // align-items: center;
   }
   &__body {
     width: 100%;
     height: 80%;
-    // background: green;
+    // background: rgba(0, 128, 0, 0.153);
 
     // border: 1px rgb(19, 57, 90) dotted;
   }

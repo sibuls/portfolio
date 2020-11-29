@@ -4,6 +4,7 @@ body {
   width: 100vw;
   // height: 320vh;
   background-color: $color-body;
+  border: white dotted 1px;
 }
 
 .none {
@@ -27,16 +28,26 @@ body {
   @media (min-height: 780px) {
     height: 250vh;
   }
+
   @media (min-width: 481px) and (max-width: 767.98px) {
-    height: 320vh;
+    height: 290vh;
+    // height: 280vh;
   }
   @media (min-width: 768px) {
-    height: 330vh;
+    height: 280vh;
   }
   @media (min-width: 1024px) {
     height: 330vh;
   }
   @media (min-width: 1200px) {
     height: 350vh;
+  }
+
+  @media (orientation: landscape) {
+    height: 410vh;
+  }
+
+  @media (orientation: landscape) and (min-width: 710px) {
+    height: 500vh;
   }
 }

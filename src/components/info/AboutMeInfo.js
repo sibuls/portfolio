@@ -2,7 +2,7 @@ import React from 'react';
 
 function AboutMeInfo(props) {
   return (
-    <div>
+    <div className='rotate'>
       <p className='screen-text speech'>
         I'm Seb, late thirty, guy who's passion is projecting everything what
         can be projected... btw I dont have single furniture bought from shop,

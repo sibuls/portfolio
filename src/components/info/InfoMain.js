@@ -16,28 +16,28 @@ const InfoMain = () => {
     switch (menu) {
       case 'aboutme':
         return (
-          <div className='info info--aboutme'>
+          <div className='info  '>
             <AboutMeInfo />
           </div>
         );
         break;
       case 'description':
         return (
-          <div className='info info--description'>
+          <div className='info  '>
             <DescriptionInfo />
           </div>
         );
         break;
       case 'steps':
         return (
-          <div className='info info--description'>
+          <div className='info  '>
             <StepsInfo />
           </div>
         );
         break;
       case 'projects':
         return (
-          <div className='info info--description'>
+          <div className='info  '>
             <SummaryInfo />
           </div>
         );
@@ -45,14 +45,14 @@ const InfoMain = () => {
 
       case 'main':
         return (
-          <div className='info info--description'>
+          <div className='info  '>
             <StartInfo />
           </div>
         );
         break;
       default:
         return (
-          <div className='info info--description'>
+          <div className='info  '>
             <StartInfo />
           </div>
         );

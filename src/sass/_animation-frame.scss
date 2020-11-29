@@ -17,7 +17,7 @@
 
   &__iphone {
     position: relative;
-    // border: rgb(171, 111, 8) dotted 4px;
+    border: rgb(171, 111, 8) dotted 4px;
     grid-area: iphone;
     height: 120vh;
 
@@ -29,24 +29,42 @@
     @media (min-height: 780px) {
       height: 90vh;
     }
+
     @media (min-width: 481px) and (max-width: 767px) {
       height: 100vh;
     }
+
     @media (min-width: 768px) {
       height: 100vh;
     }
+
     @media (min-width: 1024px) {
       height: 100vh;
     }
     @media (min-width: 1200px) {
       height: 110vh;
     }
+
+    @media (min-width: 1200px) {
+      height: 80vh;
+    }
+
+    @media (orientation: landscape) {
+      height: 140vh;
+      border: rgb(26, 199, 20) dotted 4px;
+    }
+
+    @media (orientation: landscape) and (min-width: 710px) {
+      height: 130vh;
+      border: pink dotted 4px;
+    }
   }
+
   &__android {
     position: relative;
     grid-area: android;
     height: 120vh;
-    // border: rgb(17, 150, 173) dotted 2px;
+    border: rgb(3, 13, 46) dotted 2px;
 
     // media query
     @media (min-height: 720px) {
@@ -57,10 +75,13 @@
     }
     @media (min-width: 481px) and (max-width: 767.98px) {
       height: 140vh;
+
+      height: 130vh;
+      border: rgb(27, 52, 3) dotted 2px;
     }
 
     @media (min-width: 768px) {
-      height: 140vh;
+      height: 100vh;
     }
     @media (min-width: 1024px) {
       height: 140vh;
@@ -68,12 +89,16 @@
     @media (min-width: 1200px) {
       height: 160vh;
     }
+
+    @media (orientation: landscape) {
+      height: 180vh;
+    }
   }
   &__footer {
     position: relative;
     grid-area: footer;
-    // border: rgb(232, 229, 229) dotted 1px;
-    height: 60vh;
+    border: rgb(69, 51, 51) dotted 2px;
+    height: 50vh;
 
     // media query
     @media (min-height: 720px) {
@@ -83,7 +108,7 @@
       height: 60vh;
     }
     @media (min-width: 481px) and (max-width: 767.98px) {
-      height: 80vh;
+      height: 60vh;
     }
     @media (min-width: 768px) {
       height: 80vh;
@@ -93,6 +118,10 @@
     }
     @media (min-width: 1200px) {
       height: 80vh;
+    }
+
+    @media (orientation: landscape) {
+      height: 90vh;
     }
   }
 
@@ -108,14 +137,15 @@
     transform: translate(-50%, -50%);
 
     z-index: 1;
+    border: rgb(224, 11, 11) 1px dashed;
 
     @media (min-width: 481px) and (max-width: 767.98px) {
       width: 35vw;
       height: 70vw;
     }
     @media (min-width: 768px) {
-      width: 35vw;
-      height: 70vw;
+      width: 40vw;
+      height: 80vw;
     }
 
     @media (min-width: 1024px) {
@@ -125,6 +155,13 @@
     @media (min-width: 1200px) {
       width: 35vh;
       height: 70vh;
+    }
+
+    @media (orientation: landscape) {
+      width: 25vw;
+      height: 50vw;
+      top: 56%;
+      // transform: translate(-50%, -50%) rotate(-90deg);
     }
   }
 
@@ -138,13 +175,27 @@
     // border: red dotted 1px;
 
     // background: rgba(201, 201, 185, 0.488);
+
     @media (min-width: 481px) {
       width: 50vw;
       height: 145vw; /* android-box size + dots-box size  */
+
+      // width: 40vw;
+      // height: 80vw;
     }
+    @media (min-width: 768px) {
+      width: 40vw;
+      height: 108vw;
+    }
+
     @media (min-width: 1200px) {
       width: 25vw;
       height: 72.5vw; /* android-box size + dots-box size  */
+    }
+
+    @media (orientation: landscape) {
+      width: 30vw;
+      height: 81vw; /* android-box size + dots-box size  */
     }
   }
   &__android-box {
@@ -159,13 +210,28 @@
     // border: white 1px dotted;
 
     z-index: 1;
+
     @media (min-width: 481px) {
       width: 50vw;
       height: 100vw;
+
+      // width: 40vw;
+      // height: 80vw;
     }
+
+    @media (min-width: 768px) {
+      width: 40vw;
+      height: 80vw;
+    }
+
     @media (min-width: 1200px) {
       width: 25vw;
       height: 50vw;
+    }
+
+    @media (orientation: landscape) {
+      width: 30vw;
+      height: 60vw;
     }
   }
 
@@ -188,6 +254,11 @@
       width: 30vw;
       height: 15vw;
     }
+
+    @media (orientation: landscape) {
+      width: 72vh;
+      height: 35vh;
+    }
   }
 
   &__dots-box {
@@ -207,9 +278,18 @@
     @media (min-width: 481px) {
       width: 50vw;
       // height: 31.5%;
+      // width: 40vw;
+    }
+
+    @media (min-width: 768px) {
+      width: 40vw;
     }
     @media (min-width: 1200px) {
       width: 25vw;
+    }
+
+    @media (orientation: landscape) {
+      width: 30vw;
     }
 
     &--cover {
@@ -223,7 +303,7 @@
       z-index: 3;
 
       background-color: $color-body;
-      // background-color: rgba(10, 45, 10, 0.534);
+      background-color: rgba(12, 16, 31, 0.564);
     }
   }
 

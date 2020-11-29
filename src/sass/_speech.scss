@@ -29,6 +29,11 @@
   line-height: 1.2rem;
   text-align: left;
 
+  @media (orientation: landscape) {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
   span {
     text-decoration: line-through;
   }

@@ -120,4 +120,9 @@
       top: 80%;
     }
   }
+
+  @media (orientation: landscape) {
+    width: 1rem;
+    height: 1rem;
+  }
 }
