@@ -37,19 +37,27 @@
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    @media (min-width: 481px) and (max-width: 767.98px) {
+    // @media (min-width: 481px) and (max-width: 767.98px) {
+    //   width: 50vw;
+    // }
+    @media (min-width: 481px) {
       width: 50vw;
     }
-    @media (min-width: 768px) {
-      // width: 40vw;
-    }
 
-    @media (min-width: 1200px) {
-      width: 25vw;
-    }
+    // @media (min-width: 768px) {
+    //   // width: 40vw;
+    // }
+
+    // @media (min-width: 1200px) {
+    //   width: 25vw;
+    // }
 
     @media (orientation: landscape) {
       width: 30vw;
+    }
+
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+      width: 24vw;
     }
   }
 
@@ -60,20 +68,28 @@
     // backface-visibility: hidden;
 
     height: 120vw;
-    @media (min-width: 481px) and (max-width: 767.98px) {
+    // @media (min-width: 481px) and (max-width: 767.98px) {
+    //   height: 100vw;
+    // }
+
+    @media (min-width: 481px) {
       height: 100vw;
     }
 
-    @media (min-width: 768px) {
-      // height: 80vw;
-    }
+    // @media (min-width: 768px) {
+    //   // height: 80vw;
+    // }
 
-    @media (min-width: 1200px) {
-      height: 50vw;
-    }
+    // @media (min-width: 1200px) {
+    //   height: 50vw;
+    // }
 
     @media (orientation: landscape) {
       height: 60vw;
+    }
+
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+      height: 48vw;
     }
   }
 
@@ -85,20 +101,28 @@
     height: 120vw;
     // border: red dotted 1px;
 
-    @media (min-width: 481px) and (max-width: 767.98px) {
+    // @media (min-width: 481px) and (max-width: 767.98px) {
+    //   height: 100vw;
+    // }
+
+    @media (min-width: 481px) {
       height: 100vw;
     }
 
-    @media (min-width: 768px) {
-      // height: 80vw;
-    }
+    // @media (min-width: 768px) {
+    //   // height: 80vw;
+    // }
 
-    @media (min-width: 1200px) {
-      height: 50vw;
-    }
+    // @media (min-width: 1200px) {
+    //   height: 50vw;
+    // }
 
     @media (orientation: landscape) {
       height: 60vw;
+    }
+
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+      height: 48vw;
     }
   }
   &-part {

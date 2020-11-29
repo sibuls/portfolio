@@ -30,8 +30,8 @@
   text-align: left;
 
   @media (orientation: landscape) {
-    font-size: 0.8rem;
-    line-height: 1rem;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
   }
 
   span {
@@ -68,7 +68,11 @@
     }
   }
 
-  &--technologies {
+  &--cv {
     margin: $main-padding / 2 $main-padding $main-padding 0;
+
+    @media (min-width: 481px) {
+      margin: $main-padding $main-padding $main-padding 0;
+    }
   }
 }

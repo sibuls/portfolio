@@ -19,27 +19,29 @@ body {
   width: 100vw;
   overflow: hidden;
   // background-color: $color-body;
-  height: 300vh;
+  height: 290vh;
   transform: skew(0deg, -8deg);
 
-  @media (min-height: 720px) {
-    height: 260vh;
-  }
-  @media (min-height: 780px) {
-    height: 250vh;
+  @media (min-width: 360px) and (min-height: 720px) and (orientation: portrait) {
+    height: 245vh;
   }
 
-  @media (min-width: 481px) and (max-width: 767.98px) {
-    height: 290vh;
-    // height: 280vh;
+  // @media (min-width: 360px) and (min-height: 720px) and (orientation: portrait) {
+  //   height: 240vh;
+  // }
+
+  @media (min-width: 481px) and (orientation: portrait) {
+    height: 270vh;
   }
-  @media (min-width: 768px) {
-    height: 280vh;
+
+  @media (min-width: 800px) and (max-width: 1023px) and (orientation: portrait) {
+    height: 240vh;
   }
-  @media (min-width: 1024px) {
-    height: 330vh;
+
+  @media (min-width: 1024px) and (orientation: portrait) {
+    height: 270vh;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1200px) and (orientation: portrait) {
     height: 350vh;
   }
 
@@ -48,6 +50,15 @@ body {
   }
 
   @media (orientation: landscape) and (min-width: 710px) {
-    height: 500vh;
+    height: 490vh;
+    border: 1px pink dotted;
+  }
+
+  @media (orientation: landscape) and (min-width: 1024px) {
+    height: 300vh;
+  }
+
+  @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+    height: 310vh;
   }
 }

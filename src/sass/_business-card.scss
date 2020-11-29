@@ -23,6 +23,7 @@
   &--glass {
     background: rgba(33, 33, 33, 0.913);
     background: rgba(19, 32, 52, 0.92);
+
     left: 50%;
     top: 52%;
     width: 108%;
@@ -35,6 +36,14 @@
     // opacity: 0.9;
     text-align: left;
     line-height: 1rem;
+
+    background: linear-gradient(
+        130deg,
+        $color-body 0%,
+        rgba(rgb(18, 34, 46), 1) 100%
+      ),
+      $color-gray-dark;
+    opacity: 0.9;
 
     & p {
       font-size: 0.8rem;
@@ -72,7 +81,7 @@
   }
 
   &__holder {
-    color: rgba(133, 131, 131, 0.452);
+    color: rgba(133, 131, 131, 0.315);
 
     padding-left: $main-padding;
   }
@@ -110,6 +119,10 @@
     @media (min-height: 1024px) {
       padding: $main-padding;
     }
+
+    @media (min-width: 481px) and (orientation: portrait) {
+      padding: $main-padding / 2 $main-padding;
+    }
   }
   &__paragraph {
     color: rgba(79, 78, 78, 0.851);
@@ -118,6 +131,12 @@
     font-size: 0.8rem;
     font-weight: bold;
 
+    @media (min-width: 481px) and (orientation: portrait) {
+      font-size: 0.7rem;
+    }
+    @media (orientation: landscape) {
+      font-size: 0.6rem;
+    }
     &--content {
       color: rgba(80, 80, 80, 0.886);
       letter-spacing: 0.2rem;
@@ -129,6 +148,13 @@
 
       @media (min-height: 1024px) {
         font-size: 0.7rem;
+      }
+      @media (min-width: 481px) and (orientation: portrait) {
+        font-size: 0.5rem;
+      }
+
+      @media (orientation: landscape) {
+        font-size: 0.4rem;
       }
     }
   }

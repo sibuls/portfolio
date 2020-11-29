@@ -17,46 +17,49 @@
 
   &__iphone {
     position: relative;
-    border: rgb(171, 111, 8) dotted 4px;
+    border: rgb(181, 172, 9) dotted 4px;
     grid-area: iphone;
-    height: 120vh;
+    height: 110vh;
 
     // media query
 
-    @media (min-height: 720px) {
-      height: 90vh;
-    }
-    @media (min-height: 780px) {
+    @media (min-width: 360px) and (min-height: 720px) {
       height: 90vh;
     }
 
-    @media (min-width: 481px) and (max-width: 767px) {
+    @media (min-width: 481px) {
       height: 100vh;
     }
 
-    @media (min-width: 768px) {
+    @media (orientation: portrait) and (min-width: 800px) and (max-width: 1023px) {
       height: 100vh;
     }
 
-    @media (min-width: 1024px) {
-      height: 100vh;
-    }
-    @media (min-width: 1200px) {
-      height: 110vh;
-    }
+    // @media (orientation: portrait) and (min-width: 1024px) {
+    //   height: 100vh;
+    // }
 
-    @media (min-width: 1200px) {
-      height: 80vh;
-    }
+    // @media (min-width: 1200px) {
+    //   height: 110vh;
+    // }
+
+    // @media (min-width: 1200px) {
+    //   height: 80vh;
+    // }
 
     @media (orientation: landscape) {
       height: 140vh;
-      border: rgb(26, 199, 20) dotted 4px;
     }
 
     @media (orientation: landscape) and (min-width: 710px) {
-      height: 130vh;
-      border: pink dotted 4px;
+      height: 180vh;
+    }
+    @media (orientation: landscape) and (min-width: 1024px) {
+      height: 100vh;
+    }
+
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+      height: 110vh;
     }
   }
 
@@ -68,23 +71,21 @@
 
     // media query
     @media (min-height: 720px) {
-      height: 110vh;
-    }
-    @media (min-height: 780px) {
       height: 100vh;
     }
-    @media (min-width: 481px) and (max-width: 767.98px) {
+
+    @media (min-width: 481px) {
       height: 140vh;
 
       height: 130vh;
-      border: rgb(27, 52, 3) dotted 2px;
     }
 
-    @media (min-width: 768px) {
-      height: 100vh;
+    @media (min-width: 800px) and (max-width: 1023px) and (orientation: portrait) {
+      height: 110vh;
     }
+
     @media (min-width: 1024px) {
-      height: 140vh;
+      height: 130vh;
     }
     @media (min-width: 1200px) {
       height: 160vh;
@@ -93,28 +94,39 @@
     @media (orientation: landscape) {
       height: 180vh;
     }
+
+    @media (orientation: landscape) and (min-width: 710px) {
+      height: 220vh;
+    }
+    @media (orientation: landscape) and (min-width: 1024px) {
+      height: 140vh;
+    }
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+      height: 150vh;
+    }
   }
   &__footer {
     position: relative;
     grid-area: footer;
-    border: rgb(69, 51, 51) dotted 2px;
-    height: 50vh;
+    border: rgb(109, 7, 7) dotted 2px;
+    height: 60vh;
 
     // media query
-    @media (min-height: 720px) {
-      height: 60vh;
+    @media (min-width: 360px) and (min-height: 720px) {
+      height: 55vh;
+      border: rgb(255, 255, 255) dotted 2px;
     }
-    @media (min-height: 780px) {
-      height: 60vh;
+
+    @media (min-width: 481px) {
+      height: 40vh;
     }
-    @media (min-width: 481px) and (max-width: 767.98px) {
-      height: 60vh;
+
+    @media (orientation: portrait) and (min-width: 800px) and (max-width: 1023px) {
+      height: 30vh;
     }
-    @media (min-width: 768px) {
-      height: 80vh;
-    }
+
     @media (min-width: 1024px) {
-      height: 80vh;
+      height: 40vh;
     }
     @media (min-width: 1200px) {
       height: 80vh;
@@ -122,6 +134,16 @@
 
     @media (orientation: landscape) {
       height: 90vh;
+      border: rgb(40, 3, 3) dotted 2px;
+    }
+    @media (orientation: landscape) and (min-width: 710px) {
+      height: 90vh;
+    }
+    @media (orientation: landscape) and (min-width: 1024px) {
+      height: 60vh;
+    }
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+      height: 50vh;
     }
   }
 
@@ -132,18 +154,25 @@
     height: 90vw;
 
     top: 50%;
-    // top: 70%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     z-index: 1;
     border: rgb(224, 11, 11) 1px dashed;
 
-    @media (min-width: 481px) and (max-width: 767.98px) {
+    // @media (min-width: 360px) and (min-height: 780px) {
+    //   width: 50vw;
+    //   height: 90vw;
+    // }
+
+    @media (min-width: 481px) {
+      top: 65%;
       width: 35vw;
       height: 70vw;
     }
-    @media (min-width: 768px) {
+
+    @media (min-width: 800px) and (max-width: 1023px) and (orientation: portrait) {
       width: 40vw;
       height: 80vw;
     }
@@ -152,16 +181,37 @@
       width: 35vw;
       height: 70vw;
     }
-    @media (min-width: 1200px) {
-      width: 35vh;
-      height: 70vh;
-    }
+    // @media (min-width: 1200px) {
+    //   width: 35vh;
+    //   height: 70vh;
+    // }
 
     @media (orientation: landscape) {
       width: 25vw;
       height: 50vw;
-      top: 56%;
-      // transform: translate(-50%, -50%) rotate(-90deg);
+
+      top: 50%;
+      left: 65%;
+    }
+
+    @media (orientation: landscape) and (min-width: 1280px) {
+      width: 22vw;
+      height: 40vw;
+
+      border: white 2px solid;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 2dppx) and (orientation: landscape) and (min-width: 1360px) {
+      width: 25vw;
+      height: 50vw;
+      // border: orange 2px solid;
+    }
+
+    // only laptops and desktops
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+      width: 20vw;
+      height: 40vw;
+      border: green 2px solid;
     }
   }
 
@@ -183,10 +233,10 @@
       // width: 40vw;
       // height: 80vw;
     }
-    @media (min-width: 768px) {
-      width: 40vw;
-      height: 108vw;
-    }
+    // @media (min-width: 768px) {
+    //   width: 40vw;
+    //   height: 108vw;
+    // }
 
     @media (min-width: 1200px) {
       width: 25vw;
@@ -196,6 +246,11 @@
     @media (orientation: landscape) {
       width: 30vw;
       height: 81vw; /* android-box size + dots-box size  */
+    }
+
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+      width: 24vw;
+      height: 58vw;
     }
   }
   &__android-box {
@@ -219,10 +274,10 @@
       // height: 80vw;
     }
 
-    @media (min-width: 768px) {
-      width: 40vw;
-      height: 80vw;
-    }
+    // @media (min-width: 768px) {
+    //   width: 40vw;
+    //   height: 80vw;
+    // }
 
     @media (min-width: 1200px) {
       width: 25vw;
@@ -232,6 +287,11 @@
     @media (orientation: landscape) {
       width: 30vw;
       height: 60vw;
+    }
+
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+      width: 24vw;
+      height: 48vw;
     }
   }
 
@@ -246,8 +306,9 @@
     height: 35vw;
     border: dotted 1px grey;
     @media (min-width: 481px) {
-      width: 50vw;
-      height: 25vw;
+      width: 45vw;
+      height: 22.5vw;
+      left: 65%;
     }
 
     @media (min-width: 1200px) {
@@ -258,6 +319,14 @@
     @media (orientation: landscape) {
       width: 72vh;
       height: 35vh;
+      left: 65%;
+    }
+
+    @media (orientation: landscape) and (min-width: 1024px) {
+      width: 50vh;
+      height: 25vh;
+
+      left: 60%;
     }
   }
 
@@ -281,15 +350,19 @@
       // width: 40vw;
     }
 
-    @media (min-width: 768px) {
-      width: 40vw;
-    }
+    // @media (min-width: 768px) {
+    //   width: 40vw;
+    // }
     @media (min-width: 1200px) {
       width: 25vw;
     }
 
     @media (orientation: landscape) {
       width: 30vw;
+    }
+
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+      width: 24vw;
     }
 
     &--cover {

@@ -22,8 +22,7 @@ export const defaultObject = {
   email: false,
   linkedin: false,
   cv: '',
-  // isRotated: false,
-  // delay: 11,
+
   handleCardClick: () => {},
   handleDotClick: () => {},
   handleRotateClick: () => {},

@@ -182,7 +182,7 @@ const TechnologiesInfo = ({ cv }) => {
         anime={questionAnime}
         time={'2s'}
         delay={'0s'}
-        className='screen-text speech speech--question  speech--technologies opacity '
+        className='screen-text speech speech--question  speech--cv opacity '
       >
         Which technologies am I using?
       </Question>

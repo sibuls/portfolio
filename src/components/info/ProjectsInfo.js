@@ -4,7 +4,7 @@ import photo from '../../images/preview.jpg';
 const ProjectsInfo = () => {
   return (
     <div className='projects'>
-      <p className='screen-text speech speech--question  speech--technologies'>
+      <p className='screen-text speech speech--question  speech--cv'>
         Are they any projects?
       </p>
 
