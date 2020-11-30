@@ -30,7 +30,7 @@ const Background = () => {
     <React.Fragment>
       <div className='body'>
         {' '}
-        <p className='body__text'> {sentence(10)}</p>
+        <p className='body__text'> {sentence(30)}</p>
       </div>
     </React.Fragment>
   );

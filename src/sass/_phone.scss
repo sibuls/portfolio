@@ -56,9 +56,18 @@
       width: 30vw;
     }
 
+    @media (min-width: 1000px) and (orientation: landscape) {
+      width: 24vw;
+    }
+
     @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
       width: 24vw;
     }
+
+    // macbook
+    // @media (orientation: landscape) and (min-width: 1440px) and (min-height: 800px) {
+    //   width: 24vw;
+    // }
   }
 
   &--front {
@@ -87,10 +96,18 @@
     @media (orientation: landscape) {
       height: 60vw;
     }
+    @media (min-width: 1000px) and (orientation: landscape) {
+      height: 48vw;
+    }
 
     @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
       height: 48vw;
     }
+
+    // macbook
+    // @media (orientation: landscape) and (min-width: 1440px) and (min-height: 800px) {
+    //   height: 48vw;
+    // }
   }
 
   &--back {
@@ -121,9 +138,17 @@
       height: 60vw;
     }
 
+    @media (min-width: 1000px) and (orientation: landscape) {
+      height: 48vw;
+    }
     @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
       height: 48vw;
     }
+
+    // macbook
+    // @media (orientation: landscape) and (min-width: 1440px) and (min-height: 800px) {
+    //   height: 48vw;
+    // }
   }
   &-part {
     position: absolute;
