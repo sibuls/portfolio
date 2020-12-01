@@ -19,45 +19,40 @@
     position: relative;
     border: rgb(252, 240, 9) dotted 2px;
     grid-area: iphone;
-    height: 110vh;
+    height: 210vw;
 
-    // left: 50%;
-    // transform: translateX(-50%);
     // media query
 
     @media (orientation: portrait) and (min-width: 360px) and (min-height: 720px) {
-      height: 90%;
+      height: 210vw;
     }
 
-    @media (orientation: portrait) and (min-width: 481px) {
-      height: 100vh;
-    }
+    // tablet
+    @media only screen and (orientation: portrait) and (min-width: 481px) {
+      border: rgb(230, 103, 6) dashed 4px;
 
-    @media (orientation: portrait) and (min-width: 800px) and (max-width: 1023px) {
-      height: 100vh;
+      height: 140vw;
     }
 
     @media (orientation: landscape) {
-      // border: rgb(252, 9, 9) dotted 8px;
-
-      height: 140vh;
+      height: 80vw;
     }
 
     @media (orientation: landscape) and (min-width: 710px) {
-      height: 180vh;
+      height: 80vw;
       // border: rgb(9, 252, 37) dotted 8px;
     }
 
     // tablet
 
     @media only screen and (orientation: landscape) and (min-width: 768px) {
-      height: 100vh;
+      height: 80vw;
       // border: rgb(9, 46, 252) dotted 8px;
     }
 
     // macbook lower
     @media only screen and (orientation: landscape) and (min-width: 1000px) {
-      height: 100vh;
+      height: 80vw;
     }
 
     // macbook 13 default
@@ -67,138 +62,148 @@
     }
 
     // laptop
-    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
-      height: 110vh;
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) {
+      height: 60vw;
       // border: rgb(0, 0, 0) 10px solid;
     }
 
-    @media (orientation: landscape) and (min-width: 1440px) {
-      height: 110vh;
-    }
+    // @media (orientation: landscape) and (min-width: 1440px) {
+    //   height: 110vh;
+    // }
 
     @media (orientation: landscape) and (min-width: 1920px) {
-      height: 110vh;
+      height: 40vw;
     }
   }
 
   &__android {
     position: relative;
     grid-area: android;
-    height: 120vh;
-    // border: rgb(3, 13, 46) dotted 2px;
+    height: 220vw;
+    border: rgb(3, 13, 46) dotted 2px;
 
     // media query
     @media (min-height: 720px) {
-      height: 100vh;
+      height: 220vw;
+      border: rgb(227, 220, 19) dotted 2px;
     }
 
-    @media (min-width: 481px) {
-      height: 140vh;
+    @media only screen and (orientation: portrait) and (min-width: 481px) {
+      height: 160vw;
+      border: rgb(213, 213, 213) dashed 4px;
+    }
+    // @media (min-width: 768px) {
+    //   height: 220vw;
+    //   // border: rgb(3, 13, 46) dotted 12px;
+    // }
+    // @media (min-width: 800px) and (max-width: 1023px) and (orientation: portrait) {
+    //   height: 110vh;
+    // }
 
-      height: 130vh;
-      // border: rgb(115, 122, 145) dotted 12px;
-    }
-    @media (min-width: 768px) {
-      height: 130vh;
-      // border: rgb(3, 13, 46) dotted 12px;
-    }
-    @media (min-width: 800px) and (max-width: 1023px) and (orientation: portrait) {
-      height: 110vh;
-    }
-
-    @media (min-width: 1200px) {
-      height: 160vh;
-    }
+    // @media (min-width: 1200px) {
+    //   height: 160vh;
+    // }
 
     @media (orientation: landscape) {
-      height: 180vh;
+      height: 100vw;
     }
 
     @media (orientation: landscape) and (min-width: 710px) {
-      height: 220vh;
+      height: 100vw;
+      border: rgb(206, 200, 10) dotted 2px;
     }
 
     // tablet
 
     @media (orientation: landscape) and (min-width: 768px) {
-      height: 140vh;
+      height: 100vw;
     }
 
     @media (min-width: 1000px) and (orientation: landscape) {
-      height: 140vh;
-      // border: green 12px solid;
+      height: 70vw;
+      border: rgb(193, 8, 63) 12px solid;
     }
 
-    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
-      height: 150vh;
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) {
+      height: 80vw;
     }
 
-    @media (orientation: landscape) and (min-width: 1440px) {
-      height: 150vh;
-    }
-    @media (orientation: landscape) and (min-width: 1680px) {
-      height: 130vh;
-    }
+    // @media (orientation: landscape) and (min-width: 1440px) {
+    //   height: 150vh;
+    // }
+    // @media (orientation: landscape) and (min-width: 1680px) {
+    //   height: 130vh;
+    // }
 
     @media (orientation: landscape) and (min-width: 1920px) {
-      height: 140vh;
+      height: 60vw;
+      border: rgb(21, 126, 17) 12px solid;
     }
   }
   &__footer {
     position: relative;
     grid-area: footer;
-    // border: rgb(109, 7, 7) dotted 2px;
-    height: 65vh;
+    border: rgb(109, 7, 7) dotted 6px;
+    height: 120vw;
 
     // media query
-    @media (min-width: 360px) and (min-height: 720px) {
-      height: 55vh;
-      // border: rgb(255, 255, 255) dotted 2px;
+    @media only screen and (min-width: 360px) and (min-height: 720px) {
+      height: 120vw;
+      border: rgb(255, 255, 255) dotted 2px;
     }
 
-    @media (min-width: 481px) {
-      height: 40vh;
+    // tablet
+    @media only screen and (orientation: portrait) and (min-width: 481px) {
+      height: 80vw;
+      border: 4px rgb(57, 53, 146) dashed;
     }
 
-    @media (orientation: portrait) and (min-width: 800px) and (max-width: 1023px) {
-      height: 40vh;
-      // border: 12px solid red;
-    }
+    // @media (orientation: portrait) and (min-width: 800px) and (max-width: 1023px) {
+    //   height: 40vh;
+    // }
 
-    @media (min-width: 768px) {
-      height: 40vh;
-    }
-    @media (min-width: 1200px) {
-      height: 80vh;
-    }
+    // @media (min-width: 768px) {
+    //   height: 40vh;
+    // }
+    // @media (min-width: 1200px) {
+    //   height: 80vh;
+    // }
 
     @media (orientation: landscape) {
-      height: 90vh;
+      height: 50vw;
       // border: rgb(40, 3, 3) dotted 2px;
     }
     @media (orientation: landscape) and (min-width: 710px) {
-      height: 90vh;
+      height: 50vw;
     }
+    // tablet
     @media (orientation: landscape) and (min-width: 768px) {
-      height: 60vh;
+      height: 50vw;
+      border: 4px rgb(244, 184, 32) dashed;
     }
 
-    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
-      height: 50vh;
+    // macbook lower
+    @media only screen and (orientation: landscape) and (min-width: 1000px) {
+      height: 50vw;
+      border: 4px rgb(74, 3, 42) dashed;
+    }
+
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) {
+      height: 50vw;
 
       // border: pink 8px dotted;
     }
 
-    @media (orientation: landscape) and (min-width: 1440px) {
-      height: 50vh;
-      // border: rgb(113, 152, 21) 8px solid;
-    }
+    // @media (orientation: landscape) and (min-width: 1440px) {
+    //   height: 50vh;
+    //   // border: rgb(113, 152, 21) 8px solid;
+    // }
 
-    @media (orientation: landscape) and (min-width: 1680px) {
-      height: 40vh;
-    }
+    // @media (orientation: landscape) and (min-width: 1680px) {
+    //   height: 40vh;
+    // }
     @media (orientation: landscape) and (min-width: 1920px) {
-      height: 50vh;
+      height: 35vw;
     }
   }
 
@@ -275,6 +280,12 @@
     @media (orientation: landscape) and (min-width: 1440px) {
       width: 19vw;
       height: 36vw;
+    }
+    @media (orientation: landscape) and (min-width: 1920px) {
+      width: 14vw;
+      height: 28vw;
+      left: 60%;
+      top: 55%;
     }
   }
 
@@ -365,6 +376,27 @@
       width: 24vw;
       height: 48vw;
     }
+    @media (orientation: landscape) and (min-width: 1920px) {
+      width: 18vw;
+      height: 36vw;
+    }
+  }
+
+  &__footer-wraper {
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: red 2px dotted;
+
+    border: dotted 6px rgb(247, 140, 26);
+
+    // laptop small 1dpp if i want make it without macbook
+    // @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+    //   border: dotted 4px rgb(39, 152, 7);
+    // }
   }
 
   &__footer-container {
@@ -372,7 +404,7 @@
     bottom: 10%;
     left: 50%;
     transform-origin: center center;
-    transform: translate(-50%, 0%) skew(20deg, -5deg) rotate(7deg);
+    transform: translate(-50%, 0%);
 
     width: 72vw;
     height: 35vw;
@@ -392,31 +424,50 @@
       width: 72vh;
       height: 35vh;
       left: 65%;
+      border: solid red 2px;
     }
 
     @media (orientation: landscape) and (min-width: 768px) {
-      width: 50vh;
-      height: 25vh;
+      width: 35%;
+      height: 35%;
 
-      left: 60%;
+      left: 65%;
+      border: solid rgb(48, 194, 55) 2px;
+    }
+
+    // mac lower
+    @media (min-width: 1000px) and (orientation: landscape) {
+      width: 30%;
+      height: 30%;
+      border: dotted 4px white;
+    }
+
+    // laptop small
+    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) {
+      width: 30%;
+      height: 30%;
+      bottom: 25%;
     }
 
     // aspect ratio 8/5 - macbooks
-    @media (orientation: landscape) and (min-width: 1440px) and (min-height: 900px) and (max-resolution: 1dppx) {
-      width: 45vh;
-      height: 25vh;
-      // border: 15px blue dotted;
-    }
 
-    @media (orientation: landscape) and (min-width: 1680px) {
+    // @media (orientation: landscape) and (min-width: 1440px) and (min-height: 900px) and (max-resolution: 1dppx) {
+    //   width: 45vh;
+    //   height: 25vh;
+    //   // border: 15px blue dotted;
+    // }
+
+    // @media (orientation: landscape) and (min-width: 1680px) {
+    //   width: 40vh;
+    //   height: 20vh;
+
+    //   // border: red dotted 12px;
+    // }
+    @media (orientation: landscape) and (min-width: 1920px) {
       width: 40vh;
       height: 20vh;
-
-      // border: red dotted 12px;
-    }
-    @media (orientation: landscape) and (min-width: 1920px) {
-      width: 45vh;
-      height: 25vh;
+      left: 58%;
+      bottom: 8%;
     }
   }
 
@@ -456,6 +507,10 @@
 
     @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
       width: 24vw;
+    }
+
+    @media (orientation: landscape) and (min-width: 1920px) {
+      width: 18vw;
     }
 
     &--cover {

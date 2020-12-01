@@ -68,6 +68,9 @@
     // @media (orientation: landscape) and (min-width: 1440px) and (min-height: 800px) {
     //   width: 24vw;
     // }
+    @media (orientation: landscape) and (min-width: 1920px) {
+      width: 18vw;
+    }
   }
 
   &--front {
@@ -104,6 +107,9 @@
       height: 48vw;
     }
 
+    @media (orientation: landscape) and (min-width: 1920px) {
+      height: 36vw;
+    }
     // macbook
     // @media (orientation: landscape) and (min-width: 1440px) and (min-height: 800px) {
     //   height: 48vw;
@@ -143,6 +149,9 @@
     }
     @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
       height: 48vw;
+    }
+    @media (orientation: landscape) and (min-width: 1920px) {
+      height: 36vw;
     }
 
     // macbook

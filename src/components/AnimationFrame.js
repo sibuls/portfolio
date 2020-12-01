@@ -131,19 +131,21 @@ const AnimationFrame = () => {
           </div>
         </div>
         <div className='animation__footer'>
-          {' '}
-          <Menu
-            name={'email'}
-            text={'email'}
-            handleClick={() => handleEmailClick('email')}
-          />
-          <Menu
-            name={'linkedin'}
-            text={'linkedin'}
-            handleClick={() => handleLinkedinClick('linkedin')}
-          />
-          <div className='animation__footer-container'>
-            <Case />
+          <div className='animation__footer-wraper'>
+            {' '}
+            <Menu
+              name={'email'}
+              text={'email'}
+              handleClick={() => handleEmailClick('email')}
+            />
+            <Menu
+              name={'linkedin'}
+              text={'linkedin'}
+              handleClick={() => handleLinkedinClick('linkedin')}
+            />
+            <div className='animation__footer-container'>
+              <Case />
+            </div>
           </div>
         </div>
       </div>
