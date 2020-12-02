@@ -7,12 +7,16 @@
 
   background: $color-background;
 
-  .body__text {
+  &__text {
     font-size: 0.8rem;
     line-height: 1.2rem;
     text-align: center;
 
     color: rgba(189, 189, 189, 0.146);
     color: rgba(189, 189, 189, 0.543);
+  }
+
+  &__span-white {
+    color: rgb(0, 0, 0);
   }
 }

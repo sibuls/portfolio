@@ -17,7 +17,7 @@
 
   &__iphone {
     position: relative;
-    border: rgb(252, 240, 9) dotted 2px;
+
     grid-area: iphone;
     height: 210vw;
 
@@ -29,8 +29,6 @@
 
     // tablet
     @media only screen and (orientation: portrait) and (min-width: 481px) {
-      border: rgb(230, 103, 6) dashed 4px;
-
       height: 140vw;
     }
 
@@ -40,14 +38,12 @@
 
     @media (orientation: landscape) and (min-width: 710px) {
       height: 80vw;
-      // border: rgb(9, 252, 37) dotted 8px;
     }
 
     // tablet
 
     @media only screen and (orientation: landscape) and (min-width: 768px) {
       height: 80vw;
-      // border: rgb(9, 46, 252) dotted 8px;
     }
 
     // macbook lower
@@ -58,18 +54,12 @@
     // macbook 13 default
     @media (orientation: landscape) and (min-width: 1280px) {
       height: 100vh;
-      // border: rgb(9, 46, 252) dotted 8px;
     }
 
     // laptop
     @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) {
       height: 60vw;
-      // border: rgb(0, 0, 0) 10px solid;
     }
-
-    // @media (orientation: landscape) and (min-width: 1440px) {
-    //   height: 110vh;
-    // }
 
     @media (orientation: landscape) and (min-width: 1920px) {
       height: 40vw;
@@ -80,29 +70,15 @@
     position: relative;
     grid-area: android;
     height: 220vw;
-    border: rgb(3, 13, 46) dotted 2px;
 
     // media query
     @media (min-height: 720px) {
       height: 220vw;
-      border: rgb(227, 220, 19) dotted 2px;
     }
 
     @media only screen and (orientation: portrait) and (min-width: 481px) {
       height: 160vw;
-      border: rgb(213, 213, 213) dashed 4px;
     }
-    // @media (min-width: 768px) {
-    //   height: 220vw;
-    //   // border: rgb(3, 13, 46) dotted 12px;
-    // }
-    // @media (min-width: 800px) and (max-width: 1023px) and (orientation: portrait) {
-    //   height: 110vh;
-    // }
-
-    // @media (min-width: 1200px) {
-    //   height: 160vh;
-    // }
 
     @media (orientation: landscape) {
       height: 100vw;
@@ -110,7 +86,6 @@
 
     @media (orientation: landscape) and (min-width: 710px) {
       height: 100vw;
-      border: rgb(206, 200, 10) dotted 2px;
     }
 
     // tablet
@@ -121,57 +96,34 @@
 
     @media (min-width: 1000px) and (orientation: landscape) {
       height: 70vw;
-      border: rgb(193, 8, 63) 12px solid;
     }
 
     @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) {
       height: 80vw;
     }
 
-    // @media (orientation: landscape) and (min-width: 1440px) {
-    //   height: 150vh;
-    // }
-    // @media (orientation: landscape) and (min-width: 1680px) {
-    //   height: 130vh;
-    // }
-
     @media (orientation: landscape) and (min-width: 1920px) {
       height: 60vw;
-      border: rgb(21, 126, 17) 12px solid;
     }
   }
   &__footer {
     position: relative;
     grid-area: footer;
-    border: rgb(109, 7, 7) dotted 6px;
+
     height: 120vw;
 
     // media query
     @media only screen and (min-width: 360px) and (min-height: 720px) {
       height: 120vw;
-      border: rgb(255, 255, 255) dotted 2px;
     }
 
     // tablet
     @media only screen and (orientation: portrait) and (min-width: 481px) {
       height: 80vw;
-      border: 4px rgb(57, 53, 146) dashed;
     }
-
-    // @media (orientation: portrait) and (min-width: 800px) and (max-width: 1023px) {
-    //   height: 40vh;
-    // }
-
-    // @media (min-width: 768px) {
-    //   height: 40vh;
-    // }
-    // @media (min-width: 1200px) {
-    //   height: 80vh;
-    // }
 
     @media (orientation: landscape) {
       height: 50vw;
-      // border: rgb(40, 3, 3) dotted 2px;
     }
     @media (orientation: landscape) and (min-width: 710px) {
       height: 50vw;
@@ -179,29 +131,17 @@
     // tablet
     @media (orientation: landscape) and (min-width: 768px) {
       height: 50vw;
-      border: 4px rgb(244, 184, 32) dashed;
     }
 
     // macbook lower
     @media only screen and (orientation: landscape) and (min-width: 1000px) {
       height: 50vw;
-      border: 4px rgb(74, 3, 42) dashed;
     }
 
     @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) {
       height: 50vw;
-
-      // border: pink 8px dotted;
     }
 
-    // @media (orientation: landscape) and (min-width: 1440px) {
-    //   height: 50vh;
-    //   // border: rgb(113, 152, 21) 8px solid;
-    // }
-
-    // @media (orientation: landscape) and (min-width: 1680px) {
-    //   height: 40vh;
-    // }
     @media (orientation: landscape) and (min-width: 1920px) {
       height: 35vw;
     }
@@ -219,12 +159,6 @@
     transform: translate(-50%, -50%);
 
     z-index: 1;
-    // border: rgb(224, 11, 11) 1px dashed;
-
-    // @media (min-width: 360px) and (min-height: 780px) {
-    //   width: 50vw;
-    //   height: 90vw;
-    // }
 
     @media (min-width: 481px) {
       top: 65%;
@@ -241,10 +175,6 @@
       width: 35vw;
       height: 70vw;
     }
-    // @media (min-width: 1200px) {
-    //   width: 35vh;
-    //   height: 70vh;
-    // }
 
     @media (orientation: landscape) {
       width: 25vw;
@@ -258,23 +188,18 @@
     @media (orientation: landscape) and (min-width: 1000px) {
       width: 19vw;
       height: 38vw;
-
-      // border: rgb(14, 242, 71) 2px solid;
     }
 
     // macbook 13 default
     @media (orientation: landscape) and (min-width: 1280px) {
       width: 19vw;
       height: 38vw;
-
-      // border: rgb(216, 119, 15) 2px solid;
     }
 
     // only laptops and desktops
     @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
       width: 20vw;
       height: 40vw;
-      // border: rgb(17, 75, 201) 2px solid;
     }
 
     @media (orientation: landscape) and (min-width: 1440px) {
@@ -296,21 +221,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // border: red dotted 1px;
-
-    // background: rgba(201, 201, 185, 0.488);
 
     @media (min-width: 481px) {
       width: 50vw;
       height: 145vw; /* android-box size + dots-box size  */
-
-      // width: 40vw;
-      // height: 80vw;
     }
-    // @media (min-width: 768px) {
-    //   width: 40vw;
-    //   height: 108vw;
-    // }
 
     @media (min-width: 1200px) {
       width: 25vw;
@@ -340,23 +255,13 @@
     left: 50%;
     transform: translate(-50%, 0%);
     z-index: 2;
-    // background: rgba(92, 92, 12, 0.557);
-    // border: white 1px dotted;
 
     z-index: 1;
 
     @media (min-width: 481px) {
       width: 50vw;
       height: 100vw;
-
-      // width: 40vw;
-      // height: 80vw;
     }
-
-    // @media (min-width: 768px) {
-    //   width: 40vw;
-    //   height: 80vw;
-    // }
 
     @media (min-width: 1200px) {
       width: 25vw;
@@ -389,14 +294,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    border: red 2px dotted;
-
-    border: dotted 6px rgb(247, 140, 26);
-
-    // laptop small 1dpp if i want make it without macbook
-    // @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
-    //   border: dotted 4px rgb(39, 152, 7);
-    // }
   }
 
   &__footer-container {
@@ -408,7 +305,7 @@
 
     width: 72vw;
     height: 35vw;
-    // border: dotted 1px grey;
+
     @media (min-width: 481px) {
       width: 45vw;
       height: 22.5vw;
@@ -424,7 +321,6 @@
       width: 72vh;
       height: 35vh;
       left: 65%;
-      border: solid red 2px;
     }
 
     @media (orientation: landscape) and (min-width: 768px) {
@@ -432,14 +328,12 @@
       height: 35%;
 
       left: 65%;
-      border: solid rgb(48, 194, 55) 2px;
     }
 
     // mac lower
     @media (min-width: 1000px) and (orientation: landscape) {
       width: 30%;
       height: 30%;
-      border: dotted 4px white;
     }
 
     // laptop small
@@ -449,20 +343,6 @@
       bottom: 25%;
     }
 
-    // aspect ratio 8/5 - macbooks
-
-    // @media (orientation: landscape) and (min-width: 1440px) and (min-height: 900px) and (max-resolution: 1dppx) {
-    //   width: 45vh;
-    //   height: 25vh;
-    //   // border: 15px blue dotted;
-    // }
-
-    // @media (orientation: landscape) and (min-width: 1680px) {
-    //   width: 40vh;
-    //   height: 20vh;
-
-    //   // border: red dotted 12px;
-    // }
     @media (orientation: landscape) and (min-width: 1920px) {
       width: 40vh;
       height: 20vh;
@@ -480,20 +360,13 @@
     left: 50%;
 
     transform: translate(-50%, 0%);
-    // z-index: 2;
+
     background: transparent;
-    // background: $color-body;
-    // background: rgba(172, 108, 13, 0.488);
 
     @media (min-width: 481px) {
       width: 50vw;
-      // height: 31.5%;
-      // width: 40vw;
     }
 
-    // @media (min-width: 768px) {
-    //   width: 40vw;
-    // }
     @media (min-width: 1200px) {
       width: 25vw;
     }
@@ -524,7 +397,6 @@
       z-index: 3;
 
       background-color: $color-body;
-      background-color: rgba(12, 16, 31, 0.564);
     }
   }
 }

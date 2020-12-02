@@ -2,9 +2,8 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100vw;
-  // height: 320vh;
+
   background-color: $color-body;
-  // border: white dotted 1px;
 }
 
 .none {
@@ -15,13 +14,10 @@ body {
 }
 .wrapper {
   position: relative;
-  // min-height: 250vh;
   width: 100vw;
   overflow: hidden;
-  // background-color: $color-body;
   height: 550vw;
   transform: skew(0deg, -8deg);
-  border: rgb(130, 14, 154) dotted 2px;
 
   // the same as above so it can be removed after check all project
   @media (min-width: 360px) and (min-height: 720px) and (orientation: portrait) {
@@ -32,10 +28,6 @@ body {
     border: black dashed 4px;
     height: 380vw;
   }
-
-  // @media (min-width: 800px) and (max-width: 1023px) and (orientation: portrait) {
-  //   height: 250vh;
-  // }
 
   @media (min-width: 1024px) and (orientation: portrait) {
     height: 270vh;
@@ -54,35 +46,15 @@ body {
 
   @media (orientation: landscape) and (min-width: 768px) {
     height: 230vw;
-    border: 3px rgb(171, 171, 171) dotted;
   }
 
   @media (min-width: 1000px) and (orientation: landscape) {
     height: 200vw;
-    // border: green 2px solid;
   }
 
   @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) {
     height: 190vw;
   }
-
-  // @media (orientation: landscape) and (min-width: 1600px) and (min-height: 768px) and (max-resolution: 1dppx) {
-  //   height: 310vh;
-  // }
-
-  // @media (orientation: landscape) and (min-width: 1440px) and (min-height: 800px) {
-  //   height: 310vh;
-  //   border: 2px rgb(203, 228, 42) dotted;
-  // }
-
-  // @media (orientation: landscape) and (min-width: 1536px) {
-  //   height: 310vh;
-  // }
-
-  // @media (orientation: landscape) and (min-width: 1680px) {
-  //   height: 280vh;
-  //   border: dashed 12px orange;
-  // }
 
   @media (orientation: landscape) and (min-width: 1920px) {
     height: 135vw;

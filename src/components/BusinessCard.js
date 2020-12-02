@@ -49,11 +49,25 @@ const BusinessCard = (props) => {
     'reactDom App ()=> className function () useState (defaultObject Asset Size js/main.js 1.55 MiB';
   const textFunctions =
     'import {AppContext} from ../AppContext  @media (min-width: 1280px) position: absolute width: 80%;height:80%';
-  // const card = (
 
-  // );
+  const handleLinkedin = () => {
+    const newWindow = window.open(
+      'https://www.linkedin.com/in/sebastian-orlowski-547baa145/',
+      '_blank',
+      'noopener,noreferrer'
+    );
+    if (newWindow) newWindow.opener = null;
+  };
 
-  // console.log(props.name);
+  const handleEmail = () => {
+    console.log('kukukukukuku');
+    const newWindow = window.open(
+      'mailto:sebo.orlowski@gmail.com',
+      '_blank',
+      'noopener,noreferrer'
+    );
+    if (newWindow) newWindow.opener = null;
+  };
 
   return (
     <div>
@@ -62,7 +76,10 @@ const BusinessCard = (props) => {
         <div className='business-card__title'>
           <p className='business-card__paragraph'>{props.title}</p>
         </div>
-        {/* <div className='business-card__square business-card__square--hideTitle'></div> */}
+        <div className='business-card__square business-card__square--hideTitle'>
+          {' '}
+          React DOM import className
+        </div>
         <div className='business-card__square business-card__square--textfunctions'>
           <p>{textFunctions}</p>
         </div>
@@ -70,10 +87,11 @@ const BusinessCard = (props) => {
           <p>{textCode}</p>
         </div>{' '}
         <Paper
-          paperAnime={paperAnime}
+          onClick={props.name === 'linkedin' ? handleLinkedin : handleEmail}
           className={`business-card__square   business-card__square--${
             props.name
           }  ${linkedin ? 'business-card__square--linkedin--move' : null} `}
+          paperAnime={paperAnime}
         >
           <div className='business-card__content'>
             <p className='business-card__paragraph business-card__paragraph--content'>

@@ -141,6 +141,7 @@ const AnimationFrame = () => {
             <Menu
               name={'linkedin'}
               text={'linkedin'}
+              // link={'https://www.google.co.uk'}
               handleClick={() => handleLinkedinClick('linkedin')}
             />
             <div className='animation__footer-container'>

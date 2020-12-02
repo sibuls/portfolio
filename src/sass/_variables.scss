@@ -1,13 +1,6 @@
 // main colors
 
 $color-gray-xxlight: #f2f2f2;
-$color-gray-xlight: #d7d5d5;
-$color-gray-light: #bdb8b8;
-$color-gray-medium: #f2f0f0;
-$color-gray-dark: #e6e2e2;
-$color-font: grey;
-
-$color-gray-xxlight: #f2f2f2;
 $color-gray-xlight: #bbbaba;
 $color-gray-light: #7d7c7c;
 $color-gray-medium: #f2f0f0;
@@ -16,15 +9,7 @@ $color-font: grey;
 
 // body
 
-$color-font-body: rgba(222, 222, 222, 0.16);
-
-$color-body: rgb(21, 38, 63);
-$color-font-body: rgba(222, 222, 222, 0.16);
-
-$color-body: rgb(21, 67, 40);
-
 $color-body: rgb(19, 32, 52);
-
 $color-font-body: rgba(232, 232, 232, 0.201);
 
 //my friend Paulina's wish (demand) color :)
@@ -119,9 +104,7 @@ $color-phone-black: linear-gradient(
 // color of paper
 $color-paper: #e9e4c9;
 
-// test
-
-// color of phone
+// phone color
 $color-phone-background: linear-gradient(
     120deg,
     #fff9f9 0%,
@@ -164,10 +147,8 @@ $color-businesscard-background-pencil: linear-gradient(
 
 // color speech
 
-$color-speech: #04488ce3;
 $color-speech: rgb(25, 45, 75);
-// $color-speech: #043d76e0;
-// $color-speech: lighten(rgba(36, 65, 103, 0.934), 0%);
+
 $color-speech-question: lightgrey;
 
 // fonts sizes
@@ -179,8 +160,6 @@ $lg-font-size: 20px;
 // fonts family
 
 $font-montserrat: 'Montserrat', sans-serif;
-$font-hand: 'Nothing You Could Do', cursive;
-$font-draper: 'Draper', sans-serif;
 
 // margins
 $main-padding: 20px;

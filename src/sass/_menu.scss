@@ -3,7 +3,6 @@
   left: 10%;
   width: 35vw;
   height: 15vw;
-  // transform: rotate(-5deg);
 
   @media (min-width: 481px) {
     width: 22%;
@@ -33,14 +32,13 @@
 
   @media (orientation: landscape) and (min-width: 1280px) {
     width: 14%;
-    height: 8%;
   }
 
   @media (orientation: landscape) and (min-width: 1440px) {
+    width: 12%;
   }
 
   @media (orientation: landscape) and (min-width: 1920px) {
-    // top: 10%;
     left: 16%;
     width: 10%;
     height: 10%;
@@ -53,8 +51,6 @@
   right: 10%;
   width: 30vw;
   height: 30vw;
-  // transform: rotate(12deg);
-  // transform: rotate(-5deg);
 
   @media (min-width: 481px) {
     width: 22%;
@@ -77,6 +73,10 @@
   }
   // macbook lower
   @media (orientation: landscape) and (min-width: 1000px) {
+    width: 14%;
+    height: 16%;
+  }
+  @media (orientation: landscape) and (min-width: 1280px) {
     width: 12%;
     height: 16%;
   }
@@ -87,9 +87,6 @@
     top: 30%;
     left: 22%;
   }
-  // @media (orientation: landscape) and (min-width: 2560px) {
-  //   padding-left: $main-padding / 2;
-  // }
 }
 
 .steps {
@@ -97,7 +94,6 @@
   left: 8%;
   width: 30vw;
   height: 30vw;
-  // transform: rotate(-5deg);
 
   @media (min-width: 481px) {
     width: 22%;
@@ -123,7 +119,13 @@
     width: 16%;
     height: 10%;
   }
+  @media (orientation: landscape) and (min-width: 1280px) {
+    width: 14%;
+  }
 
+  @media (orientation: landscape) and (min-width: 1440px) {
+    width: 12%;
+  }
   @media (orientation: landscape) and (min-width: 1920px) {
     top: 54%;
     left: 16%;
@@ -134,8 +136,7 @@
 .summary {
   top: 24%;
   right: 12%;
-  // transform: rotate(12deg);
-  // transform: rotate(-5deg);
+
   width: 35vw;
   height: 15vw;
 
@@ -150,8 +151,6 @@
     width: 15%;
     height: 20%;
 
-    // left: 6%;
-    // top: 68%;
     left: 24%;
     top: 68%;
   }
@@ -159,23 +158,18 @@
   @media (orientation: landscape) and (min-width: 768px) {
     width: 15%;
     height: 20%;
-
-    // border: rgb(202, 199, 23) 2px solid;
   }
 
   // macbook lower
   @media (orientation: landscape) and (min-width: 1000px) {
-    width: 12%;
+    width: 14%;
     height: 16%;
   }
 
-  @media (orientation: landscape) and (min-width: 1440px) {
+  @media (orientation: landscape) and (min-width: 1280px) {
+    width: 12%;
+    height: 16%;
   }
-
-  // @media (min-width: 1200px) {
-  //   width: 35vh;
-  //   height: 15vh;
-  // }
 
   @media (orientation: landscape) and (min-width: 1920px) {
     width: 8%;
@@ -190,7 +184,7 @@
 
   width: 35vw;
   height: 15vw;
-  // transform: rotate(-5deg);
+
   @media (min-width: 481px) {
     width: 22vw;
     height: 10vw;
@@ -199,10 +193,7 @@
     top: 24%;
     left: 2%;
   }
-  @media (min-width: 1200px) {
-    // bottom: 20%;
-    // left: 15%;
-  }
+
   @media (orientation: landscape) {
     width: 22%;
     height: 16%;
@@ -232,11 +223,9 @@
 .email {
   top: 0%;
   right: 10%;
-  // z-index: 2;
+
   width: 30vw;
   height: 25vw;
-  // transform: rotate(12deg);
-  // transform: rotate(-5deg);
 
   @media (min-width: 481px) {
     width: 18vw;
@@ -244,18 +233,12 @@
     left: 6%;
     top: 48%;
   }
-  // @media (min-width: 768px) {
-  //   width: 25vw;
-  //   height: 20vw;
-  //   bottom: 6%;
-  // }
+
   @media (min-width: 1200px) {
     top: 10%;
     right: 10%;
   }
   @media (orientation: landscape) {
-    // top: -8%;
-    // right: 6%;
     width: 14%;
     height: 26%;
     left: 10%;
@@ -267,7 +250,6 @@
     height: 22%;
     left: 8%;
     top: 46%;
-    // border: 2px solid red;
   }
   @media (orientation: landscape) and (min-width: 1000px) {
     width: 20vh;
@@ -288,7 +270,6 @@
   right: 4%;
   width: 35vw;
   height: 15vw;
-  // z-index: -1;
 
   transform: translate(0%, 50%) rotate(5deg);
 
@@ -346,24 +327,11 @@
         $color-gray-dark;
     }
 
-    @media (orientation: landscape) {
-      border: rgb(210, 210, 210) 0.08rem solid;
-    }
-
     @media (min-width: 481px) {
-      // border: rgb(210, 210, 210) 2px solid;
-
       border-radius: 0.5rem;
-      // border: rgb(210, 210, 210) 0.2rem solid;
     }
-
-    // @media (min-width: 768px) {
-    //   border-radius: 0.5rem;
-    //   // border: red 2px solid;
-    // }
 
     @media (orientation: landscape) and (min-width: 768px) {
-      // border: red 2px solid;
     }
   }
 
