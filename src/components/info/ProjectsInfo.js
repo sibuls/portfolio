@@ -11,8 +11,7 @@ const ProjectsInfo = () => {
       <div className='projects__box'>
         {' '}
         <p className='screen-text speech  '>
-          Project I am currently working on. Website with free locally
-          advertisments
+          I am currently working on: free locally advertisments
         </p>
         <div className='projects__galery'>
           <img className='projects__image' src={photo} alt='house' />

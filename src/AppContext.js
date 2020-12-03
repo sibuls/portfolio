@@ -4,6 +4,7 @@ export const defaultObject = {
   isAboutMeActive: false,
   //
   isFlipped: false,
+  //
   isFlippedDone: false,
   menuActive: 'start',
   prevTransfrom:
@@ -15,6 +16,7 @@ export const defaultObject = {
   currentTop: '0%',
   prevDotColor: '',
   //
+  prevEmailSend: false,
   currentDotColor: '',
   isDotAnimated: false,
   showWarning: false,
@@ -22,6 +24,8 @@ export const defaultObject = {
   email: false,
   linkedin: false,
   cv: '',
+  //
+  emailSend: false,
 
   handleCardClick: () => {},
   handleDotClick: () => {},
@@ -30,6 +34,7 @@ export const defaultObject = {
   handleEmailClick: () => {},
   handleLinkedinClick: () => {},
   handleCv: () => {},
+  handleEmailSend: () => {},
 };
 
 export const AppContext = createContext(defaultObject);

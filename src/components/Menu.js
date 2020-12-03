@@ -1,15 +1,23 @@
 import React from 'react';
 
+// darkblue msquare menu - 'who am I" "what im doing" "linkedin" etc
 const Menu = (props) => {
   return (
     <div className={`menu ${props.name}`}>
-      {props.text !== 'Rotate phone' ? (
-        <div className='menu__shadow'>
-          <div className='menu__text menu__text--shadow'>
-            <p> {props.text} </p>
-          </div>
+      <div className='menu__shadow'>
+        <div className='menu__text menu__text--shadow'>
+          <p
+            className={`    ${
+              props.name === 'rotate-phone'
+                ? 'menu__shadow--rotate-shadow'
+                : null
+            }`}
+          >
+            {' '}
+            {props.text}{' '}
+          </p>
         </div>
-      ) : null}
+      </div>
       <div
         className={`menu__square  ${
           props.name === 'rotate-phone' ? 'menu__square--rotate' : null

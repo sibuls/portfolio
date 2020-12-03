@@ -522,7 +522,11 @@ h2 {
 @media (orientation: landscape) and (min-width: 1280px) {
   .aboutme {
     width: 14%;
-    height: 8%;
+  }
+}
+@media (orientation: landscape) and (min-width: 1440px) {
+  .aboutme {
+    width: 12%;
   }
 }
 @media (orientation: landscape) and (min-width: 1920px) {
@@ -563,6 +567,12 @@ h2 {
   }
 }
 @media (orientation: landscape) and (min-width: 1000px) {
+  .description {
+    width: 14%;
+    height: 16%;
+  }
+}
+@media (orientation: landscape) and (min-width: 1280px) {
   .description {
     width: 12%;
     height: 16%;
@@ -611,6 +621,16 @@ h2 {
     height: 10%;
   }
 }
+@media (orientation: landscape) and (min-width: 1280px) {
+  .steps {
+    width: 14%;
+  }
+}
+@media (orientation: landscape) and (min-width: 1440px) {
+  .steps {
+    width: 12%;
+  }
+}
 @media (orientation: landscape) and (min-width: 1920px) {
   .steps {
     top: 54%;
@@ -649,6 +669,12 @@ h2 {
   }
 }
 @media (orientation: landscape) and (min-width: 1000px) {
+  .summary {
+    width: 14%;
+    height: 16%;
+  }
+}
+@media (orientation: landscape) and (min-width: 1280px) {
   .summary {
     width: 12%;
     height: 16%;
@@ -2024,7 +2050,7 @@ h2 {
   left: 45%;
   width: 65%;
   height: 100%;
-  z-index: 3;
+  z-index: 9;
   transform: translate(-50%, -50%) rotate(10deg);
   opacity: 1;
 }
@@ -2033,7 +2059,7 @@ h2 {
   left: 45%;
   width: 85%;
   height: 100%;
-  z-index: 3;
+  z-index: 9;
   transform: translate(-50%, -50%) rotate(10deg);
   opacity: 1;
 }
@@ -2046,7 +2072,6 @@ h2 {
   opacity: 0.3;
   transform: translate(-50%, -50%) rotate(-5deg);
   z-index: -1;
-  background: red;
 }
 .business-card__square--textfunctions {
   top: 60%;
@@ -2287,12 +2312,15 @@ body {
   color: rgba(232, 232, 232, 0.201);
   background: linear-gradient(100deg, #9b9797 1%, #656161 10%, #858282 20%, #717070 30%, #7e7f80 40%, #a5a2a2 50%, #747272 60%, #7e7676 70%, #837f7f 80%, #363839 90%, #dad7d7 100%), #949494;
 }
-.body .body__text {
+.body__text {
   font-size: 0.8rem;
   line-height: 1.2rem;
   text-align: center;
   color: rgba(189, 189, 189, 0.146);
   color: rgba(189, 189, 189, 0.543);
+}
+.body__span-white {
+  color: black;
 }
 
 .animation__dot {

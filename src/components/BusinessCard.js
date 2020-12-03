@@ -17,6 +17,7 @@ const BusinessCard = (props) => {
     linkedin,
     handleLinkedinClick,
     handleEmailClick,
+    handleEmailSend,
   } = useContext(AppContext);
 
   const pencil = (
@@ -59,15 +60,15 @@ const BusinessCard = (props) => {
     if (newWindow) newWindow.opener = null;
   };
 
-  const handleEmail = () => {
-    console.log('kukukukukuku');
-    const newWindow = window.open(
-      'mailto:sebo.orlowski@gmail.com',
-      '_blank',
-      'noopener,noreferrer'
-    );
-    if (newWindow) newWindow.opener = null;
-  };
+  // const handleEmail = () => {
+  //   console.log('kukukukukuku');
+  //   const newWindow = window.open(
+  //     'mailto:sebo.orlowski@gmail.com',
+  //     '_blank',
+  //     'noopener,noreferrer'
+  //   );
+  //   if (newWindow) newWindow.opener = null;
+  // };
 
   return (
     <div>
@@ -87,7 +88,15 @@ const BusinessCard = (props) => {
           <p>{textCode}</p>
         </div>{' '}
         <Paper
-          onClick={props.name === 'linkedin' ? handleLinkedin : handleEmail}
+          onClick={
+            props.name === 'linkedin'
+              ? handleLinkedin
+              : () => {
+                  {
+                    handleEmailSend(true);
+                  }
+                }
+          }
           className={`business-card__square   business-card__square--${
             props.name
           }  ${linkedin ? 'business-card__square--linkedin--move' : null} `}
@@ -96,6 +105,9 @@ const BusinessCard = (props) => {
           <div className='business-card__content'>
             <p className='business-card__paragraph business-card__paragraph--content'>
               {props.content}
+            </p>
+            <p className='business-card__paragraph business-card__paragraph--content'>
+              {props.contentForm}
             </p>
           </div>
           {pencil}

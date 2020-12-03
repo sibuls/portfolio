@@ -1,0 +1,81 @@
+.contact {
+  width: 100%;
+  height: 100%;
+  // border: red 2px dotted;
+
+  // background: blue;
+
+  // align-content: start;
+  &__title {
+    width: 100%;
+    padding: $main-padding;
+    color: $color-body;
+    font-weight: bold;
+  }
+
+  &__input,
+  &__textarea {
+    width: 90%;
+    padding: $main-padding / 2;
+    border-radius: 0.3rem;
+    // width: 100%;
+    margin: $main-padding / 2;
+    border: 1px solid lightgray;
+
+    background: rgb(222, 220, 220);
+    font-size: 0.8rem;
+    color: rgb(0, 0, 32);
+    outline: none;
+    // border: rgb(57, 145, 54) 2px solid;
+  }
+
+  &__input:focus,
+  &__textarea:focus {
+    border: 1px solid rgb(63, 63, 65);
+  }
+
+  &__textarea {
+    height: 40%;
+    // max-width: 400px;
+    // min-height: 100px;
+    // max-height:
+  }
+
+  &__label {
+    width: 100%;
+    // padding-bottom: 10px;
+    color: rgb(69, 69, 70);
+    font-weight: bold;
+    // border: rgb(7, 9, 80) 2px solid;
+    padding-left: $main-padding / 2;
+  }
+
+  &__form {
+    width: 100%;
+    height: 70%;
+
+    // border: green 2px dotted;
+    // background: orange;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+  }
+
+  &__phone-body {
+    // background: green;
+    width: 100%;
+    height: 30%;
+  }
+
+  &__cv-button {
+    text-align: center;
+
+    &:hover {
+      background-color: rgb(69, 70, 70);
+    }
+    // position: absolute;
+    // z-index: 3;
+  }
+}

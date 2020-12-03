@@ -115,7 +115,7 @@
   }
 
   &__button {
-    background-color: rgb(93, 95, 96);
+    background-color: rgb(104, 102, 102);
     font-size: 1rem;
     padding: $main-padding / 3 0;
     border: double white 3px;
@@ -124,6 +124,12 @@
     color: white;
     z-index: 2;
     width: 40%;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      background-color: rgb(29, 29, 29);
+    }
 
     @media (orientation: landscape) {
       font-size: 0.8rem;

@@ -39,6 +39,8 @@ const App = () => {
   const [linkedin, setLinkedin] = useState(defaultObject.linkedin);
 
   const [cv, setCv] = useState(defaultObject.cv);
+
+  const [emailSend, setEmailSend] = useState(defaultObject.emailSend);
   // const [footer, setFooter] = useState(defaultObject.footer);
 
   // const [delay, setDelay] = useState(defaultObject.delay);
@@ -58,6 +60,7 @@ const App = () => {
   const prevTop = usePrevious(currentTop);
   const prevDotColor = usePrevious(currentDotColor);
   const prevIsFlippedDone = usePrevious(isFlippedDone);
+  const prevEmailSend = usePrevious(emailSend);
 
   document.addEventListener('scroll', (e) => {
     if (window.pageYOffset > window.innerHeight) {
@@ -111,27 +114,31 @@ const App = () => {
     console.log('zmiana na ' + cv);
   };
 
+  const handleEmailSend = (email) => {
+    setEmailSend(email);
+  };
+
   setTimeout(() => {
     isDotAnimated && !isFlipped && !isFlippedDone ? initialRotate() : null;
   }, 9000);
 
   // if (window.pageYOffset > 780)
 
-  const paper = () => {
-    return {
-      /* <div className='paper'>
-  <div className='paper__main'>
-    <div className='paper__pattern'>
-      <div className='paper__content'>notatki notatki notatki</div>
-      <div className='paper__content'>notatki notatki notatki</div>
-      <div className='paper__content'>notatki notatki notatki</div>
-      <div className='paper__content'>notatki notatki notatki</div>
-    </div>
-  </div>
-  <div className='paper__margin'></div>
-</div> */
-    };
-  };
+  //   const paper = () => {
+  //     return {
+  //       /* <div className='paper'>
+  //   <div className='paper__main'>
+  //     <div className='paper__pattern'>
+  //       <div className='paper__content'>notatki notatki notatki</div>
+  //       <div className='paper__content'>notatki notatki notatki</div>
+  //       <div className='paper__content'>notatki notatki notatki</div>
+  //       <div className='paper__content'>notatki notatki notatki</div>
+  //     </div>
+  //   </div>
+  //   <div className='paper__margin'></div>
+  // </div> */
+  //     };
+  //   };
 
   return (
     <div className='wrapper'>
@@ -151,19 +158,18 @@ const App = () => {
           isDotAnimated: isDotAnimated,
           showWarning: showWarning,
           isFlippedDone: isFlippedDone,
-
           linkedin: linkedin,
           email: email,
-
-          // isRotated: isRotated,
           cv: cv,
+          emailSend: emailSend,
+          prevEmailSend: prevEmailSend,
           handleCardClick: handleCardClick,
           handleDotClick: handleDotClick,
           handleRotateClick: handleRotateClick,
-
           handleEmailClick: handleEmailClick,
           handleLinkedinClick: handleLinkedinClick,
           handleCv: handleCv,
+          handleEmailSend: handleEmailSend,
         }}
       >
         {' '}

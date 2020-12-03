@@ -64,11 +64,13 @@ const Case = () => {
           emailAnime={emailAnime}
           className=' business-card  business-card__box  '
           onClick={() => handleEmailClick('email')}
+          // handleScroll={props.handleScroll}
         >
           <BusinessCard
             name={'email'}
-            title={'E-mail'}
+            title={'Contact'}
             content={'sebo.orlowski@gmail.com'}
+            contentForm={'or push here to open Form above'}
           />
         </Email>
         <Linkedin
