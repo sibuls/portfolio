@@ -26,6 +26,7 @@ export const defaultObject = {
   cv: '',
   //
   emailSend: false,
+  bothCards: false,
 
   handleCardClick: () => {},
   handleDotClick: () => {},
@@ -35,6 +36,7 @@ export const defaultObject = {
   handleLinkedinClick: () => {},
   handleCv: () => {},
   handleEmailSend: () => {},
+  handleBothCardsClick: () => {},
 };
 
 export const AppContext = createContext(defaultObject);

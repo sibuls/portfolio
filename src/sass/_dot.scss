@@ -10,6 +10,25 @@
   left: 50%;
   background-color: $color-body;
 
+  &-initial {
+    animation: dotsinitial 2s ease-in infinite alternate-reverse;
+
+    &--done {
+      animation-name: dotsinitialdone;
+    }
+
+    &--blue {
+      animation-duration: 1s;
+    }
+    &--black {
+      animation-duration: 1.5s;
+    }
+
+    &--silver {
+      animation-duration: 2s;
+    }
+  }
+
   &--anime {
     animation: dots ease-in 2s forwards;
     top: 50%;
@@ -132,5 +151,25 @@
   @media (orientation: landscape) and (min-width: 1920px) {
     width: 1.6rem;
     height: 1.6rem;
+  }
+}
+
+@keyframes dotsinitial {
+  0% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+
+  100% {
+    transform: scale(1.4) translate(-50%, -50%);
+  }
+}
+
+@keyframes dotsinitialdone {
+  0% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+
+  100% {
+    transform: scale(1.05) translate(-50%, -50%);
   }
 }

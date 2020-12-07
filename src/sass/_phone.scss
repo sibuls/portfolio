@@ -25,6 +25,8 @@
     left: 50%;
     top: 50%;
 
+    // border: white 2px dotted;
+
     @media (min-width: 481px) {
       width: 50vw;
     }
@@ -46,7 +48,7 @@
     }
   }
 
-  &--front {
+  &--android {
     height: 120vw;
     @media (min-width: 481px) {
       height: 100vw;
@@ -68,27 +70,27 @@
     }
   }
 
-  &--back {
-    height: 120vw;
+  // &--back {
+  //   height: 120vw;
 
-    @media (min-width: 481px) {
-      height: 100vw;
-    }
+  //   @media (min-width: 481px) {
+  //     height: 100vw;
+  //   }
 
-    @media (orientation: landscape) {
-      height: 60vw;
-    }
+  //   @media (orientation: landscape) {
+  //     height: 60vw;
+  //   }
 
-    @media (min-width: 1000px) and (orientation: landscape) {
-      height: 48vw;
-    }
-    @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
-      height: 48vw;
-    }
-    @media (orientation: landscape) and (min-width: 1920px) {
-      height: 36vw;
-    }
-  }
+  //   @media (min-width: 1000px) and (orientation: landscape) {
+  //     height: 48vw;
+  //   }
+  //   @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
+  //     height: 48vw;
+  //   }
+  //   @media (orientation: landscape) and (min-width: 1920px) {
+  //     height: 36vw;
+  //   }
+  // }
   &-part {
     position: absolute;
     width: 100%;
@@ -160,6 +162,12 @@
     backface-visibility: inherit;
 
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     &--modelx {
       width: 90%;
@@ -246,13 +254,13 @@
     }
     &--silver {
       background: linear-gradient(115deg, #181818, #656565);
-      box-shadow: -1px 1px 2px 0px #082213;
+      box-shadow: -1px 1px 2px 0px #4a4a4a;
       top: 1%;
       left: -1%;
     }
 
     &--border {
-      border: 1px solid rgb(215, 215, 215);
+      border: 2px solid rgb(255, 255, 255);
       background: rgba(255, 255, 255, 0);
 
       @media (min-height: 1024px) {
@@ -331,7 +339,7 @@
       ),
       silver;
 
-    background: rgba(255, 214, 250, 0.8);
+    // background: rgba(255, 214, 250, 0.8);
     box-shadow: 0px 0px 2px 0px #b3b2b1;
   }
 

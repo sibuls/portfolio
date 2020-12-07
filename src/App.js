@@ -37,10 +37,12 @@ const App = () => {
 
   const [email, setEmail] = useState(defaultObject.email);
   const [linkedin, setLinkedin] = useState(defaultObject.linkedin);
+  const [bothCards, setBothCards] = useState(defaultObject.bothCards);
 
   const [cv, setCv] = useState(defaultObject.cv);
 
   const [emailSend, setEmailSend] = useState(defaultObject.emailSend);
+
   // const [footer, setFooter] = useState(defaultObject.footer);
 
   // const [delay, setDelay] = useState(defaultObject.delay);
@@ -62,12 +64,14 @@ const App = () => {
   const prevIsFlippedDone = usePrevious(isFlippedDone);
   const prevEmailSend = usePrevious(emailSend);
 
-  document.addEventListener('scroll', (e) => {
-    if (window.pageYOffset > window.innerHeight) {
-      // setIsDotAnimated(true);
-      // setCurrentDotColor('silver');
-    }
-  });
+  // document.addEventListener('scroll', (e) => {
+  //   if (window.pageYOffset > window.innerHeight) {
+  //     // setIsDotAnimated(true);
+  //     // setCurrentDotColor('silver');
+  //   }
+  // });
+
+  // window.addEventListener('scroll', this.handleScroll, { passive: true })
 
   // handles
 
@@ -99,6 +103,12 @@ const App = () => {
     // setFooter('linkedin');
   };
 
+  const handleBothCardsClick = () => {
+    setBothCards(!bothCards);
+    setEmail(bothCards);
+    setLinkedin(bothCards);
+  };
+
   const initialRotate = () => {
     setIsFlippedDone(true);
     setIsFlipped(true);
@@ -116,6 +126,9 @@ const App = () => {
 
   const handleEmailSend = (email) => {
     setEmailSend(email);
+    //  check if work correctly
+    setIsFlipped(true);
+    //
   };
 
   setTimeout(() => {
@@ -163,6 +176,7 @@ const App = () => {
           cv: cv,
           emailSend: emailSend,
           prevEmailSend: prevEmailSend,
+          bothCards: bothCards,
           handleCardClick: handleCardClick,
           handleDotClick: handleDotClick,
           handleRotateClick: handleRotateClick,
@@ -170,6 +184,7 @@ const App = () => {
           handleLinkedinClick: handleLinkedinClick,
           handleCv: handleCv,
           handleEmailSend: handleEmailSend,
+          handleBothCardsClick: handleBothCardsClick,
         }}
       >
         {' '}

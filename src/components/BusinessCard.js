@@ -2,10 +2,6 @@ import React, { useContext, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { AppContext } from '../AppContext';
 
-// const DivAnimation = styled.div`
-//   animation: 0s 0s ${(props) => props.caseAnime} ease-out forwards;
-// `;
-
 const Paper = styled.div`
   animation: 2s 0s ${(props) => props.paperAnime} linear infinite;
 `;
@@ -61,7 +57,7 @@ const BusinessCard = (props) => {
   };
 
   // const handleEmail = () => {
-  //   console.log('kukukukukuku');
+
   //   const newWindow = window.open(
   //     'mailto:sebo.orlowski@gmail.com',
   //     '_blank',
@@ -103,11 +99,10 @@ const BusinessCard = (props) => {
           paperAnime={paperAnime}
         >
           <div className='business-card__content'>
-            <p className='business-card__paragraph business-card__paragraph--content'>
-              {props.content}
-            </p>
-            <p className='business-card__paragraph business-card__paragraph--content'>
-              {props.contentForm}
+            <p className='business-card__content--name'>{props.content}</p>
+
+            <p className='business-card__content--description'>
+              {props.contentSecondLine}
             </p>
           </div>
           {pencil}

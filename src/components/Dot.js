@@ -4,9 +4,12 @@ import { AppContext } from '../AppContext';
 
 const Dot = ({ color }) => {
   // appcontext
-  const { currentDotColor, prevDotColor, handleDotClick } = useContext(
-    AppContext
-  );
+  const {
+    currentDotColor,
+    prevDotColor,
+    handleDotClick,
+    isDotAnimated,
+  } = useContext(AppContext);
 
   return (
     <div
@@ -14,7 +17,11 @@ const Dot = ({ color }) => {
         color === currentDotColor && !prevDotColor
           ? 'animation__dot--anime'
           : null
-      }         `}
+      }         ${
+        !isDotAnimated
+          ? `animation__dot-initial animation__dot-initial--${color} `
+          : `animation__dot-initial animation__dot-initial--done animation__dot-initial--${color} `
+      }  `}
       onClick={() => handleDotClick(color)}
     ></div>
   );

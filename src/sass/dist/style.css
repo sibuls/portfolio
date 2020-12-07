@@ -485,11 +485,130 @@ h2 {
   font-size: 1.2rem;
 }
 
+.menu {
+  position: absolute;
+}
+.menu__square {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  border: #d2d2d2 0.1rem solid;
+  background: linear-gradient(130deg, #132034 0%, #12222e 100%), #949494;
+  opacity: 0.7;
+}
+.menu__square--rotate {
+  background: linear-gradient(130deg, #aeadad 0%, #636363 100%), #949494;
+}
+.menu__square--active {
+  background: linear-gradient(130deg, #132034 0%, #02090e 100%), #949494;
+  opacity: 0.8;
+  border: white 0.15rem solid;
+}
+@media (min-width: 481px) {
+  .menu__square {
+    border-radius: 0.5rem;
+  }
+}
+.menu__shadow {
+  position: absolute;
+  width: 100%;
+  height: 115%;
+  transform: translate(-50%, 0%) rotate(0deg) skew(-25deg, 0deg);
+  transform-origin: bottom;
+  bottom: 0%;
+  left: 50%;
+  background: linear-gradient(100deg, #9b9797 1%, #656161 10%, #858282 20%, #717070 30%, #7e7f80 40%, #a5a2a2 50%, #747272 60%, #7e7676 70%, #837f7f 80%, #363839 90%, #dad7d7 100%), #949494;
+  background: rgba(77, 76, 76, 0.301);
+  border-radius: 5px;
+}
+.menu__shadow--rotate-shadow {
+  color: rgba(237, 237, 237, 0.493);
+}
+.menu__text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-shadow: 0px 0px 1px rgba(136, 133, 133, 0.815);
+  color: #132034;
+  color: rgba(230, 229, 229, 0.988);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  line-height: 1.8rem;
+}
+@media (orientation: landscape) {
+  .menu__text {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+  }
+}
+@media (orientation: landscape) and (min-width: 1000px) {
+  .menu__text {
+    font-size: 0.6rem;
+    line-height: 1.2rem;
+    padding: 0 20px;
+  }
+}
+@media (orientation: landscape) and (min-width: 1536px) {
+  .menu__text {
+    padding: 0 20px;
+    line-height: 1.4rem;
+  }
+}
+@media (orientation: landscape) and (min-width: 2560px) {
+  .menu__text {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+  }
+}
+.menu__text--rotate {
+  color: #132034;
+  font-weight: bold;
+  text-shadow: 0px 0px 1px rgba(19, 32, 52, 0.1);
+}
+@media (orientation: landscape) {
+  .menu__text--rotate {
+    line-height: 1rem;
+  }
+}
+.menu__text--shadow {
+  font-size: 1.1rem;
+  text-shadow: 0px 0px 0px rgba(3, 8, 34, 0.899);
+  top: 45%;
+  opacity: 0.4;
+}
+@media (orientation: landscape) {
+  .menu__text--shadow {
+    font-size: 0.6rem;
+  }
+}
+.menu__text p {
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+.menu--color {
+  top: 10%;
+  left: 10%;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+  color: rgba(195, 195, 198, 0.927);
+  transform: translate(0%, 0%);
+}
+
 .aboutme {
   top: 6%;
   left: 10%;
   width: 35vw;
   height: 15vw;
+  animation: squaresmenu 4s infinite linear alternate-reverse;
 }
 @media (min-width: 481px) {
   .aboutme {
@@ -543,6 +662,7 @@ h2 {
   right: 10%;
   width: 30vw;
   height: 30vw;
+  animation: squaresmenu 3s 1s infinite ease-in alternate-reverse;
 }
 @media (min-width: 481px) {
   .description {
@@ -592,6 +712,7 @@ h2 {
   left: 8%;
   width: 30vw;
   height: 30vw;
+  animation: squaresmenu 3s infinite ease-in alternate-reverse;
 }
 @media (min-width: 481px) {
   .steps {
@@ -640,14 +761,15 @@ h2 {
   }
 }
 
-.summary {
+.faq {
   top: 24%;
   right: 12%;
   width: 35vw;
   height: 15vw;
+  animation: squaresmenu 3s 2s infinite ease-in alternate-reverse;
 }
 @media (min-width: 481px) {
-  .summary {
+  .faq {
     width: 22%;
     height: 16%;
     top: 8%;
@@ -655,7 +777,7 @@ h2 {
   }
 }
 @media (orientation: landscape) {
-  .summary {
+  .faq {
     width: 15%;
     height: 20%;
     left: 24%;
@@ -663,25 +785,25 @@ h2 {
   }
 }
 @media (orientation: landscape) and (min-width: 768px) {
-  .summary {
+  .faq {
     width: 15%;
     height: 20%;
   }
 }
 @media (orientation: landscape) and (min-width: 1000px) {
-  .summary {
+  .faq {
     width: 14%;
     height: 16%;
   }
 }
 @media (orientation: landscape) and (min-width: 1280px) {
-  .summary {
+  .faq {
     width: 12%;
     height: 16%;
   }
 }
 @media (orientation: landscape) and (min-width: 1920px) {
-  .summary {
+  .faq {
     width: 8%;
     height: 16%;
     top: 70%;
@@ -693,6 +815,7 @@ h2 {
   left: 10%;
   width: 35vw;
   height: 15vw;
+  animation: squaresmenu 3s infinite linear alternate-reverse;
 }
 @media (min-width: 481px) {
   .linkedin {
@@ -739,6 +862,7 @@ h2 {
   right: 10%;
   width: 30vw;
   height: 25vw;
+  animation: squaresmenu 4s infinite ease-in alternate-reverse;
 }
 @media (min-width: 481px) {
   .email {
@@ -827,116 +951,14 @@ h2 {
   }
 }
 
-.menu {
-  position: absolute;
-}
-.menu__square {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
-  border: #d2d2d2 0.1rem solid;
-  background: linear-gradient(130deg, #132034 0%, #12222e 100%), #949494;
-  opacity: 0.7;
-}
-.menu__square--rotate {
-  background: linear-gradient(130deg, #aeadad 0%, #636363 100%), #949494;
-}
-@media (min-width: 481px) {
-  .menu__square {
-    border-radius: 0.5rem;
+@keyframes squaresmenu {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
   }
 }
-.menu__shadow {
-  position: absolute;
-  width: 100%;
-  height: 115%;
-  transform: translate(-50%, 0%) rotate(0deg) skew(-25deg, 0deg);
-  transform-origin: bottom;
-  bottom: 0%;
-  left: 50%;
-  background: linear-gradient(100deg, #9b9797 1%, #656161 10%, #858282 20%, #717070 30%, #7e7f80 40%, #a5a2a2 50%, #747272 60%, #7e7676 70%, #837f7f 80%, #363839 90%, #dad7d7 100%), #949494;
-  background: rgba(77, 76, 76, 0.301);
-  border-radius: 5px;
-}
-.menu__text {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font-weight: bold;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  text-shadow: 0px 0px 1px rgba(136, 133, 133, 0.815);
-  color: #132034;
-  color: rgba(230, 229, 229, 0.988);
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-  line-height: 1.8rem;
-}
-@media (orientation: landscape) {
-  .menu__text {
-    font-size: 0.7rem;
-    line-height: 1.2rem;
-  }
-}
-@media (orientation: landscape) and (min-width: 1000px) {
-  .menu__text {
-    font-size: 0.6rem;
-    line-height: 1.2rem;
-    padding: 0 20px;
-  }
-}
-@media (orientation: landscape) and (min-width: 1536px) {
-  .menu__text {
-    padding: 0 20px;
-    line-height: 1.4rem;
-  }
-}
-@media (orientation: landscape) and (min-width: 2560px) {
-  .menu__text {
-    font-size: 0.8rem;
-    line-height: 1.6rem;
-  }
-}
-.menu__text--rotate {
-  color: #132034;
-  font-weight: bold;
-  text-shadow: 0px 0px 1px rgba(19, 32, 52, 0.1);
-}
-@media (orientation: landscape) {
-  .menu__text--rotate {
-    line-height: 1rem;
-  }
-}
-.menu__text--shadow {
-  font-size: 1.1rem;
-  text-shadow: 0px 0px 0px rgba(3, 8, 34, 0.899);
-  top: 45%;
-  opacity: 0.4;
-}
-@media (orientation: landscape) {
-  .menu__text--shadow {
-    font-size: 0.6rem;
-  }
-}
-.menu__text p {
-  padding: 0 10px;
-  text-transform: uppercase;
-}
-.menu--color {
-  top: 10%;
-  left: 10%;
-  text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
-  color: rgba(195, 195, 198, 0.927);
-  transform: translate(0%, 0%);
-}
-
 .animation {
   position: absolute;
   width: 100vw;
@@ -1359,6 +1381,135 @@ h2 {
   z-index: 3;
   background-color: #132034;
 }
+.animation__squares {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.animation__squares-square {
+  position: absolute;
+  border: 0.1rem rgba(160, 159, 159, 0.582) solid;
+  transform: translate(-50%, 0%);
+}
+.animation__squares-square--1 {
+  width: 30%;
+  height: 40%;
+  top: 10%;
+  left: 20%;
+  animation: squares1 6s ease-in infinite alternate-reverse;
+}
+@media (min-width: 800px), (orientation: landscape) {
+  .animation__squares-square--1 {
+    animation-duration: 15s;
+  }
+}
+@media (min-width: 1536px) {
+  .animation__squares-square--1 {
+    animation-duration: 20s;
+    border: 0.1rem rgba(160, 159, 159, 0.824) solid;
+  }
+}
+.animation__squares-square--2 {
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: 40%;
+  animation: squares2 7s ease-in infinite alternate-reverse;
+}
+@media (min-width: 800px), (orientation: landscape) {
+  .animation__squares-square--2 {
+    animation-duration: 22s;
+  }
+}
+@media (min-width: 1536px) {
+  .animation__squares-square--2 {
+    animation-duration: 28s;
+    border: 0.1rem rgba(160, 159, 159, 0.824) solid;
+  }
+}
+.animation__squares-square--3 {
+  width: 50%;
+  height: 40%;
+  top: 5%;
+  left: 80%;
+  animation: squares3 8s ease-in infinite reverse;
+}
+@media (min-width: 800px), (orientation: landscape) {
+  .animation__squares-square--3 {
+    animation-duration: 10s;
+  }
+}
+@media (min-width: 1536px) {
+  .animation__squares-square--3 {
+    animation-duration: 16s;
+    border: 0.1rem rgba(160, 159, 159, 0.824) solid;
+  }
+}
+.animation__squares-square--4 {
+  width: 40%;
+  height: 40%;
+  bottom: 5%;
+  left: 80%;
+  animation: squares4 6s ease-in infinite alternate-reverse;
+}
+@media (min-width: 800px), (orientation: landscape) {
+  .animation__squares-square--4 {
+    animation-duration: 12s;
+  }
+}
+@media (min-width: 1536px) {
+  .animation__squares-square--4 {
+    animation-duration: 18s;
+    border: 0.1rem rgba(160, 159, 159, 0.824) solid;
+  }
+}
+@keyframes squares1 {
+  0% {
+    left: 20%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes squares2 {
+  0% {
+    left: 40%;
+  }
+  50% {
+    left: 110%;
+  }
+  100% {
+    left: -20%;
+  }
+}
+@keyframes squares3 {
+  0% {
+    left: 80%;
+  }
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes squares4 {
+  0% {
+    left: 80%;
+  }
+  50% {
+    left: -20%;
+  }
+  100% {
+    left: 110%;
+  }
+}
 
 .back {
   backface-visibility: hidden;
@@ -1411,59 +1562,31 @@ h2 {
     width: 18vw;
   }
 }
-.phone--front {
+.phone--android {
   height: 120vw;
 }
 @media (min-width: 481px) {
-  .phone--front {
+  .phone--android {
     height: 100vw;
   }
 }
 @media (orientation: landscape) {
-  .phone--front {
+  .phone--android {
     height: 60vw;
   }
 }
 @media (min-width: 1000px) and (orientation: landscape) {
-  .phone--front {
+  .phone--android {
     height: 48vw;
   }
 }
 @media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
-  .phone--front {
+  .phone--android {
     height: 48vw;
   }
 }
 @media (orientation: landscape) and (min-width: 1920px) {
-  .phone--front {
-    height: 36vw;
-  }
-}
-.phone--back {
-  height: 120vw;
-}
-@media (min-width: 481px) {
-  .phone--back {
-    height: 100vw;
-  }
-}
-@media (orientation: landscape) {
-  .phone--back {
-    height: 60vw;
-  }
-}
-@media (min-width: 1000px) and (orientation: landscape) {
-  .phone--back {
-    height: 48vw;
-  }
-}
-@media (orientation: landscape) and (min-width: 1360px) and (min-height: 768px) and (max-resolution: 1dppx) {
-  .phone--back {
-    height: 48vw;
-  }
-}
-@media (orientation: landscape) and (min-width: 1920px) {
-  .phone--back {
+  .phone--android {
     height: 36vw;
   }
 }
@@ -2559,7 +2682,7 @@ body {
   margin-bottom: 10px;
 }
 .cv__button {
-  background-color: #5d5f60;
+  background-color: #686666;
   font-size: 1rem;
   padding: 6.6666666667px 0;
   border: double white 3px;
@@ -2568,6 +2691,11 @@ body {
   color: white;
   z-index: 2;
   width: 40%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.cv__button:hover {
+  background-color: #1d1d1d;
 }
 @media (orientation: landscape) {
   .cv__button {
@@ -2579,4 +2707,55 @@ body {
 .cv__body {
   width: 100%;
   height: 80%;
+}
+
+.contact {
+  width: 100%;
+  height: 100%;
+}
+.contact__title {
+  width: 100%;
+  padding: 20px;
+  color: #132034;
+  font-weight: bold;
+}
+.contact__input, .contact__textarea {
+  width: 90%;
+  padding: 10px;
+  border-radius: 0.3rem;
+  margin: 10px;
+  border: 1px solid lightgray;
+  background: #dedcdc;
+  font-size: 0.8rem;
+  color: #000020;
+  outline: none;
+}
+.contact__input:focus, .contact__textarea:focus {
+  border: 1px solid #3f3f41;
+}
+.contact__textarea {
+  height: 40%;
+}
+.contact__label {
+  width: 100%;
+  color: #454546;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.contact__form {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contact__phone-body {
+  width: 100%;
+  height: 30%;
+}
+.contact__cv-button {
+  text-align: center;
+}
+.contact__cv-button:hover {
+  background-color: #454646;
 }

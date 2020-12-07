@@ -144,7 +144,7 @@ const PhoneBack = () => {
  
   0% { ${
     currentDotColor
-      ? 'border:white 1px solid; background:transparent;   box-shadow: 0px 0px 0px 0px #414141;'
+      ? 'border:white 2px solid; background:transparent;   box-shadow: 0px 0px 0px 0px #414141;'
       : 'background:transparent;   box-shadow: 0px 0px 0px 0px #414141; '
   }
    }
@@ -152,7 +152,7 @@ const PhoneBack = () => {
 
     90% { ${
       currentDotColor
-        ? 'border:white 1px solid; background:transparent;   box-shadow: 0px 0px 0px 0px #414141;'
+        ? 'border:white 2px solid; background:transparent;   box-shadow: 0px 0px 0px 0px #414141;'
         : 'background:transparent;   box-shadow: 0px 0px 0px 0px #414141; '
     }
      }
@@ -205,7 +205,7 @@ const PhoneBack = () => {
     <React.Fragment>
       <DivAnimation
         phoneShowMain={phoneShowMain}
-        className=' phone phone--back'
+        className=' phone phone--android'
         onClick={handleRotateClick}
       >
         {' '}

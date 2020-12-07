@@ -1,8 +1,173 @@
+.menu {
+  position: absolute;
+
+  &__square {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 0.5rem;
+    border: rgb(210, 210, 210) 0.1rem solid;
+    // background: linear-gradient(
+    //     130deg,
+    //     $color-body 0%,
+    //     rgba(rgb(18, 34, 46), 1) 100%
+    //   ),
+    //   $color-gray-dark;
+
+    background: linear-gradient(
+        130deg,
+        rgb(117, 124, 136) 0%,
+        rgba(rgb(15, 27, 43), 1) 40%,
+        rgba(rgb(9, 21, 36), 1) 100%
+      ),
+      $color-gray-dark;
+
+    opacity: 0.7;
+    &--rotate {
+      background: linear-gradient(
+          130deg,
+          rgba(rgb(174, 173, 173), 1) 0%,
+          rgba(rgb(99, 99, 99), 1) 100%
+        ),
+        $color-gray-dark;
+    }
+
+    &--active {
+      background: linear-gradient(
+          130deg,
+          rgb(6, 11, 28) 1%,
+          rgba(rgb(11, 21, 36), 1) 40%,
+          rgba(rgb(2, 4, 19), 1) 60%,
+          rgba(rgb(10, 18, 29), 1) 80%,
+          rgba(rgb(3, 14, 26), 1) 100%
+        ),
+        black;
+
+      // background: $color-phone-silver;
+
+      opacity: 0.8;
+      border: rgb(240, 240, 240) 0.1rem solid;
+    }
+
+    @media (min-width: 481px) {
+      border-radius: 0.5rem;
+    }
+
+    @media (orientation: landscape) and (min-width: 768px) {
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+
+    width: 100%;
+    height: 115%;
+    transform: translate(-50%, 0%) rotate(0deg) skew(-25deg, 0deg);
+    transform-origin: bottom;
+    bottom: 0%;
+    left: 50%;
+    background: $color-background;
+    background: rgba(77, 76, 76, 0.301);
+
+    border-radius: 5px;
+
+    &--rotate-shadow {
+      color: rgba(237, 237, 237, 0.493);
+    }
+  }
+
+  &__text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+
+    text-shadow: 0px 0px 1px rgba(136, 133, 133, 0.815);
+
+    color: rgba(230, 229, 229, 0.988);
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 3;
+    line-height: 1.8rem;
+
+    &--active {
+      color: white;
+
+      text-shadow: 2px 2px 2px rgb(1, 1, 1);
+      // color: rgb(8, 17, 31);
+    }
+
+    @media (orientation: landscape) {
+      font-size: 0.7rem;
+      line-height: 1.2rem;
+    }
+
+    @media (orientation: landscape) and (min-width: 1000px) {
+      font-size: 0.6rem;
+      line-height: 1.2rem;
+      padding: 0 $main-padding;
+    }
+
+    @media (orientation: landscape) and (min-width: 1536px) {
+      padding: 0 $main-padding;
+      line-height: 1.4rem;
+    }
+
+    @media (orientation: landscape) and (min-width: 2560px) {
+      font-size: 0.8rem;
+      line-height: 1.6rem;
+    }
+    &--rotate {
+      color: $color-body;
+      font-weight: bold;
+      text-shadow: 0px 0px 1px rgba($color-body, 0.1);
+
+      @media (orientation: landscape) {
+        line-height: 1rem;
+      }
+    }
+
+    &--shadow {
+      font-size: 1.1rem;
+      text-shadow: 0px 0px 0px rgba(3, 8, 34, 0.899);
+      top: 45%;
+      opacity: 0.4;
+      @media (orientation: landscape) {
+        font-size: 0.6rem;
+      }
+    }
+
+    & p {
+      padding: 0 $main-padding / 2;
+      text-transform: uppercase;
+    }
+  }
+
+  &--color {
+    top: 10%;
+    left: 10%;
+    text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+    color: rgba(195, 195, 198, 0.927);
+    transform: translate(0%, 0%);
+  }
+}
+
 .aboutme {
   top: 6%;
   left: 10%;
   width: 35vw;
   height: 15vw;
+  animation: squaresmenu 4s infinite linear alternate-reverse;
 
   @media (min-width: 481px) {
     width: 22%;
@@ -51,6 +216,7 @@
   right: 10%;
   width: 30vw;
   height: 30vw;
+  animation: squaresmenu 3s 1s infinite ease-in alternate-reverse;
 
   @media (min-width: 481px) {
     width: 22%;
@@ -94,6 +260,7 @@
   left: 8%;
   width: 30vw;
   height: 30vw;
+  animation: squaresmenu 3s infinite ease-in alternate-reverse;
 
   @media (min-width: 481px) {
     width: 22%;
@@ -133,12 +300,13 @@
     height: 10%;
   }
 }
-.summary {
+.faq {
   top: 24%;
   right: 12%;
 
   width: 35vw;
   height: 15vw;
+  animation: squaresmenu 3s 2s infinite ease-in alternate-reverse;
 
   @media (min-width: 481px) {
     width: 22%;
@@ -184,6 +352,7 @@
 
   width: 35vw;
   height: 15vw;
+  animation: squaresmenu 3s infinite linear alternate-reverse;
 
   @media (min-width: 481px) {
     width: 22vw;
@@ -226,6 +395,7 @@
 
   width: 30vw;
   height: 25vw;
+  animation: squaresmenu 4s infinite ease-in alternate-reverse;
 
   @media (min-width: 481px) {
     width: 18vw;
@@ -301,134 +471,12 @@
   }
 }
 
-.menu {
-  position: absolute;
-
-  &__square {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    border-radius: 0.5rem;
-    border: rgb(210, 210, 210) 0.1rem solid;
-    background: linear-gradient(
-        130deg,
-        $color-body 0%,
-        rgba(rgb(18, 34, 46), 1) 100%
-      ),
-      $color-gray-dark;
-    opacity: 0.7;
-    &--rotate {
-      background: linear-gradient(
-          130deg,
-          rgba(rgb(174, 173, 173), 1) 0%,
-          rgba(rgb(99, 99, 99), 1) 100%
-        ),
-        $color-gray-dark;
-    }
-
-    @media (min-width: 481px) {
-      border-radius: 0.5rem;
-    }
-
-    @media (orientation: landscape) and (min-width: 768px) {
-    }
+@keyframes squaresmenu {
+  0% {
+    transform: scale(1);
   }
 
-  &__shadow {
-    position: absolute;
-
-    width: 100%;
-    height: 115%;
-    transform: translate(-50%, 0%) rotate(0deg) skew(-25deg, 0deg);
-    transform-origin: bottom;
-    bottom: 0%;
-    left: 50%;
-    background: $color-background;
-    background: rgba(77, 76, 76, 0.301);
-
-    border-radius: 5px;
-
-    &--rotate-shadow {
-      color: rgba(237, 237, 237, 0.493);
-    }
-  }
-
-  &__text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    font-weight: bold;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-
-    text-shadow: 0px 0px 1px rgba(136, 133, 133, 0.815);
-
-    color: $color-body;
-    color: rgba(230, 229, 229, 0.988);
-
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 3;
-    line-height: 1.8rem;
-
-    @media (orientation: landscape) {
-      font-size: 0.7rem;
-      line-height: 1.2rem;
-    }
-
-    @media (orientation: landscape) and (min-width: 1000px) {
-      font-size: 0.6rem;
-      line-height: 1.2rem;
-      padding: 0 $main-padding;
-    }
-
-    @media (orientation: landscape) and (min-width: 1536px) {
-      padding: 0 $main-padding;
-      line-height: 1.4rem;
-    }
-
-    @media (orientation: landscape) and (min-width: 2560px) {
-      font-size: 0.8rem;
-      line-height: 1.6rem;
-    }
-    &--rotate {
-      color: $color-body;
-      font-weight: bold;
-      text-shadow: 0px 0px 1px rgba($color-body, 0.1);
-
-      @media (orientation: landscape) {
-        line-height: 1rem;
-      }
-    }
-
-    &--shadow {
-      font-size: 1.1rem;
-      text-shadow: 0px 0px 0px rgba(3, 8, 34, 0.899);
-      top: 45%;
-      opacity: 0.4;
-      @media (orientation: landscape) {
-        font-size: 0.6rem;
-      }
-    }
-
-    & p {
-      padding: 0 $main-padding / 2;
-      text-transform: uppercase;
-    }
-  }
-
-  &--color {
-    top: 10%;
-    left: 10%;
-    text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
-    color: rgba(195, 195, 198, 0.927);
-    transform: translate(0%, 0%);
+  100% {
+    transform: scale(1.15);
   }
 }

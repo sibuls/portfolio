@@ -30,6 +30,7 @@ var defaultObject = {
   cv: '',
   //
   emailSend: false,
+  bothCards: false,
   handleCardClick: function handleCardClick() {},
   handleDotClick: function handleDotClick() {},
   handleRotateClick: function handleRotateClick() {},
@@ -37,7 +38,8 @@ var defaultObject = {
   handleEmailClick: function handleEmailClick() {},
   handleLinkedinClick: function handleLinkedinClick() {},
   handleCv: function handleCv() {},
-  handleEmailSend: function handleEmailSend() {}
+  handleEmailSend: function handleEmailSend() {},
+  handleBothCardsClick: function handleBothCardsClick() {}
 };
 exports.defaultObject = defaultObject;
 var AppContext = (0, _react.createContext)(defaultObject);

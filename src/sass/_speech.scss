@@ -60,7 +60,7 @@
   &--question {
     margin: 0 $main-padding $main-padding 0;
     background-color: $color-speech-question;
-    color: $color-font;
+    color: darken($color-font, 10%);
     text-align: left;
 
     &:after {

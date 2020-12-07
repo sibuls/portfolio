@@ -4,15 +4,15 @@ function AboutMeInfo(props) {
   return (
     <div className='rotate'>
       <p className='screen-text speech'>
-        I'm Seb, late thirty, guy who's passion is projecting everything what
-        can be projected... btw I dont have single furniture bought from shop,
+        I'm Seb, late thirty, guy whose passion is projecting everything what
+        can be projected... btw I don't have single furniture bought from shop,
         all just made by myself.. sorry, office chair has been bought from Ikea.
       </p>
 
       <p className='screen-text speech'>
         I have worked in several professions in my live - gardener, miner (yeap
-        :), waiter, restaurant manager. I have always thought that you have to
-        like what you do, especially if we spend most of the day in work.
+        :), waiter, restaurant manager. I have always thought that we have to
+        like what we do, especially if we spend most of the day in work.
       </p>
 
       <p className='screen-text speech'>
@@ -23,15 +23,6 @@ function AboutMeInfo(props) {
       </p>
 
       <p className='screen-text speech'>We'll see what comes out... </p>
-      {/* <p className='screen-text'>I'm web designer</p>
-      <p className='screen-text'>
-        I'll make project of your webiste depending on your preferences.
-      </p>
-      <p className='screen-text'>I'm web developer</p>
-      <p className='screen-text'>
-        I'll translate this project to computer language so it can be
-        distributed worldwide
-      </p> */}
     </div>
   );
 }

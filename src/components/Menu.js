@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../AppContext';
 
 // darkblue msquare menu - 'who am I" "what im doing" "linkedin" etc
 const Menu = (props) => {
+  const { menuActive, email, linkedin } = useContext(AppContext);
+
   return (
     <div className={`menu ${props.name}`}>
       <div className='menu__shadow'>
@@ -19,9 +22,21 @@ const Menu = (props) => {
         </div>
       </div>
       <div
-        className={`menu__square  ${
-          props.name === 'rotate-phone' ? 'menu__square--rotate' : null
-        }`}
+        className={` menu__square  ${
+          props.name === menuActive ? 'menu__square--active' : null
+        } 
+        ${
+          linkedin === true && props.name === 'linkedin'
+            ? 'menu__square--active'
+            : null
+        } 
+        ${
+          email === true && props.name === 'email'
+            ? 'menu__square--active'
+            : null
+        } 
+
+        ${props.name === 'rotate-phone' ? 'menu__square--rotate' : null}  `}
       ></div>{' '}
       <div
         className={`menu__text  ${
@@ -29,7 +44,10 @@ const Menu = (props) => {
         }`}
         onClick={props.handleClick}
       >
-        <p> {props.text} </p>
+        <p className={props.name === menuActive ? 'menu__text--active' : null}>
+          {' '}
+          {props.text}{' '}
+        </p>
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import Phone from './phone/Phone';
 import Case from './Case';
 
 import Menu from './Menu';
+import StartAnimation from './StartAnimation';
 
 const AnimationFrame = () => {
   const {
@@ -47,21 +48,7 @@ const AnimationFrame = () => {
 
   const myRef = useRef(null);
 
-  // const executeScroll = () => {
-  //   console.log('kukukkkku');
-
-  //   window.scrollTo({
-  //     top: myRef,
-  //     // behavior: 'smooth',
-  //   });
-  // };
-  // run this function from an event handler or an effect to execute scroll
-
-  console.log(emailSend + ' email');
-  console.log(prevEmailSend + ' emal prev');
-
   const handleScroll = () => {
-    console.log('handle scrollll');
     emailSend === true && prevEmailSend === false
       ? window.scrollTo({
           behavior: 'smooth',
@@ -75,6 +62,10 @@ const AnimationFrame = () => {
     <React.Fragment>
       <div className='animation'>
         <div className='animation__iphone'>
+          <StartAnimation name={'iphone'} />
+
+          {/* <StartAnimation /> */}
+
           <Menu
             name={'aboutme'}
             text={'Who am I'}
@@ -107,12 +98,12 @@ const AnimationFrame = () => {
             }
           />
           <Menu
-            name={'summary'}
+            name={'faq'}
             text={'FAQ'}
             ontop={true}
             handleClick={() =>
               handleCardClick(
-                'projects',
+                'faq',
                 // 'translate(-50%, 0%) skew(8deg, 5deg) scale(1.2) rotate(-95deg); ',
                 'translate(-50%, 0%) skew(5deg, 5deg) scale(1.25) rotate(-4deg); '
 
@@ -138,6 +129,7 @@ const AnimationFrame = () => {
               )
             }
           /> */}
+          <StartAnimation name={'android'} />
           <div className='animation__android-container'>
             <div className='animation__android-box'>
               <div className='animation__dots-box'>
@@ -152,8 +144,8 @@ const AnimationFrame = () => {
                 <Dot color={'black'} />
                 <Dot color={'silver'} />
               </div>
+
               <div className='phone--flip'>
-                {' '}
                 <Flip />
               </div>
             </div>
@@ -161,6 +153,8 @@ const AnimationFrame = () => {
         </div>
 
         <div className='animation__footer'>
+          <StartAnimation name={'footer'} />
+
           <div className='animation__footer-wraper'>
             {' '}
             <Menu
@@ -171,7 +165,6 @@ const AnimationFrame = () => {
             <Menu
               name={'linkedin'}
               text={'linkedin'}
-              // link={'https://www.google.co.uk'}
               handleClick={() => handleLinkedinClick('linkedin')}
             />
             <div className='animation__footer-container'>

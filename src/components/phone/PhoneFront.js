@@ -22,7 +22,9 @@ const PhoneFront = () => {
   const cvDiv = (
     <div className='cv'>
       <div
-        className='cv__body'
+        className={`${
+          cv === 'tools' ? 'cv__body ' : 'cv__body cv__body--scroll'
+        }    `}
         // onClick={cv === 'tools' ? handleRotateClick : null}
         onClick={handleRotateClick}
       >
@@ -40,10 +42,8 @@ const PhoneFront = () => {
     </div>
   );
 
-  console.log(emailSend);
-
   return (
-    <div className='phone  phone--front'>
+    <div className='phone  phone--android'>
       <div
         className={`phone-part phone__frame phone__frame--${currentDotColor}`}
       ></div>

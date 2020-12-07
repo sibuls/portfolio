@@ -35,7 +35,7 @@ const InfoMain = () => {
           </div>
         );
         break;
-      case 'projects':
+      case 'faq':
         return (
           <div className='info  '>
             <SummaryInfo />

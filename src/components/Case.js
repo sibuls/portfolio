@@ -23,12 +23,8 @@ const Case = () => {
     linkedin,
     handleLinkedinClick,
     handleEmailClick,
+    handleBothCardsClick,
   } = useContext(AppContext);
-
-  const handleCardsClick = () => {
-    handleLinkedinClick();
-    handleEmailClick();
-  };
 
   const caseAnime = keyframes`
   0% {${footer === 'start' ? 'opacity:1' : ' opacity:1 '} }
@@ -39,19 +35,19 @@ const Case = () => {
  }`;
 
   const linkedinAnime = keyframes`
-         0% {${linkedin ? '  top: 50%; ' : '  top: -8%; '} }
+         0% {${linkedin ? '  top: 50%; ' : '  top: 42%; '} }
        
          100% { 
    
-            ${linkedin ? '  top: -8%; ' : '  top: 50%; '} 
+            ${linkedin ? '  top: -42%; ' : '  top: 50%; '} 
         }`;
 
   const emailAnime = keyframes`
-        0% {${email ? 'top: 50% ' : '  top: -28%; '} }
+        0% {${email ? 'top: 50% ' : '  top: -17%; '} }
       
         100% { 
         
-           ${email ? 'top: -35% ' : '  top: 50%; '} 
+           ${email ? 'top: -17% ' : '  top: 50%; '} 
        }`;
 
   return (
@@ -60,19 +56,6 @@ const Case = () => {
         className='business-card business-card--case '
         caseAnime={caseAnime}
       >
-        <Email
-          emailAnime={emailAnime}
-          className=' business-card  business-card__box  '
-          onClick={() => handleEmailClick('email')}
-          // handleScroll={props.handleScroll}
-        >
-          <BusinessCard
-            name={'email'}
-            title={'Contact'}
-            content={'sebo.orlowski@gmail.com'}
-            contentForm={'or push here to open Form above'}
-          />
-        </Email>
         <Linkedin
           linkedinAnime={linkedinAnime}
           className='business-card business-card__box business-card__box--linkedin '
@@ -82,11 +65,25 @@ const Case = () => {
             name={'linkedin'}
             title={'Linkedin'}
             content={'Sebastian Orlowski'}
+            contentSecondLine={'open Linkedin'}
           />
-        </Linkedin>
+        </Linkedin>{' '}
+        <Email
+          emailAnime={emailAnime}
+          className=' business-card  business-card__box business-card__box--email '
+          onClick={() => handleEmailClick('email')}
+          // handleScroll={props.handleScroll}
+        >
+          <BusinessCard
+            name={'email'}
+            title={'Contact'}
+            content={'sebo.orlowski@gmail.com'}
+            contentSecondLine={'or click here to open form'}
+          />
+        </Email>
         <div
           className='business-card business-card--glass'
-          onClick={handleCardsClick}
+          onClick={handleBothCardsClick}
         >
           <p className='business-card__holder'>Business card </p>
           <p className='business-card__holder'>holder</p>

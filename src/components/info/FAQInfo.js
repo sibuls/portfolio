@@ -32,7 +32,7 @@ function FAQInfo(props) {
         feel free to use it. It will be even pleasure for me :)
       </p>
       <p className='screen-text speech speech--question'>
-        I have different question which wasn't mention above
+        I have other question which wasn't mention above
       </p>
 
       <p className='screen-text speech'>
