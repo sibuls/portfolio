@@ -22,7 +22,7 @@ const Menu = (props) => {
         </div>
       </div>
       <div
-        className={` menu__square  ${
+        className={` menu__square menu__square--${props.name} ${
           props.name === menuActive ? 'menu__square--active' : null
         } 
         ${
