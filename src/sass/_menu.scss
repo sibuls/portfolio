@@ -1,35 +1,69 @@
 .menu {
   position: absolute;
 
+  cursor: pointer;
+
+  &__border {
+    position: absolute;
+    width: 102%;
+    height: 102%;
+    border-radius: 2rem;
+    transform: translate(-2%, 2%);
+    z-index: -1;
+
+    background: linear-gradient(
+        120deg,
+        darken(#987e68, 20%) 1%,
+        darken(#dcc2ab, 10%) 10%,
+        darken(#ac8863, 10%) 20%,
+        darken(#c4b29b, 0%) 43%,
+        darken(#bd9b6e, 20%) 50%,
+        darken(#bd9d72, 20%) 55%,
+        darken(#ae9474, 0%) 60%,
+        darken(#ab9882, 10%) 80%,
+        darken(#d8c3b0, 00%) 100%
+      ),
+      #a98d72;
+    box-shadow: -1px 1px 0px 0px #a0856e;
+
+    &--active {
+      background: linear-gradient(
+          120deg,
+          darken(#987e68, 20%) 1%,
+          darken(#dcc2ab, 10%) 10%,
+          darken(#ac8863, 10%) 20%,
+          darken(#c4b29b, 0%) 43%,
+          darken(#bd9b6e, 20%) 50%,
+          darken(#bd9d72, 20%) 55%,
+          darken(#ae9474, 0%) 60%,
+          darken(#ab9882, 10%) 80%,
+          darken(#d8c3b0, 00%) 100%
+        ),
+        #a98d72;
+      transform: translate(-2%, 2%) scale(0.85);
+    }
+  }
+
   &__square {
     position: absolute;
     width: 100%;
     height: 100%;
+    z-index: 2;
 
     border-radius: 2rem;
     border: rgb(210, 210, 210) 0.1rem solid;
-    // background: linear-gradient(
-    //     130deg,
-    //     $color-body 0%,
-    //     rgba(rgb(18, 34, 46), 1) 100%
-    //   ),
-    //   $color-gray-dark;
-
     background: linear-gradient(
         130deg,
-        rgb(117, 124, 136) 0%,
-        rgba(rgb(15, 27, 43), 1) 40%,
-        rgba(rgb(9, 21, 36), 1) 100%
+        $color-body 0%,
+        rgba(rgb(18, 34, 46), 1) 100%
       ),
       $color-gray-dark;
 
     opacity: 0.7;
 
-    // &--description,
-    // &--faq,
-    // &--email {
-    //   border-radius: 2rem;
-    // }
+    background: $color-phone-silver;
+
+    border: rgb(240, 240, 240) 0.1rem solid;
 
     &--rotate {
       background: linear-gradient(
@@ -41,20 +75,20 @@
     }
 
     &--active {
+      opacity: 1;
+
+      transform: scale(0.85);
+
       background: linear-gradient(
-          130deg,
-          rgb(6, 11, 28) 1%,
-          rgba(rgb(11, 21, 36), 1) 40%,
-          rgba(rgb(2, 4, 19), 1) 60%,
-          rgba(rgb(10, 18, 29), 1) 80%,
-          rgba(rgb(3, 14, 26), 1) 100%
+          120deg,
+          #ccc7c2 1%,
+          #a89482 10%,
+          #b6aba2 30%,
+          #9b8979 50%,
+          #8d7865 80%,
+          #c5af9d 100%
         ),
-        black;
-
-      // background: $color-phone-silver;
-
-      opacity: 0.8;
-      border: rgb(240, 240, 240) 0.1rem solid;
+        #a98d72;
     }
 
     @media (min-width: 481px) {
@@ -89,9 +123,7 @@
     width: 100%;
     height: 100%;
     font-weight: bold;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+
     font-size: 1rem;
     letter-spacing: 0.1rem;
 
@@ -107,11 +139,35 @@
     z-index: 3;
     line-height: 1.8rem;
 
-    &--active {
-      color: white;
+    // transform: rotate(0deg);
 
-      text-shadow: 2px 2px 2px rgb(1, 1, 1);
+    &--active {
+      // color: $color-speech;
+
+      // text-shadow: 2px 2px 2px rgba(14, 11, 29, 0.596);
+
       // color: rgb(8, 17, 31);
+      // font-size: 0.8rem;
+
+      // @media (orientation: landscape) {
+      //   font-size: 0.5rem;
+      // }
+
+      // @media (orientation: landscape) and (min-width: 1000px) {
+      //   font-size: 0.5rem;
+      //   line-height: 1.2rem;
+      //   padding: 0 $main-padding;
+      // }
+
+      // @media (orientation: landscape) and (min-width: 1536px) {
+      //   padding: 0 $main-padding;
+      //   line-height: 1.4rem;
+      // }
+
+      // @media (orientation: landscape) and (min-width: 2560px) {
+      //   font-size: 0.6rem;
+      //   line-height: 1.6rem;
+      // }
     }
 
     @media (orientation: landscape) {
@@ -154,9 +210,14 @@
       }
     }
 
-    & p {
+    &-p {
       padding: 0 $main-padding / 2;
       text-transform: uppercase;
+      position: absolute;
+
+      &--active {
+        transform: scale(0.85);
+      }
     }
   }
 
@@ -478,12 +539,135 @@
   }
 }
 
+// @keyframes squaresmenu {
+//   0% {
+//     transform: scale(1) translateX(-10%);
+//   }
+
+//   100% {
+//     transform: scale(1.15) translateX(50%);
+//   }
+// }
+
 @keyframes squaresmenu {
   0% {
-    transform: scale(1);
+    transform: translateX(-10%);
   }
 
   100% {
-    transform: scale(1.15);
+    transform: translateX(50%);
+  }
+}
+
+.menu:hover .menu__square,
+.menu:hover .menu__text-p {
+  animation: hovermenu 0.5s linear alternate-reverse;
+}
+
+.menu:hover .menu__square--active,
+.menu:hover .menu__text-p--active {
+  animation: hovermenudown 0.5s linear alternate-reverse;
+}
+.menu:hover .menu__border {
+  animation: hoverborder 0.5s linear alternate-reverse;
+}
+
+.menu:hover .menu__border--active {
+  animation: hoverborderdown 0.5s linear alternate-reverse;
+}
+
+// .menu:hover .menu__text-p--active {
+//   animation: hovermenudownp 0.5s linear alternate-reverse;
+// }
+
+@keyframes hovermenu {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hovermenudown {
+  0% {
+    transform: rotate(0deg) scale(0.85);
+  }
+  25% {
+    transform: rotate(0deg) scale(0.85);
+  }
+  50% {
+    transform: rotate(0deg) scale(0.85);
+  }
+  75% {
+    transform: rotate(0deg) scale(0.85);
+  }
+  100% {
+    transform: rotate(0deg) scale(0.85);
+  }
+}
+
+// @keyframes hovermenudownp {
+//   0% {
+//     transform: rotate(0deg) scale(0.85);
+//     color: red;
+//   }
+//   25% {
+//     transform: rotate(0deg) scale(0.85);
+//   }
+//   50% {
+//     transform: rotate(0deg) scale(0.85);
+//   }
+//   75% {
+//     transform: rotate(0deg) scale(0.85);
+//   }
+//   100% {
+//     transform: rotate(0deg) scale(0.85);
+//     color: red;
+//   }
+// }
+
+@keyframes hoverborder {
+  0% {
+    transform: rotate(0deg) translate(-2%, 2%);
+  }
+  25% {
+    transform: rotate(10deg) translate(-2%, 2%);
+  }
+  50% {
+    transform: rotate(0deg) translate(-2%, 2%);
+  }
+  75% {
+    transform: rotate(10deg) translate(-2%, 2%);
+  }
+  100% {
+    transform: rotate(0deg) translate(-2%, 2%);
+  }
+}
+
+@keyframes hoverborderdown {
+  0% {
+    transform: rotate(0deg) translate(-2%, 2%) scale(0.85);
+  }
+  25% {
+    transform: rotate(0deg) translate(-2%, 2%) scale(0.85);
+  }
+  50% {
+    transform: rotate(0deg) translate(-2%, 2%) scale(0.85);
+  }
+  75% {
+    transform: rotate(0deg) translate(-2%, 2%) scale(0.85);
+  }
+  100% {
+    transform: rotate(0deg) translate(-2%, 2%) scale(0.85);
   }
 }
