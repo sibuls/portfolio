@@ -13,93 +13,93 @@ import webpack from '../../images/webpack.jpg';
 import git from '../../images/git.jpg';
 
 const Technologies = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 
 const Question = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 
 const HtmlDate = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const HtmlBox = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 
 const CssDate = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const CssBox = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const JsDate = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const JsBox = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const BootstrapDate = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const BootstrapBox = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const ReactDate = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const ReactBox = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const GitDate = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const GitBox = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 
 const NpmDate = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const NpmBox = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const NodeDate = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const NodeBox = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const WebpackDate = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 const WebpackBox = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 
 const EndAnime = styled.div`
-  animation: ${(props) => props.time} ${(props) => props.delay}
-    ${(props) => props.anime} ease-out forwards;
+  animation: ${({ time }) => time} ${({ delay }) => delay}
+    ${({ anime }) => anime} ease-out forwards;
 `;
 
 const TechnologiesInfo = ({ cv }) => {

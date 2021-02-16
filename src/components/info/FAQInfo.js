@@ -1,6 +1,6 @@
 import React from 'react';
 
-function FAQInfo(props) {
+function FAQInfo() {
   return (
     // <div className='summary-galery '>
     //   <p className='summary-galery__title'>Projects</p>

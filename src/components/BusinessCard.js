@@ -6,7 +6,7 @@ const Paper = styled.div`
   animation: 2s 0s ${(props) => props.paperAnime} linear infinite;
 `;
 
-const BusinessCard = (props) => {
+const BusinessCard = ({ name, title, content, contentSecondLine }) => {
   const {
     footer,
     email,
@@ -19,7 +19,7 @@ const BusinessCard = (props) => {
   const pencil = (
     <div className='pencil-container'>
       {' '}
-      <div className={`pencil-line pencil-line--${props.name}`}></div>
+      <div className={`pencil-line pencil-line--${name}`}></div>
       <div className='pencil'>
         <div className='pencil__triangle'>
           <div className='pencil__inside'></div>
@@ -69,9 +69,9 @@ const BusinessCard = (props) => {
   return (
     <div>
       {' '}
-      <div className={`business-card business-card--${props.name}`}>
+      <div className={`business-card business-card--${name}`}>
         <div className='business-card__title'>
-          <p className='business-card__paragraph'>{props.title}</p>
+          <p className='business-card__paragraph'>{title}</p>
         </div>
         <div className='business-card__square business-card__square--hideTitle'>
           {' '}
@@ -85,7 +85,7 @@ const BusinessCard = (props) => {
         </div>{' '}
         <Paper
           onClick={
-            props.name === 'linkedin'
+            name === 'linkedin'
               ? handleLinkedin
               : () => {
                   {
@@ -93,16 +93,16 @@ const BusinessCard = (props) => {
                   }
                 }
           }
-          className={`business-card__square   business-card__square--${
-            props.name
-          }  ${linkedin ? 'business-card__square--linkedin--move' : null} `}
+          className={`business-card__square   business-card__square--${name}  ${
+            linkedin ? 'business-card__square--linkedin--move' : null
+          } `}
           paperAnime={paperAnime}
         >
           <div className='business-card__content'>
-            <p className='business-card__content--name'>{props.content}</p>
+            <p className='business-card__content--name'>{content}</p>
 
             <p className='business-card__content--description'>
-              {props.contentSecondLine}
+              {contentSecondLine}
             </p>
           </div>
           {pencil}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function StepsInfo(props) {
+function StepsInfo() {
   return (
     <div>
       <p className='screen-text speech speech--question'>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DescriptionInfo(props) {
+function DescriptionInfo() {
   return (
     <div>
       <p className='screen-text speech speech--question'>

@@ -7,19 +7,30 @@ const Menu = ({ name, text, handleClick }) => {
 
   return (
     <div className={`menu ${name}`}>
+      <div
+        className={` menu__glass   ${
+          name === menuActive ? 'menu__glass--active' : null
+        } 
+        ${
+          linkedin === true && name === 'linkedin'
+            ? 'menu__glass--active'
+            : null
+        } 
+        ${email === true && name === 'email' ? 'menu__glass--active' : null} 
+
+           `}
+      ></div>
       <div className='menu__shadow'>
-        {/* <div className='menu__text menu__text--shadow'>
-          <p
+        <div className='menu__text menu__text--shadow'>
+          {/* <p
             className={`    ${
-              name === 'rotate-phone'
-                ? 'menu__shadow--rotate-shadow'
-                : null
+              name === 'rotate-phone' ? 'menu__shadow--rotate-shadow' : null
             }`}
           >
             {' '}
-            {props.text}{' '}
-          </p>
-        </div> */}
+            {text}{' '}
+          </p> */}
+        </div>
       </div>
       <div
         className={` menu__square menu__square--${name} ${

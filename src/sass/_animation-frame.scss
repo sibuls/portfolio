@@ -402,43 +402,24 @@
     }
   }
 
-  // &__arrow {
-  //   width: 100%;
-
-  //   opacity: 1;
-  //   // border: 4px dotted rgb(97, 15, 15);
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   position: absolute;
-  //   z-index: 9;
-
-  //   &-box {
-  //     clip-path: polygon(
-  //       40% 31%,
-  //       19% 32%,
-  //       51% 0,
-  //       83% 34%,
-  //       58% 31%,
-  //       67% 100%,
-  //       32% 100%
-  //     );
-
-  //     width: 100%;
-  //     height: 30%;
-  //     background: $color-phone-silver;
-  //     opacity: 0.5;
-  //     // border: 4px dotted rgb(20, 201, 26);
-  //   }
-
-  //   &-content {
-  //     color: whitesmoke;
-  //     text-shadow: 2px 2px 3px black;
-  //     font-size: 1.2rem;
-  //     text-align: center;
-  //     padding: $main-padding;
-  //     line-height: 1.5rem;
-  //   }
-  // }
+  &__html {
+    position: absolute;
+    width: 50%;
+    top: -2%;
+    left: -5%;
+  }
+  &__css {
+    position: absolute;
+    width: 50%;
+    top: 5%;
+    left: 50%;
+  }
+  &__js {
+    // position: absolute;
+    border: 2px red dotted;
+    // top: 0;
+    // left: 50%;
+  }
 }
 
 .back {

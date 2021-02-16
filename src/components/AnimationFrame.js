@@ -1,5 +1,6 @@
 import React, { useContext, useState, useRef } from 'react';
 import { AppContext } from '../AppContext';
+import styled, { keyframes } from 'styled-components';
 
 import Dot from './Dot';
 import Flip from './flip/Flip';
@@ -9,6 +10,21 @@ import Case from './Case';
 
 import Menu from './Menu';
 import StartAnimation from './StartAnimation';
+
+import html from '../images/html.png';
+import css from '../images/css.png';
+import js from '../images/js.jpg';
+import react from '../images/react.jpg';
+import bootstrap from '../images/bootstrap.jpg';
+import npm from '../images/npm.jpg';
+import node from '../images/node.jpg';
+import webpack from '../images/webpack.jpg';
+import git from '../images/git.jpg';
+
+const Box = styled.div`
+  animation: ${({ time }) => time} ${({ anime }) => anime} ease-out infinite
+    alternate-reverse;
+`;
 
 const AnimationFrame = () => {
   const {
@@ -58,14 +74,40 @@ const AnimationFrame = () => {
   };
   handleScroll();
 
+  const boxAnime1 = keyframes`
+  0% { 
+  opacity:0;
+
+  }
+
+  
+
+  50% {      
+  opacity:0.2;  }
+
+  
+  100% { 
+
+  opacity:0;
+  }
+
+`;
+
   return (
     <React.Fragment>
       <div className='animation'>
         <div className='animation__iphone'>
+          <Box anime={boxAnime1} time={4 + 's'} className='animation__html'>
+            <img src={html} alt='' className='technologies__image' />
+          </Box>{' '}
+          <Box anime={boxAnime1} time={7 + 's'} className='animation__css'>
+            <img src={css} alt='' className='technologies__image' />
+          </Box>
+          {/* <Box anime={boxAnime1} time={4 + 's'} className='animation__js'>
+            <img src={js} alt='' className='technologies__image' />
+          </Box> */}
           <StartAnimation name={'iphone'} />
-
           {/* <StartAnimation /> */}
-
           <Menu
             name={'aboutme'}
             text={'Who am I'}
@@ -111,7 +153,6 @@ const AnimationFrame = () => {
               )
             }
           />
-
           <div className='animation__iphone-container'>
             <Phone />
           </div>
@@ -151,7 +192,6 @@ const AnimationFrame = () => {
             </div>
           </div>
         </div>
-
         <div className='animation__footer'>
           <StartAnimation name={'footer'} />
 

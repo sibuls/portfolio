@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AboutMeInfo(props) {
+function AboutMeInfo() {
   return (
     <div className='rotate'>
       <p className='screen-text speech'>
