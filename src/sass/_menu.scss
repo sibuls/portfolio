@@ -16,7 +16,7 @@
       background: rgba(255, 255, 255, 0.084);
       border: rgb(167, 166, 166) 1px solid;
 
-      animation: menu-glass-active 4s infinite alternate-reverse ease-in;
+      animation: menu-glass-active 4s infinite alternate-reverse linear;
     }
   }
 
@@ -333,7 +333,7 @@
   left: 8%;
   width: 30vw;
   height: 30vw;
-  animation: squaresmenu-steps 6s infinite ease-in alternate-reverse;
+  animation: squaresmenu-steps 6s infinite linear alternate-reverse;
 
   @media (min-width: 481px) {
     width: 22%;

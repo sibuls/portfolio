@@ -7,7 +7,8 @@ function StepsInfo() {
         What are the main stages of the project?
       </p>
       <p className='screen-text speech'>
-        Pencil, pencil eraser, <span>sheets of paper</span>, a looot sheets of
+        Pencil, pencil eraser,{' '}
+        <span className='line-through'>sheets of paper</span>, a looot sheets of
         paper
       </p>
       <p className='screen-text speech'>Graphic design.</p>

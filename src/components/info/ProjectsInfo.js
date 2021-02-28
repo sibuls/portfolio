@@ -21,8 +21,11 @@ const ProjectsInfo = () => {
         {' '}
         <p className='screen-text speech  '>
           I am currently working on - free locally advertisments. Please keep in
-          mind that it's still not done, but you can see how it will look like
-          more or less.
+          mind that it's still not done, and at the moment{' '}
+          <span className='screen-text--warning '>
+            media queries are just for mobile
+          </span>
+          .
         </p>
         <div className='projects__galery'>
           <img

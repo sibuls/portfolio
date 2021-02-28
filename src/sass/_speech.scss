@@ -17,6 +17,11 @@
   &--date {
     text-align: center;
   }
+
+  &--warning {
+    color: red;
+    text-decoration: none;
+  }
 }
 
 .speech {
@@ -37,10 +42,6 @@
   @media (orientation: landscape) and (min-width: 1000px) {
     font-size: 0.6rem;
     line-height: 0.7rem;
-  }
-
-  span {
-    text-decoration: line-through;
   }
 
   &:after {
@@ -80,4 +81,8 @@
       margin: $main-padding $main-padding $main-padding 0;
     }
   }
+}
+
+.line-through {
+  text-decoration: line-through;
 }

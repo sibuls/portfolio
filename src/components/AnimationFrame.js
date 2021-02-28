@@ -106,7 +106,7 @@ const AnimationFrame = () => {
           {/* <Box anime={boxAnime1} time={4 + 's'} className='animation__js'>
             <img src={js} alt='' className='technologies__image' />
           </Box> */}
-          <StartAnimation name={'iphone'} />
+          {/* <StartAnimation name={'iphone'} /> */}
           {/* <StartAnimation /> */}
           <Menu
             name={'aboutme'}
